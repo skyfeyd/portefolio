@@ -1,0 +1,68 @@
+.menu1, .menu2, .menu3 {
+  margin-right: 50px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  font-size: 22px;
+  padding: 13px;
+}
+.menu1 .menu3, .menu2 .menu3, .menu3 .menu3 {
+  margin-right: 150px;
+}
+
+.menu :hover {
+  color: black;
+  background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  max-width: 1200px;
+  max-height: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px;
+}
+
+.helloThere {
+  border: 2px solid black;
+}
+.helloThere .title {
+  font-size: 45px;
+}
+
+.webLearner {
+  border: 2px solid black;
+}
+.photo .pp {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  position: absolute;
+  left: 0%;
+  align-self: center;
+  margin-left: 16px;
+  font-size: 75px;
+}
+
+header {
+  background-image: linear-gradient(-45deg, #FF0058, #4101F5);
+  height: 15vh;
+  display: flex;
+  justify-content: end;
+  box-shadow: black;
+}
+header > nav {
+  padding-top: 5vh;
+  padding-left: 6vh;
+}
+
+/*# sourceMappingURL=style.css.map */

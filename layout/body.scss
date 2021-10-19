@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+section{
+    max-width: 1200px;
+    max-height: 1200px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-rows: 100px 200px ;
+}
+
+
+.helloThere{
+    border: 2px solid black;
+    .title{
+        font-size: 45px;
+       
+        
+    }
+
+}
+
+
+
+.webLearner{
+    border: 2px solid black;
+    h3{
+       
+    }
+}
+.photo{
+    .pp{
+        box-sizing: border-box;
+    }
+}
