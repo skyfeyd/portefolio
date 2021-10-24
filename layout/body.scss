@@ -16,9 +16,12 @@ section{
 .helloThere{
     
     display: flex;
+    
     .title{
         font-size: 45px;
-          
+          margin-top: 80px;
+          margin-left: 80px;
+          text-align: left;
     }
 
 }
@@ -28,18 +31,26 @@ section{
     
     display: flex;
     h3{
-       
+        font-size: 30px;
+        margin-top: 14px;
+        margin-left: 80px;
+        text-align: left;
     }
 }
 
 
 .photo{
-    width: 300px;
     
+
     .pp{
+        display: flex;
+        width: 742px;
+        height: 494px;
+        position: absolute;
+        top :198px;
+        left: 1043px;
         box-sizing: border-box;
-        height: 150px;
-        border-radius: 25%;
+        
     }
 }
 
