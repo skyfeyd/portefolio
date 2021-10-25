@@ -1,4 +1,4 @@
-h1{
+.name{
     color: white;
     position: absolute;
     left: 0%;
@@ -16,21 +16,27 @@ h1{
     align-self: center;
     margin-left: 16px;
     font-size: 75px;
+    margin-top: 0px;
 }
 
-header{
-    background-image: linear-gradient(-45deg, #FF004B, #4101F5 );
-    height: 15vh;
+.navbar1{
+    background-color: $navabar_homepage_color;
+    opacity: $navbar_opacity;
+    height: $navbar_height;
     display: flex;
     justify-content: end;
-    box-shadow: black;
+    
 
     > nav{
         padding-top: 5vh;
         padding-left: 6vh;
     }
 
+    .navbar2{
+        background-color: $navbar_project_page;
+    }
 
+    @cli
     
 }   
 
@@ -46,5 +52,38 @@ header{
     }
     .menu{
         display: none;
+    }
+}
+
+//skill page
+.navbar2{
+    background-color: $navbar_skillspage_color;
+    opacity: $navbar_opacity;
+    height: $navbar_height;
+    display: flex;
+    justify-content: end;
+    box-shadow: black;
+
+    > nav{
+        padding-top: 5vh;
+        padding-left: 6vh;
+    }
+}
+
+
+//project page
+
+
+.navbar3{
+    background-color: $navbar_project_page;
+    opacity: $navbar_opacity;
+    height: $navbar_height;
+    display: flex;
+    justify-content: end;
+    box-shadow: black;
+
+    > nav{
+        padding-top: 5vh;
+        padding-left: 6vh;
     }
 }
