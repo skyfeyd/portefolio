@@ -37,15 +37,19 @@
 .photo{
     display: flex;
     justify-content: end;
+    z-index: 1;
     
     
     .pp{
+        position: relative;
         width: 742px;
         height: 494px;
-        position: relative;
+        
         top: -150px;
         margin: 70px;
         border-radius: 45px;
+        z-index: 1;
+        
     }
 }
 
@@ -121,7 +125,6 @@
 .project1{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
     
     :link{
@@ -132,7 +135,6 @@
 .project2{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
 
     :link{
@@ -144,7 +146,7 @@
 .project3{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
+    
     border-radius: 100px;
 
     :link{
@@ -156,7 +158,6 @@
 .project4{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
 
     :link{
@@ -168,7 +169,6 @@
 .project5{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
 
     :link{
@@ -180,7 +180,6 @@
 .project6{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
     
     :link{
@@ -191,7 +190,6 @@
 .project7{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
     
     :link{
@@ -202,7 +200,6 @@
 .project8{
     width: 270px;
     height: 270px;
-    border: 2px solid black;
     border-radius: 100px;
     
     :link{

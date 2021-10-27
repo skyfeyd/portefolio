@@ -32,28 +32,14 @@
         padding-left: 6vh;
     }
 
-    .navbar2{
-        background-color: $navbar_project_page;
-    }
-
-    @cli
+    
     
 }   
 
 
-@media screen and (max-width : 1137px) {
-    h1{
-        display: none;
 
-    }
-    .responsiveTitle{
-       opacity: 100%;
-    
-    }
-    .menu{
-        display: none;
-    }
-}
+
+
 
 //skill page
 .navbar2{
@@ -86,4 +72,69 @@
         padding-top: 5vh;
         padding-left: 6vh;
     }
+}
+
+
+
+
+
+
+@media screen and (max-width : 1137px) {
+    h1{
+        display: none;
+
+    }
+    .responsiveTitle{
+       opacity: 100%;
+    
+    }
+    .menu{
+        display: none;
+    }
+
+    .burger{
+        position: fixed;
+        width: 100%;
+        height: 30vh;
+        background-color: white;
+        z-index: 100;
+        opacity: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        color: black;
+        border: 2px solid black;
+        display: none;
+        
+        
+        
+    .burgTitle1 ,.burgTitle2{
+        color: black;
+        font-size: 35px;
+        opacity: 100%;
+    }
+
+    .burgMenu1 , .burgMenu2{
+        opacity: 100%;
+    }
+        
+    
+        :link{
+            text-decoration: none;
+        }
+    
+        .closeHamburger{
+            display: flex;
+            position: absolute;
+            top: 65px;
+            right: 40px;
+            opacity: 100%;
+            
+            
+        }
+    }
+    
+   
 }

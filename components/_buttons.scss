@@ -39,6 +39,8 @@
   
 }
 
+
+
 .hamburger .bar, .hamburger:after, .hamburger:before{
     content: '';
     display: block;
@@ -49,6 +51,30 @@
     margin-top: 0px;
     transition: 0.4s;
 }
+
+.closeHamburger{
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    opacity: 0%;
+    
+    .closeButton{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         color: white;    
+     }
+}
+
+.burgMenu1 , .burgMenu2{
+    opacity: 0%;
+}
+
+.burgTitle1 ,.burgTitle2{  
+    opacity: 0%;
+}
+
 
 @media screen and (max-width : 1137px) {
    .hamburger{
