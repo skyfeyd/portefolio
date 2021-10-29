@@ -105,9 +105,9 @@
         justify-content: center;
         list-style: none;
         color: black;
-        border: 2px solid black;
+        border: 3px solid black;
         display: none;
-        
+        transition: 1s ease;
         
         
     .burgTitle1 ,.burgTitle2{
@@ -131,6 +131,7 @@
             top: 65px;
             right: 40px;
             opacity: 100%;
+            cursor: pointer;
             
             
         }

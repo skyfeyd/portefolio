@@ -158,6 +158,196 @@
     position: relative;
   }
 }
+.skillMap {
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  grid-template-rows: 85vh;
+  background-image: url(../img/Untitled-1.png);
+}
+
+.skill1 {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  top: 400px;
+  left: 300px;
+}
+
+.skill1:hover .hoverInformation1 {
+  transition: 0.5s ease;
+}
+
+.hoverInformation1 {
+  display: none;
+  height: 100px;
+  width: 240px;
+  border-radius: 20px;
+  background-color: white;
+  align-items: center;
+}
+
+.imageSkill1 {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+}
+.imageSkill1 .imageS1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bar1 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar2 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar3 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar4 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar5 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 5px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.skill2 {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  top: 400px;
+  left: 800px;
+}
+
+.hoverInformation2 {
+  display: none;
+  height: 100px;
+  width: 240px;
+  border-radius: 20px;
+  background-color: white;
+  align-items: center;
+}
+
+.imageSkill2 {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+}
+.imageSkill2 .imageS2 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bar1_2 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar2_2 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar3_2 {
+  height: 70px;
+  width: 20px;
+  background-color: #FFDD00;
+  border: 1px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar4_2 {
+  height: 70px;
+  width: 20px;
+  border: 5px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.bar5_2 {
+  height: 70px;
+  width: 20px;
+  border: 5px solid #FFDD00;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .project {
   max-width: 100%;
   max-height: 100%;
@@ -292,7 +482,7 @@
 }
 
 .navbar2 {
-  background-color: darkblue;
+  background-color: #473CDC;
   opacity: 81%;
   height: 15vh;
   display: flex;
@@ -305,7 +495,7 @@
 }
 
 .navbar3 {
-  background-color: #FF1919;
+  background-color: #EB2727;
   opacity: 81%;
   height: 15vh;
   display: flex;
@@ -343,8 +533,9 @@
     justify-content: center;
     list-style: none;
     color: black;
-    border: 2px solid black;
+    border: 3px solid black;
     display: none;
+    transition: 1s ease;
   }
   .burger .burgTitle1, .burger .burgTitle2 {
     color: black;
@@ -363,6 +554,7 @@
     top: 65px;
     right: 40px;
     opacity: 100%;
+    cursor: pointer;
   }
 }
 
