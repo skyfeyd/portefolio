@@ -121,13 +121,11 @@
 .skill1{
     height: 20px;
     width: 20px;
-    background-color: white;
-    border-radius: 100%;
-    border: 2px solid white;
+    border-radius: 100%; 
     position: absolute;
     top:400px;
     left: 300px;
-    
+    transition: 0.5s ease;
 }
 
 .skill1:hover{
@@ -143,7 +141,7 @@
     width: 240px;
     border-radius: 20px;
     background-color: white;
-    
+    transition: 0.5s ease;
     align-items: center;
 }
 
@@ -151,6 +149,7 @@
     height: 90px;
     width: 90px;
     border-radius: 100%;
+    margin: 4px;
 
     .imageS1{
         height: 100%;
@@ -165,6 +164,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -175,7 +175,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -186,7 +186,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -197,7 +197,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -208,7 +208,7 @@
     background-color: #FFDD00;
     border: 5px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -219,20 +219,17 @@
 .skill2{
     height: 20px;
     width: 20px;
-    background-color: white;
     border-radius: 100%;
-    border: 2px solid white;
     position: absolute;
-    top:400px;
-    left: 800px;
-    
+    top: 200px;
+    left: 700px;
 }
 
 
 .hoverInformation2{
     display: none;
     height: 100px;
-    width: 240px;
+    width: 250px;
     border-radius: 20px;
     background-color: white;
     align-items: center;
@@ -240,9 +237,10 @@
 
 
 .imageSkill2{
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     border-radius: 100%;
+    
 
     .imageS2{
         height: 100%;
@@ -257,6 +255,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -267,7 +266,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -278,7 +277,7 @@
     background-color: #FFDD00;
     border: 1px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -288,7 +287,7 @@
     width: 20px;
     border: 5px solid #FFDD00;
     border-radius: 10px;
-    margin-left: 8px;
+    margin: 4px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -298,12 +297,344 @@
     width: 20px;
     border: 5px solid #FFDD00;
     border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.skill3{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%; 
+    position: absolute;
+    top:600px;
+    left: 900px;
+    transition: 0.5s ease;
+}
+
+.skill3:hover{
+    .hoverInformation1{
+        
+        transition: 0.5s ease;
+    }
+}
+
+.hoverInformation3{
+    display: none;
+    height: 100px;
+    width: 240px;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.5s ease;
+    align-items: center;
+}
+
+.imageSkill3{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    margin: 4px;
+
+    .imageS3{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.bar1_3{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar2_3{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar3_3{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar4_3{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar5_3{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 5px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.skill4{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%; 
+    position: absolute;
+    top:500px;
+    right: 300px;
+    transition: 0.5s ease;
+}
+
+.skill4:hover{
+    .hoverInformation1{
+        
+        transition: 0.5s ease;
+    }
+}
+
+.hoverInformation4{
+    display: none;
+    height: 100px;
+    width: 240px;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.5s ease;
+    align-items: center;
+}
+
+.imageSkill4{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    margin: 4px;
+
+    .imageS4{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.bar1_4{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    display: flex;
+}
+.bar2_4{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar3_4{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar4_4{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar5_4{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 5px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.skill5{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%; 
+    position: absolute;
+    top:500px;
+    right: 900px;
+    transition: 0.5s ease;
+
+}
+
+.skill5:hover{
+    .hoverInformation1{
+        
+        transition: 0.5s ease;
+    }
+}
+
+.hoverInformation5{
+    display: none;
+    height: 100px;
+    width: 248px;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.5s ease;
+    align-items: center;
+}
+
+.imageSkill5{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    margin: 8px;
+
+    .imageS5{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.bar1_5{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    display: flex;
+}
+.bar2_5{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 1px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar3_5{
+    height: 70px;
+    width: 20px;
+    background-color: #FFDD00;
+    border: 5px solid #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar4_5{
+    height: 70px;
+    width: 20px;
+    border: 5px solid #FFDD00;
+    background-color: #FFDD00;
+    border-radius: 10px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bar5_5{
+    height: 70px;
+    width: 20px;
+    
+    border: 5px solid #FFDD00;
+    border-radius: 10px;
     margin-left: 8px;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
+.titleSkill{
+    align-items: baseline;
+    text-align: center;
+    color: white;
+    margin: 10px;
+
+    :hover{
+        color: #FFDD00;
+    }
+}
+
+@media screen and (max-width : 1137px) {
+    .skill1{
+        position: absolute;
+        top: 300px;
+        left: 100px;
+    }
+
+    .skill2{
+        position: absolute;
+        top:600px;
+        left: 100px;
+    }
+
+    .skill3{
+        position: absolute;
+        top:400px;
+        left: 250px;
+    }
+
+    .skill4{
+        position: absolute;
+        top:700px;
+        left: 230px;
+    }
+
+    .skill5{
+        position: absolute;
+        top:550px;
+        left: 200px;
+    }
+
+}
 //page 3 project
 .project{
     max-width: 100%;
