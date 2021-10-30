@@ -617,7 +617,6 @@
   height: 70px;
   width: 20px;
   border: 5px solid #FFDD00;
-  background-color: #FFDD00;
   border-radius: 10px;
   margin: 4px;
   align-items: center;
@@ -778,6 +777,194 @@
   align-items: center;
 }
 
+.ProjectPresentation {
+  display: grid;
+  grid-template-columns: 500px 300px 300px 300px 300px;
+  grid-template-rows: 50px 100px 200px 200px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.titleProject {
+  grid-column: 1/6;
+  grid-row: 1;
+  text-align: center;
+  font-size: 40px;
+}
+
+.img1Project {
+  display: inline-block;
+  width: 500px;
+  height: 600px;
+  margin-left: 50px;
+  background-image: url(../img/cowboybebop.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+.img1Project .description1 {
+  height: 100%;
+  opacity: 0%;
+  color: darkviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img1Project:hover {
+  background-color: black;
+  opacity: 70%;
+}
+.img1Project:hover .description1 {
+  opacity: 100%;
+}
+
+.Presentation1 {
+  display: flex;
+  position: relative;
+  left: 600px;
+  top: -600px;
+  font-size: 24px;
+}
+
+.typeEtc1 {
+  font-size: 40px;
+  flex-direction: column;
+  margin-left: 75px;
+}
+
+.textPres1 {
+  grid-column: 2/5;
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+/*
+.img00{
+    //grid-column: 1;
+    //grid-row: 4;
+    display: inline-block;
+    width: 500px;
+    height: 200px;
+    margin: 40px;
+    background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+}*/
+.Limg1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.img11 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img22 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img33 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img44 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+@media screen and (max-width: 1137px) {
+  .img1Project {
+    width: 312px;
+    height: 326px;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  .ProjectPresentation {
+    grid-template-columns: 1fr;
+    grid-template-rows: 326px 100px 300px;
+  }
+
+  .titleProject {
+    grid-column: 1;
+    grid-row: 1;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+  }
+
+  .typeEtc1 {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 30px;
+  }
+
+  .textPres1 {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 30px;
+  }
+
+  .Limg1 {
+    display: inline-block;
+  }
+
+  .img11 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .img22 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img33 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img44 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 .name {
   color: white;
   position: absolute;
@@ -832,6 +1019,19 @@
   box-shadow: black;
 }
 .navbar3 > nav {
+  padding-top: 5vh;
+  padding-left: 6vh;
+}
+
+.navbar4 {
+  background-color: darkviolet;
+  opacity: 81%;
+  height: 15vh;
+  display: flex;
+  justify-content: end;
+  box-shadow: black;
+}
+.navbar4 > nav {
   padding-top: 5vh;
   padding-left: 6vh;
 }

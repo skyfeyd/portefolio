@@ -74,7 +74,21 @@
     }
 }
 
+//project page 1
 
+.navbar4{
+    background-color: $project1_color_navbar;
+    opacity: $navbar_opacity;
+    height: $navbar_height;
+    display: flex;
+    justify-content: end;
+    box-shadow: black;
+
+    > nav{
+        padding-top: 5vh;
+        padding-left: 6vh;
+    }
+}
 
 
 
