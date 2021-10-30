@@ -753,6 +753,253 @@
     align-items: center;
 }
 
+.prjTitle2{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle3{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle4{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle5{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle6{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle7{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+.prjTitle8{
+    text-align: center;
+    color: black;   
+    align-items: center;
+}
+
+@media screen and (max-width : 1137px) {
+    .project{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .project1{
+        grid-row: 1;
+        grid-column: 1;
+        height: 200px;
+        
+        .prjTitle1{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+
+    }
+
+    .project1:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle1{
+            opacity: 100%;
+            color: white;
+        }
+    }
+    
+    .project2{     
+        height: 200px;
+        
+        .prjTitle2{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project2:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle2{
+            opacity: 100%;
+            color: white;
+        }
+    }
+
+    .project3{
+        height: 200px;
+        
+        .prjTitle3{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+        
+    }
+
+    .project3:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle3{
+            opacity: 100%;
+            color: white;
+        }
+    }
+
+    .project4{
+        grid-row: 4;
+        grid-column: 1;
+        height: 200px;      
+       
+        .prjTitle4{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project4:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle4{
+            opacity: 100%;
+            color: white;
+        }
+    }
+
+    .project5{
+        grid-row: 5;
+        grid-column: 1;
+        height: 200px;
+        
+        .prjTitle5{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project5:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle5{
+            opacity: 100%;
+            color: white;
+        }
+    }
+    
+    .project6{
+        grid-row: 6;
+        grid-column: 1;
+        height: 200px;
+        
+        .prjTitle6{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project6:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle6{
+            opacity: 100%;
+            color: white;
+        }
+    }
+
+    .project7{
+        grid-row: 7;
+        grid-column: 1;
+        height: 200px;
+        
+        .prjTitle7{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project7:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle7{
+            opacity: 100%;
+            color: white;
+        }
+    }
+    .project8{
+        grid-row: 8;
+        grid-column: 1;
+        height: 200px;     
+       
+        .prjTitle8{
+            display: flex;
+            align-items: center;
+            margin-top: -125px;
+            justify-content: center;
+            opacity: 0%;
+            
+        }
+    }
+
+    .project8:hover{
+        background-color: black;
+        opacity: 54%;
+
+        .prjTitle8{
+            opacity: 100%;
+            color: white;
+        }
+    }
+    
+}
 
 // page project
 
@@ -945,6 +1192,7 @@
     }
 
     .img11{
+        
         margin-left: 30px;
         margin-bottom: 10px;
     }
