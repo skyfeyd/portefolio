@@ -2,107 +2,262 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'poppins';
 }
 
 
-
+.homepageGrid{
+    display: grid;
+    grid-template-columns: 120px 140px 120px 469px 131px 674px;
+    grid-template-rows:131px 129px 198px;
+    max-width: 1681px;
+    max-height: 623px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    
+}
 
 .helloThere{
-    
-    display: flex;
+    grid-column: 1/4;
+    grid-row: 1;
+
     
     .title{
         font-size: 45px;
-          margin-top: 100px;
-          margin-left: 80px;
-          text-align: left;
     }
 
 }
 
 
 .webLearner{
+    grid-column: 1/5;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
     
-    display: flex;
+
     h3{
-        font-size: 30px;
-        margin-top: 14px;
-        margin-left: 80px;
-        text-align: left;
+         font-size: 30px;
+         font-weight: normal;
+        
     }
 }
 
 
 .photo{
-    display: flex;
-    justify-content: end;
-    z-index: 1;
-    
+    grid-column: 6;
+    grid-row: 1/4;
     
     .pp{
-        position: relative;
-        width: 742px;
-        height: 494px;
-        
-        top: -150px;
-        margin: 70px;
-        border-radius: 45px;
-        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 102px;
         
     }
 }
+
+.hobby{
+    grid-column: 1/4;
+    grid-row: 3;
+    font-size: 34px;
+    font-weight: normal;
+    align-self: start;
+
+}
+
+.hobby1{
+    grid-column: 1;
+    grid-row: 3;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 100%;
+    justify-self: center;
+    align-self: center;
+
+    .iconfusée{
+        width: 100;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+
+}
+
+.hobbyText1{
+    opacity: 0%;
+    color: black;
+    transition: 1s ease;
+    
+}
+
+.hobby1:hover{
+    .hobbyText1{
+        opacity: 100%;      
+        color: black;
+    }
+}
+
+.hobby2{
+    grid-column: 2;
+    grid-row: 3;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    justify-self: center;
+    align-self: center;
+    .iconManette{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }   
+}
+
+.hobbyText2{
+    opacity: 0%;
+    color: black;
+    transition: 1s ease;
+}
+
+.hobby2:hover{
+    .hobbyText2{
+        opacity: 100%;
+    }
+}
+.hobby3{
+    grid-column: 3;
+    grid-row: 3;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    justify-self: center;
+    align-self: center;
+    .iconMusique{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.hobbyText3{
+    opacity: 0%;
+    color: black;
+    transition: 1s ease;
+    margin-bottom: -300px;
+}
+
+.hobby3:hover{
+    .hobbyText3{
+        opacity: 100%;
+    }
+}
+
 
 
 @media screen and (max-width : 1137px){
-    .helloThere{
-        margin-right: 20px;
-    }
-    .webLearner{
-        margin-right: 20px;
-    }
-
-    .photo{
+    .homepageGrid{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 50px;
+        align-items: start;
+        width: 100%;
         
+        /*
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 200px 100px 100px 449px 100px;
+        justify-self: center;
+        */
         
-        
-        .pp{
-            width: 426px;
-            height: 284px;
-            position: relative;
-            top: 20px;
+        .hobby1{
+            margin-right: 200px;
+        }
+
+        .hobby2{
+            margin-top: -100px;
+        }
+
+        .hobby3{
+            margin-left: 200px;
+            margin-top: -100px;
+        }
+
+        .photo{
+            width: 55%;
+            height: 55%;
             
-        } 
+            margin: 40px;
+            .pp{
+                border-radius: 23%;
+            }
+        }
+
+        
+        .iconGithub{
+        position: relative;
+        bottom: 75px;
+        left: 50px;
+        }
+        
     }
+}
+
+
+.footer{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    position: block;
+    bottom: 0px;
+    background-color: $navabar_homepage_color;
+    justify-content: center;
+    align-items: center;
     
 }
+.Twitter{
+    grid-column: 6;
+    grid-row: 4;
+    height: 45px;
+    width: 45px;
+    margin: 30px;
+    border-radius: 100%;
+    justify-self: start;
+    cursor: pointer;
 
-@media screen and (max-width : 1297px) {
-    .photo{
-        display: flex;
-        justify-content: center;
-        .pp{
-            width: 426px;
-            height: 284px;
-            position: relative;
-            top: 20px;
-            margin: 20px;
-        } 
+    .iconTwitter{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
-@media screen and (max-width : 1619px) {
-    .photo{
-        display: flex;
-        justify-content: end;
 
-        .pp{
-            width: 426px;
-            height: 284px;
-            position: relative;
-        } 
+
+.github{
+    grid-column:6;
+    grid-row: 4;
+    height: 45px;
+    width: 45px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 100%;
+    justify-self: end;
+    
+    
+    .iconGithub{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
     }
+}
+
+@media screen and (max-width : 1137px) {
+    .footer{
+        margin-top: 300px;
+    }
+    
 }
 
 //skill page
@@ -1028,7 +1183,7 @@
     width: 500px;
     height: 600px;
     margin-left: 50px;
-    background-image: url(../img/cowboybebop.jpg);
+    background-image: url(../img/Screen\ SeSo\ 1.png);
     background-size: cover;
     background-position:center ;
     border-radius: 50px;  
@@ -1036,9 +1191,9 @@
     .description1{
         height: 100%;
         opacity: 0%;
-        color: $project1_color_navbar;
+        color: $project1_color_navbar ;
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: center;
         
     }
@@ -1050,6 +1205,39 @@
     opacity: 70%;
 
     .description1{
+        opacity: 100%;
+    }
+    
+}
+
+
+.img1Project_2{
+    display: inline-block;
+    width: 500px;
+    height: 600px;
+    margin-left: 50px;
+    background-image: url(../img/channels4_profile.jpg);
+    background-size: cover;
+    background-position:center ;
+    border-radius: 50px;  
+    
+    .description1_2{
+        height: 100%;
+        opacity: 0%;
+        color: $project1_color_navbar ;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        
+    }
+    
+}
+
+.img1Project_2:hover{
+    background-color: black;
+    opacity: 70%;
+
+    .description1_2{
         opacity: 100%;
     }
     
@@ -1105,7 +1293,7 @@
     width: 300px;
     height: 200px;
     margin: 60px;
-    background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+    background-image: url(../img/Screen\ Fu\ SeSo.png);
     background-size: cover;
     background-position: center;
     border-radius: 45px;
@@ -1118,7 +1306,7 @@
     width: 300px;
     height: 200px;
     margin: 60px;
-    background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+    background-image: url(../img/Screen\ wen\ SeSo.png);
     background-size: cover;
     background-position: center;
     border-radius: 45px;
@@ -1130,7 +1318,7 @@
     width: 300px;
     height: 200px;
     margin: 60px;
-    background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+    background-image: url(../img/Enemy2\ Seso.png);
     background-size: cover;
     background-position: center;
     border-radius: 45px;
@@ -1143,11 +1331,63 @@
     width: 300px;
     height: 200px;
     margin: 60px;
-    background-image: url(../img/68e7263845_112725_saturne-28octobre2016.jpg);
+    background-image: url(../img/Enemy\ Seso.png);
     background-size: cover;
     background-position: center;
     border-radius: 45px;
 }
+
+.img11_2{
+    //grid-column: 2;
+    //grid-row: 4;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 60px;
+    background-image: url(../img/VitaScreen2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+}
+
+.img22_2{
+    //grid-column: 3;
+    //grid-row: 4;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 60px;
+    background-image: url(../img/Screen\ wen\ SeSo.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+}
+.img33_2{
+    //grid-column: 4;
+    //grid-row: 4;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 60px;
+    background-image: url(../img/Enemy2\ Seso.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+}
+
+.img44_2{
+    //grid-column: 5;
+    //grid-row: 4;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 60px;
+    background-image: url(../img/Enemy\ Seso.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+}
+
 
 @media screen and (max-width : 1137px) {
     
@@ -1210,6 +1450,31 @@
     }
     
     .img44{
+       
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .img11_2{
+        
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    .img22_2{        
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .img33_2{       
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .img44_2{
        
         margin-left: 30px;
         margin-top: 10px;
