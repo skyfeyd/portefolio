@@ -1,3 +1,4 @@
+//Name of the page or the project
 .name{
     color: white;
     position: absolute;
@@ -8,6 +9,17 @@
     ;
 }
 
+.name2{
+    color: black;
+    position: absolute;
+    left: 0%;
+    align-self: center;
+    margin-left: 16px;
+    font-size: 75px;
+    ;
+}
+
+//Responsive Title of the page
 .responsiveTitle{
     color: white;
     opacity: 0%;
@@ -18,7 +30,7 @@
     font-size: 75px;
     margin-top: 0px;
 }
-
+//Change color
 .responsiveTitle2{
     color: black;
     opacity: 0%;
@@ -30,7 +42,7 @@
     margin-top: 0px;
 }
 
-
+//navbar of the homepage 
 .navbar1{
     background-color: $navabar_homepage_color;
     opacity: $navbar_opacity;
@@ -53,7 +65,7 @@
 
 
 
-//skill page
+// navbar of the skill page
 .navbar2{
     background-color: $navbar_skillspage_color;
     opacity: $navbar_opacity;
@@ -69,9 +81,7 @@
 }
 
 
-//project page
-
-
+//nav of the project page
 .navbar3{
     background-color: $navbar_project_page;
     opacity: $navbar_opacity;
@@ -86,8 +96,7 @@
     }
 }
 
-//project page 1
-
+//navbar project page 1
 .navbar4{
     background-color: $project1_color_navbar;
     opacity: $navbar_opacity;
@@ -101,7 +110,7 @@
         padding-left: 6vh;
     }
 }
-
+//navbar project page 2
 .navbar5{
     background-color: $project2_color_navbar;
     opacity: $navbar_opacity;
@@ -115,7 +124,7 @@
         padding-left: 6vh;
     }
 }
-
+//navbar project page 3
 .navbar6{
     background-image: $project3_color_navbar ;
     opacity: $navbar_opacity;
@@ -130,18 +139,10 @@
     }
 }
 
-.name2{
-    color: black;
-    position: absolute;
-    left: 0%;
-    align-self: center;
-    margin-left: 16px;
-    font-size: 75px;
-    ;
-}
 
 
 
+// add some responsive yiiiis
 @media screen and (max-width : 1137px) {
     h1{
         display: none;

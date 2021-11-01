@@ -5,7 +5,7 @@
     font-family:'poppins';
 }
 
-
+//Homepage
 .homepageGrid{
     display: grid;
     grid-template-columns: 120px 140px 120px 469px 131px 674px;
@@ -57,6 +57,7 @@
     }
 }
 
+//Hobbies
 .hobby{
     grid-column: 1/4;
     grid-row: 3;
@@ -155,7 +156,7 @@
 }
 
 
-
+//Responsive of the homepage
 @media screen and (max-width : 1137px){
     .homepageGrid{
         display: flex;
@@ -261,7 +262,6 @@
 }
 
 //skill page
-
 .skillMap{
     max-width: 100%;
     max-height: 100%;
@@ -753,6 +753,7 @@
     }
 }
 
+// Responsive of the skill page
 @media screen and (max-width : 1137px) {
     .skill1{
         position: absolute;
@@ -840,6 +841,8 @@
     }
     
 }
+// I taught i had more project but i lost many
+
 /*
 .project4{
     grid-column: ;
@@ -924,7 +927,7 @@
     color: black;   
     align-items: center;
 }
-
+/*
 .prjTitle4{
     text-align: center;
     color: black;   
@@ -953,7 +956,7 @@
     text-align: center;
     color: black;   
     align-items: center;
-}
+}*/
 
 .iWillAdd{
     grid-column: 1/4;
@@ -976,7 +979,7 @@
     align-items: center;
     
 }
-
+// Responsive of the project page
 @media screen and (max-width : 1137px) {
     .project{
         display: flex;
@@ -1057,7 +1060,7 @@
             color: black;
         }
     }
-
+    /*
     .project4{
         grid-row: 4;
         grid-column: 1;
@@ -1170,7 +1173,7 @@
             opacity: 0%;
             
         }
-    }
+    }*/
 
     .project8:hover{
         background-color: black;
@@ -1191,7 +1194,6 @@
 // page project
 
 //1
-
 
 
 .ProjectPresentation{
@@ -1534,8 +1536,9 @@
     border-radius: 45px;
 }
 
+
+//And some responsive AGAIN
 @media screen and (max-width : 1137px) {
-    
 
     .img1Project{
         width: 312px;

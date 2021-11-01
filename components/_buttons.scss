@@ -1,4 +1,4 @@
-
+// menu Desktop
 .menu{
 
     .menu1, .menu2{
@@ -45,7 +45,7 @@
     }
 }
 
-
+//Menu Responsive
 .hamburger{
     position: relative;
     display: block;
@@ -99,7 +99,7 @@
     opacity: 0%;
 }
 
-
+//Responsive Activation of the Burger Menu
 @media screen and (max-width : 1137px) {
    .hamburger{
     opacity: 100%;
