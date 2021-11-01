@@ -215,7 +215,7 @@
     background-color: $navabar_homepage_color;
     justify-content: center;
     align-items: center;
-    
+
 }
 .Twitter{
     grid-column: 6;
@@ -271,7 +271,11 @@
     background-image: url(../img/Untitled-1.png);
     
 }
-
+.backgroundSkills{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}   
 
 .skill1{
     height: 20px;
@@ -1233,7 +1237,11 @@
         
     }
     
+    
+    
 }
+
+
 
 .img1Project:hover{
     background-color: black;
@@ -1251,7 +1259,7 @@
     width: 500px;
     height: 300px;
     margin-left: 50px;
-    background-image: url(../img/channels4_profile.jpg);
+    background-image: url(/img/channels4_profile.jpg)    ;
     background-size: cover;
     background-position:center ;
     border-radius: 50px;  
