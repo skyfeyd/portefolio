@@ -255,7 +255,7 @@
 
 @media screen and (max-width : 1137px) {
     .footer{
-        margin-top: 300px;
+        margin-top: 0px;
     }
     
 }
@@ -545,7 +545,6 @@
 .bar5_3{
     height: 70px;
     width: 20px;
-    background-color: #FFDD00;
     border: 5px solid #FFDD00;
     border-radius: 10px;
     margin: 4px;
@@ -629,9 +628,8 @@
 }
 .bar4_4{
     height: 70px;
-    width: 20px;
-    background-color: #FFDD00;
-    border: 1px solid #FFDD00;
+    width: 20px;  
+    border: 5px solid #FFDD00;
     border-radius: 10px;
     margin: 4px;
     align-items: center;
@@ -640,8 +638,7 @@
 }
 .bar5_4{
     height: 70px;
-    width: 20px;
-    background-color: #FFDD00;
+    width: 20px;  
     border: 5px solid #FFDD00;
     border-radius: 10px;
     margin: 4px;
@@ -759,13 +756,13 @@
 @media screen and (max-width : 1137px) {
     .skill1{
         position: absolute;
-        top: 300px;
+        top: 250px;
         left: 100px;
     }
 
     .skill2{
         position: absolute;
-        top:600px;
+        top: 600px;
         left: 100px;
     }
 
@@ -777,8 +774,8 @@
 
     .skill4{
         position: absolute;
-        top:700px;
-        left: 230px;
+        top: 350px;
+        left: 20px;
     }
 
     .skill5{
@@ -1311,6 +1308,15 @@
     
 }
 
+.ProjectPresentation_3{
+    display: grid;
+    grid-template-columns: 500px 300px 300px 300px 300px;
+    grid-template-rows:50px 100px 200px 200px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
 .Presentation1{
     display: flex;
     position: relative;
@@ -1443,8 +1449,8 @@
     border-radius: 45px;
 }
 .img33_2{
-    //grid-column: 4;
-    //grid-row: 4;
+    grid-column: 4;
+    grid-row: 4;
     display: inline-block;
     width: 300px;
     height: 200px;
@@ -1565,9 +1571,52 @@
         margin: 30px;
         
     }
+
+
+    .img1Project_2{
+        width: 312px;
+        height: 326px;
+    }
+
+
+    .ProjectPresentation_3{
+        grid-template-columns: 1fr;
+        grid-template-rows: 326px 100px 300px;
+    }
+
+    .titleProject_3{
+        grid-column: 1;
+        grid-row: 1;
+        height: 50px;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .img1Project_3{
+        width: 312px;
+        height: 326px;
+        margin: 35px;
+
+    }
+
+    .typeEtc1_3{
+        grid-column: 1;
+        grid-row: 2;
+        margin: 30px;
+        flex-direction: column;
+        
+    }
+    .textPres1_3{
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 100px;
+        margin: 100px;
+        
+    }
     
     .Limg1{
         display: inline-block;
+        margin-top: 200px;
     }
 
     .Limg1_2{
