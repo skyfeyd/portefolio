@@ -314,6 +314,7 @@
   max-height: 100%;
   display: grid;
   grid-template-rows: 85vh;
+  background-image: url(../img/Untitled-1.png);
 }
 
 .skill1 {
