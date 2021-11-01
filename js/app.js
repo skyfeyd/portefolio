@@ -16,6 +16,7 @@ const hoverInformation5 = document.querySelector('.hoverInformation5');
 bar.addEventListener('click',show);
 closeHamburger.addEventListener('click',close);
 
+
 skill1.addEventListener('mouseover',skillShow1)
 skill1.addEventListener('mouseout', skillClose1)
 

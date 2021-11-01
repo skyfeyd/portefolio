@@ -22,6 +22,30 @@
 }
 
 
+
+.menu_2{
+
+    .menu1_2, .menu2_2{
+        color: black;
+        margin-right: 50px;
+        font-size: 25px;
+        padding: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: all 0.4s ease-out;
+        cursor: pointer;
+        
+    }
+    
+    :hover{ 
+        color: grey;
+    }
+    :link{
+        text-decoration: none;
+    }
+}
+
+
 .hamburger{
     position: relative;
     display: block;

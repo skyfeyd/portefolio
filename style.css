@@ -21,6 +21,23 @@
   text-decoration: none;
 }
 
+.menu_2 .menu1_2, .menu_2 .menu2_2 {
+  color: black;
+  margin-right: 50px;
+  font-size: 25px;
+  padding: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+.menu_2 :hover {
+  color: grey;
+}
+.menu_2 :link {
+  text-decoration: none;
+}
+
 .hamburger {
   position: relative;
   display: block;
@@ -815,8 +832,8 @@
   max-height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 270px 270px 270px 270px;
-  grid-template-rows: 270px 270px;
+  grid-template-columns: 270px 270px 270px;
+  grid-template-rows: 270px 100px;
   align-items: center;
   justify-content: center;
   gap: 100px;
@@ -824,6 +841,8 @@
 }
 
 .project1 {
+  grid-column: 1;
+  grid-row: 1;
   width: 270px;
   height: 270px;
   border-radius: 100px;
@@ -833,6 +852,8 @@
 }
 
 .project2 {
+  grid-column: 2;
+  grid-row: 1;
   width: 270px;
   height: 270px;
   border-radius: 100px;
@@ -842,6 +863,8 @@
 }
 
 .project3 {
+  grid-column: 3;
+  grid-row: 1;
   width: 270px;
   height: 270px;
   border-radius: 100px;
@@ -850,51 +873,60 @@
   text-decoration: none;
 }
 
-.project4 {
-  width: 270px;
-  height: 270px;
-  border-radius: 100px;
-}
-.project4 :link {
-  text-decoration: none;
+/*
+.project4{
+    grid-column: ;
+    grid-row: 1;
+    width: 270px;
+    height: 270px;
+    border-radius: 100px;
+
+    :link{
+        text-decoration: none;
+    }
+
 }
 
-.project5 {
-  width: 270px;
-  height: 270px;
-  border-radius: 100px;
-}
-.project5 :link {
-  text-decoration: none;
+.project5{
+    width: 270px;
+    height: 270px;
+    border-radius: 100px;
+
+    :link{
+        text-decoration: none;
+    }
+
 }
 
-.project6 {
-  width: 270px;
-  height: 270px;
-  border-radius: 100px;
-}
-.project6 :link {
-  text-decoration: none;
+.project6{
+    width: 270px;
+    height: 270px;
+    border-radius: 100px;
+
+    :link{
+        text-decoration: none;
+    }
 }
 
-.project7 {
-  width: 270px;
-  height: 270px;
-  border-radius: 100px;
-}
-.project7 :link {
-  text-decoration: none;
+.project7{
+    width: 270px;
+    height: 270px;
+    border-radius: 100px;
+
+    :link{
+        text-decoration: none;
+    }
 }
 
-.project8 {
-  width: 270px;
-  height: 270px;
-  border-radius: 100px;
-}
-.project8 :link {
-  text-decoration: none;
-}
+.project8{
+    width: 270px;
+    height: 270px;
+    border-radius: 100px;
 
+    :link{
+        text-decoration: none;
+    }
+}*/
 .ImgProject1 {
   height: 100%;
   width: 100%;
@@ -953,6 +985,25 @@
   align-items: center;
 }
 
+.iWillAdd {
+  grid-column: 1/4;
+  grid-row: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.footer_project {
+  height: 15vh;
+  width: 100%;
+  margin-top: 130px;
+  display: flex;
+  position: block;
+  bottom: 0px;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1137px) {
   .project {
     display: flex;
@@ -983,11 +1034,12 @@
 
   .project2 {
     height: 200px;
+    width: 300px;
   }
   .project2 .prjTitle2 {
     display: flex;
     align-items: center;
-    margin-top: -125px;
+    margin-top: -60px;
     justify-content: center;
     opacity: 0%;
   }
@@ -998,7 +1050,7 @@
   }
   .project2:hover .prjTitle2 {
     opacity: 100%;
-    color: white;
+    color: black;
   }
 
   .project3 {
@@ -1018,7 +1070,7 @@
   }
   .project3:hover .prjTitle3 {
     opacity: 100%;
-    color: white;
+    color: black;
   }
 
   .project4 {
@@ -1130,6 +1182,10 @@
     opacity: 100%;
     color: white;
   }
+
+  .iWillAdd {
+    margin-top: 50px;
+  }
 }
 .ProjectPresentation {
   display: grid;
@@ -1137,6 +1193,7 @@
   grid-template-rows: 50px 100px 200px 200px;
   justify-content: center;
   gap: 30px;
+  margin-top: 50px;
 }
 
 .titleProject {
@@ -1176,7 +1233,7 @@
 .img1Project_2 {
   display: inline-block;
   width: 500px;
-  height: 600px;
+  height: 300px;
   margin-left: 50px;
   background-image: url(../img/channels4_profile.jpg);
   background-size: cover;
@@ -1200,6 +1257,33 @@
   opacity: 100%;
 }
 
+.img1Project_3 {
+  display: inline-block;
+  width: 500px;
+  height: 600px;
+  margin-left: 50px;
+  background-image: url(../img/Far2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+.img1Project_3 .description1_3 {
+  height: 100%;
+  opacity: 0%;
+  color: white;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.img1Project_3:hover {
+  background-color: black;
+  opacity: 100%;
+}
+.img1Project_3:hover .description1_3 {
+  opacity: 0%;
+}
+
 .Presentation1 {
   display: flex;
   position: relative;
@@ -1218,6 +1302,7 @@
   grid-column: 2/5;
   margin-left: 75px;
   font-size: 30px;
+  margin-top: 40px;
 }
 
 /*
@@ -1286,12 +1371,21 @@
   border-radius: 45px;
 }
 
+.Limg1_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  margin-top: -300px;
+}
+
 .img11_2 {
   display: inline-block;
   width: 300px;
   height: 200px;
   margin: 60px;
-  background-image: url(../img/VitaScreen2.png);
+  background-image: url(../img/VitaScreen1.png);
   background-size: cover;
   background-position: center;
   border-radius: 45px;
@@ -1302,7 +1396,7 @@
   width: 300px;
   height: 200px;
   margin: 60px;
-  background-image: url(../img/Screen\ wen\ SeSo.png);
+  background-image: url(../img/VitaScreen2.png);
   background-size: cover;
   background-position: center;
   border-radius: 45px;
@@ -1313,7 +1407,7 @@
   width: 300px;
   height: 200px;
   margin: 60px;
-  background-image: url(../img/Enemy2\ Seso.png);
+  background-image: url(../img/VitaScreen3.png);
   background-size: cover;
   background-position: center;
   border-radius: 45px;
@@ -1324,7 +1418,59 @@
   width: 300px;
   height: 200px;
   margin: 60px;
-  background-image: url(../img/Enemy\ Seso.png);
+  background-image: url(../img/VitaScreen4.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.Limg1_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+}
+
+.img11_3 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/Far\ Screen1.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img22_3 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/Far\ Screen2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img33_3 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/Far\ Screen3.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 45px;
+}
+
+.img44_3 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 60px;
+  background-image: url(../img/Far\ Screen4.png);
   background-size: cover;
   background-position: center;
   border-radius: 45px;
@@ -1364,6 +1510,15 @@
   }
 
   .Limg1 {
+    display: inline-block;
+  }
+
+  .Limg1_2 {
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .Limg1_3 {
     display: inline-block;
   }
 
@@ -1412,6 +1567,29 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .img11_3 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .img22_3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img33_3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img44_3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .name {
   color: white;
@@ -1424,6 +1602,17 @@
 
 .responsiveTitle {
   color: white;
+  opacity: 0%;
+  position: absolute;
+  left: 0%;
+  align-self: center;
+  margin-left: 16px;
+  font-size: 75px;
+  margin-top: 0px;
+}
+
+.responsiveTitle2 {
+  color: black;
   opacity: 0%;
   position: absolute;
   left: 0%;
@@ -1484,6 +1673,41 @@
   padding-left: 6vh;
 }
 
+.navbar5 {
+  background-color: #fae101;
+  opacity: 81%;
+  height: 15vh;
+  display: flex;
+  justify-content: end;
+  box-shadow: black;
+}
+.navbar5 > nav {
+  padding-top: 5vh;
+  padding-left: 6vh;
+}
+
+.navbar6 {
+  background-image: linear-gradient(40deg, #A400CC, #FF810D);
+  opacity: 81%;
+  height: 15vh;
+  display: flex;
+  justify-content: end;
+  box-shadow: black;
+}
+.navbar6 > nav {
+  padding-top: 5vh;
+  padding-left: 6vh;
+}
+
+.name2 {
+  color: black;
+  position: absolute;
+  left: 0%;
+  align-self: center;
+  margin-left: 16px;
+  font-size: 75px;
+}
+
 @media screen and (max-width: 1137px) {
   h1 {
     display: none;
@@ -1493,7 +1717,15 @@
     opacity: 100%;
   }
 
+  .responsiveTitle2 {
+    opacity: 100%;
+  }
+
   .menu {
+    display: none;
+  }
+
+  .menu_2 {
     display: none;
   }
 
