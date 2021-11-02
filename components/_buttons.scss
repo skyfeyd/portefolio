@@ -1,7 +1,7 @@
 // menu Desktop
 .menu{
 
-    .menu1, .menu2{
+    .menu1, .menu2, .menu3{
         color: white;
         margin-right: 50px;
         font-size: 25px;
@@ -22,28 +22,6 @@
 }
 
 
-
-.menu_2{
-
-    .menu1_2, .menu2_2{
-        color: black;
-        margin-right: 50px;
-        font-size: 25px;
-        padding: 13px;
-        padding-left: 20px;
-        padding-right: 20px;
-        transition: all 0.4s ease-out;
-        cursor: pointer;
-        
-    }
-    
-    :hover{ 
-        color: grey;
-    }
-    :link{
-        text-decoration: none;
-    }
-}
 
 //Menu Responsive
 .hamburger{
@@ -91,11 +69,11 @@
      }
 }
 
-.burgMenu1 , .burgMenu2{
+.burgMenu1 , .burgMenu2, .burgMenu3{
     opacity: 0%;
 }
 
-.burgTitle1 ,.burgTitle2{  
+.burgTitle1 ,.burgTitle2, .burgTitle3{  
     opacity: 0%;
 }
 

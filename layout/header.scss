@@ -43,13 +43,11 @@
 }
 
 //navbar of the homepage 
-.navbar1{
-    background-color: $navabar_homepage_color;
+.navbar{
     opacity: $navbar_opacity;
     height: $navbar_height;
     display: flex;
     justify-content: end;
-    
 
     > nav{
         padding-top: 5vh;
@@ -59,87 +57,6 @@
     
     
 }   
-
-
-
-
-
-
-// navbar of the skill page
-.navbar2{
-    background-color: $navbar_skillspage_color;
-    opacity: $navbar_opacity;
-    height: $navbar_height;
-    display: flex;
-    justify-content: end;
-    box-shadow: black;
-
-    > nav{
-        padding-top: 5vh;
-        padding-left: 6vh;
-    }
-}
-
-
-//nav of the project page
-.navbar3{
-    background-color: $navbar_project_page;
-    opacity: $navbar_opacity;
-    height: $navbar_height;
-    display: flex;
-    justify-content: end;
-    box-shadow: black;
-
-    > nav{
-        padding-top: 5vh;
-        padding-left: 6vh;
-    }
-}
-
-//navbar project page 1
-.navbar4{
-    background-color: $project1_color_navbar;
-    opacity: $navbar_opacity;
-    height: $navbar_height;
-    display: flex;
-    justify-content: end;
-    box-shadow: black;
-
-    > nav{
-        padding-top: 5vh;
-        padding-left: 6vh;
-    }
-}
-//navbar project page 2
-.navbar5{
-    background-color: $project2_color_navbar;
-    opacity: $navbar_opacity;
-    height: $navbar_height;
-    display: flex;
-    justify-content: end;
-    box-shadow: black;
-
-    > nav{
-        padding-top: 5vh;
-        padding-left: 6vh;
-    }
-}
-//navbar project page 3
-.navbar6{
-    background-image: $project3_color_navbar ;
-    opacity: $navbar_opacity;
-    height: $navbar_height;
-    display: flex;
-    justify-content: end;
-    box-shadow: black;
-
-    > nav{
-        padding-top: 5vh;
-        padding-left: 6vh;
-    }
-}
-
-
 
 
 // add some responsive yiiiis
@@ -157,9 +74,6 @@
      
      }
     .menu{
-        display: none;
-    }
-    .menu_2{
         display: none;
     }
 
@@ -181,13 +95,13 @@
         transition: 1s ease;
         
         
-    .burgTitle1 ,.burgTitle2{
+    .burgTitle1 ,.burgTitle2, .burgTitle3{
         color: black;
         font-size: 35px;
         opacity: 100%;
     }
 
-    .burgMenu1 , .burgMenu2{
+    .burgMenu1 , .burgMenu2, .burgMenu3{
         opacity: 100%;
     }
         

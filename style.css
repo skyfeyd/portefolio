@@ -4,7 +4,7 @@
   padding-left: 6vh;
 }
 
-.menu .menu1, .menu .menu2 {
+.menu .menu1, .menu .menu2, .menu .menu3 {
   color: white;
   margin-right: 50px;
   font-size: 25px;
@@ -18,23 +18,6 @@
   color: grey;
 }
 .menu :link {
-  text-decoration: none;
-}
-
-.menu_2 .menu1_2, .menu_2 .menu2_2 {
-  color: black;
-  margin-right: 50px;
-  font-size: 25px;
-  padding: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
-  transition: all 0.4s ease-out;
-  cursor: pointer;
-}
-.menu_2 :hover {
-  color: grey;
-}
-.menu_2 :link {
   text-decoration: none;
 }
 
@@ -77,11 +60,11 @@
   color: white;
 }
 
-.burgMenu1, .burgMenu2 {
+.burgMenu1, .burgMenu2, .burgMenu3 {
   opacity: 0%;
 }
 
-.burgTitle1, .burgTitle2 {
+.burgTitle1, .burgTitle2, .burgTitle3 {
   opacity: 0%;
 }
 
@@ -1697,79 +1680,13 @@
   margin-top: 0px;
 }
 
-.navbar1 {
-  background-color: black;
+.navbar {
   opacity: 81%;
   height: 15vh;
   display: flex;
   justify-content: end;
 }
-.navbar1 > nav {
-  padding-top: 5vh;
-  padding-left: 6vh;
-}
-
-.navbar2 {
-  background-color: #473CDC;
-  opacity: 81%;
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  box-shadow: black;
-}
-.navbar2 > nav {
-  padding-top: 5vh;
-  padding-left: 6vh;
-}
-
-.navbar3 {
-  background-color: #EB2727;
-  opacity: 81%;
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  box-shadow: black;
-}
-.navbar3 > nav {
-  padding-top: 5vh;
-  padding-left: 6vh;
-}
-
-.navbar4 {
-  background-color: darkviolet;
-  opacity: 81%;
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  box-shadow: black;
-}
-.navbar4 > nav {
-  padding-top: 5vh;
-  padding-left: 6vh;
-}
-
-.navbar5 {
-  background-color: #fae101;
-  opacity: 81%;
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  box-shadow: black;
-}
-.navbar5 > nav {
-  padding-top: 5vh;
-  padding-left: 6vh;
-}
-
-.navbar6 {
-  background-image: linear-gradient(40deg, #A400CC, #FF810D);
-  opacity: 81%;
-  height: 15vh;
-  display: flex;
-  justify-content: end;
-  box-shadow: black;
-}
-.navbar6 > nav {
+.navbar > nav {
   padding-top: 5vh;
   padding-left: 6vh;
 }
@@ -1791,10 +1708,6 @@
     display: none;
   }
 
-  .menu_2 {
-    display: none;
-  }
-
   .burger {
     position: fixed;
     width: 100%;
@@ -1812,12 +1725,12 @@
     display: none;
     transition: 1s ease;
   }
-  .burger .burgTitle1, .burger .burgTitle2 {
+  .burger .burgTitle1, .burger .burgTitle2, .burger .burgTitle3 {
     color: black;
     font-size: 35px;
     opacity: 100%;
   }
-  .burger .burgMenu1, .burger .burgMenu2 {
+  .burger .burgMenu1, .burger .burgMenu2, .burger .burgMenu3 {
     opacity: 100%;
   }
   .burger :link {
