@@ -1,5 +1,6 @@
 var x = document.querySelector('.img');
 var xc = document.querySelector('.content')
+
 var y = document.querySelector('.pres');
 var z = document.querySelector('.skills')
 var zl = document.querySelector('.skillList')
@@ -9,7 +10,7 @@ var r = document.querySelector('.r');
 var o = document.querySelector('.o');
 var g = document.querySelector('.g');
 var moving = false
-var deg = '-45';
+var deg = '90';
 
 
 close1();
@@ -48,11 +49,15 @@ function close1(){
         x.style.height = "0px";
         x.style.width = "0px"
         x.style.opacity = "0";
-        xc.style.height = "0px"
-        xc.style.width = "0px"
-        xc.style.opacity = '0'
+        xc.style.display = 'none';
+        
+
+        
+        
     }
-}
+
+    }
+
 
 function close2(){
     y.style.height = "0px";
@@ -151,6 +156,8 @@ function showX(){
     x.style.height = "454px"
     x.style.width = "477px"
     x.style.opacity = "1"
+    xc.style.display = "flex"
+    
 }
 
 function showY(){
