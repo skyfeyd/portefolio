@@ -363,7 +363,7 @@ body > .skills > .skillList {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 body > .skills > .skillList > .HTMLCSS {
   display: flex;
