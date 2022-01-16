@@ -181,7 +181,7 @@ function bigger2(){
 function bigger3(){
     if (z.style.height = '50px'){
         z.style.height = '212px'
-        z.style.width = '1452px'
+        z.style.width = '76%'
         zl.style.display = 'flex'
         
     }
