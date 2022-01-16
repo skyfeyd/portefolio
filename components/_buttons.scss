@@ -2,8 +2,8 @@
     display: flex;
     cursor: pointer;
     position: absolute;
-    top: 600px;
-    left: 1484px;
+    top: 60%;
+    left: 75%;
     align-items: center;
     justify-content: center;
     height: 148px;
@@ -29,7 +29,7 @@
     justify-self: start;
     align-self: flex-start;
     cursor: pointer;
-    >.r{
+    .r{
         height: 30px;
         width: 30px;
         background-color: #FD5656;
@@ -45,7 +45,7 @@
             margin-top: 12px;
         }
     }
-    >.o{
+    .o{
         height: 30px;
         width: 30px;
         background-color: #FDB156;
@@ -59,7 +59,7 @@
             margin-top: 12px;
         }
     }
-    >.g{
+    .g{
         height: 30px;
         width: 30px;
         background-color: #8DFD56;
@@ -73,7 +73,6 @@
             margin-top: 12px;
         }
     }
-
 
 }
 

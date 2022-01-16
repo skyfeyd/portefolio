@@ -20,7 +20,6 @@
         <div class="file1">
             <img  onclick="showX()" src="./img/Composant 1 – 7.png" alt="">
             <h2>Me.</h2>
-            
         </div>
         <div class="file2">
             <img  onclick="showY()" src="./img/Composant 1 – 7.png" alt="">
@@ -43,17 +42,23 @@
         <h2>Me.</h2>
         <div class="content">
             <img src="img/IMG_0118.png" alt="">
-            <a class="mainP" href="download/CV Raphaël Castelnau.psd" download><img src="img/Composant 14 – 1.png" alt="" ></a>
-            <a href="https://github.com/skyfeyd"><img src="img/Composant 17 – 1.png" alt=""></a>
-            <a href="https://twitter.com/RaphalCastelna6"><img src="img/Composant 16 – 1.png" alt=""></a>
+            <div class="buttons">
+                <a class="CV" href="download/CV Raphaël Castelnau.psd" download><h4>CV</h4><img src="img/file-download-solid.png" alt="" ></a>
+                <div class="logos">
+                    <a href="https://github.com/skyfeyd"><img src="img/Composant 17 – 1.png" alt=""></a>
+                    <a href="https://twitter.com/RaphalCastelna6"><img src="img/Composant 16 – 1.png" alt=""></a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="pres">
-        
         <button class="r" onclick="close2()"></button>
         <button class="o" onclick="minimise2()"></button>
         <button class="g" onclick="bigger2()"></button>
         <h2>Presentation.</h2>
+        <div class="Ycontent">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, perferendis autem. Dicta, voluptatem doloremque! Facilis? </p>
+        </div>
     </div>
     <div class="skills">
         
@@ -98,12 +103,12 @@
         <button class="g" onclick="bigger4()"></button>
         <h2>Projects.</h2>
         <div class="projectList">
-            <div class="project1"></div>
-            <div class="project2"></div>
-            <div class="project3"></div>
-            <div class="project4"></div>
-            <div class="project5"></div>
-            <div class="project6"></div>     
+            <div class="project1" onclick="openProject(this,'one')"></div>
+            <div class="project2" onclick="openProject(this,'one')"></div>
+            <div class="project3" onclick="openProject(this,'one')"></div>
+            <div class="project4" onclick="openProject(this,'one')"></div>
+            <div class="project5" onclick="openProject(this,'one')"></div>
+            <div class="project6" onclick="openProject(this,'one')"></div>     
         </div>
     </div>
 
