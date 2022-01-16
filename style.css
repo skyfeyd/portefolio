@@ -26,7 +26,7 @@
   display: flex;
   justify-self: start;
   align-self: flex-start;
-  cursor: pointer;
+  cursor: auto;
 }
 .img .r, .pres .r, .skills .r, .project .r {
   height: 30px;
@@ -38,6 +38,7 @@
   margin-top: 10px;
   margin-left: 10px;
   transition: 2ms ease-in-out;
+  cursor: pointer;
 }
 .img .r:hover, .pres .r:hover, .skills .r:hover, .project .r:hover {
   box-shadow: none;
@@ -52,6 +53,7 @@
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 7px;
+  cursor: pointer;
 }
 .img .o:hover, .pres .o:hover, .skills .o:hover, .project .o:hover {
   box-shadow: none;
@@ -66,6 +68,7 @@
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 7px;
+  cursor: pointer;
 }
 .img .g:hover, .pres .g:hover, .skills .g:hover, .project .g:hover {
   box-shadow: none;
@@ -228,7 +231,6 @@ body > .img, body .pres, body .skills, body .project {
   -webkit-backdrop-filter: blur(5px);
   border-radius: 38px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  resize: both;
 }
 body > .img > h2, body .pres > h2, body .skills > h2, body .project > h2 {
   font-family: poppins;
@@ -309,6 +311,17 @@ body > .img > .content > .buttons > .logos {
 body > .img > .content > .buttons > .logos > a {
   margin-left: 5px;
   margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+body > .img > .content > .buttons > .logos > a > img {
+  width: 58px;
+  height: 100%;
+}
+body > .img > .content > .buttons > .logos > a:hover {
+  background-color: white;
 }
 body > .pres {
   transition: 0.6s ease;
@@ -504,6 +517,11 @@ body > .project > .projectList > div:hover {
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+body > .project > .projectList > div > .MainLogo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body > .project > .projectList > div > .MainLogo1 > .logoP1 {
   width: 90%;
   height: 40%;
@@ -543,6 +561,15 @@ body > .project > .projectList > div > .p1Content > p {
   font-family: poppins;
   font-size: 25px;
   line-height: 40px;
+}
+body > .project > .projectList > div > .p1Content > .git {
+  height: 58px;
+  width: 58px;
+  border-radius: 50%;
+  margin: 20px;
+}
+body > .project > .projectList > div > .p1Content > .git:hover {
+  background-color: white;
 }
 body > .project > .projectList > div > .p1Content > .galerie {
   width: 90%;
@@ -626,6 +653,15 @@ body > .project > .projectList > div > .p2Content > p {
   font-size: 25px;
   line-height: 40px;
 }
+body > .project > .projectList > div > .p2Content > .git {
+  height: 58px;
+  width: 58px;
+  border-radius: 50%;
+  margin: 20px;
+}
+body > .project > .projectList > div > .p2Content > .git:hover {
+  background-color: white;
+}
 body > .project > .projectList > div > .p2Content > .galerie2 {
   width: 90%;
   height: 35%;
@@ -656,6 +692,10 @@ body > .project > .projectList > div > .p2Content > .galerie2 > div {
 }
 body > .project > .projectList > div > .p2Content > .galerie2 > div > img {
   width: 100%;
+  height: 60%;
+}
+body > .project > .projectList > div > .p2Content > .galerie2 > div .draco {
+  width: 70%;
   height: 100%;
 }
 body > .project > .projectList > div > .MainLogo3 {
@@ -685,6 +725,8 @@ body > .project > .projectList > div > .p3Content {
   position: relative;
 }
 body > .project > .projectList > div > .p3Content > span {
+  height: 50px;
+  width: 68px;
   position: absolute;
   top: 4%;
   right: 2%;
@@ -740,6 +782,10 @@ body > .project > .projectList > div > .p3Content > .galerie3 > div {
 }
 body > .project > .projectList > div > .p3Content > .galerie3 > div > img {
   width: 100%;
+  height: 80%;
+}
+body > .project > .projectList > div > .p3Content > .galerie3 > div > .stretch {
+  width: 90%;
   height: 100%;
 }
 
