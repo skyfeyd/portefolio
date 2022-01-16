@@ -6,8 +6,27 @@ var yc = document.querySelector('.Ycontent')
 
 var z = document.querySelector('.skills')
 var zl = document.querySelector('.skillList')
+
 var p = document.querySelector('.project');
 var pl = document.querySelector('.projectList');
+var mp = document.querySelector('.mp')
+
+var p1 = document.querySelector('.project1')
+var p1c = document.querySelector('.p1Content')
+var lp1 = document.querySelector('.logoP1')
+
+var p2 = document.querySelector('.project2')
+var p2c = document.querySelector('.p2Content')
+var lp2 = document.querySelector('.logoP2')
+var tp2 = document.querySelector('.titleP2')
+
+var p3 = document.querySelector('.project3')
+var p3c = document.querySelector('.p3Content')
+var lp3 = document.querySelector('.logoP3')
+var tp3 = document.querySelector('.titleP3')
+
+var p4 = document.querySelector('.project4')
+
 var r = document.querySelector('.r');
 var o = document.querySelector('.o');
 var g = document.querySelector('.g');
@@ -134,6 +153,7 @@ function minimise4(){
         p.style.height = '50px'
         p.style.width = '250px'
         pl.style.display = 'none';
+        mp.style.display = 'none';
     }
 }
 
@@ -169,10 +189,10 @@ function bigger3(){
 
 function bigger4(){
     if (p.style.height = '50px'){
-        p.style.height = '899px'
-        p.style.width = '1759px'
+        p.style.height= '70%'        
+        p.style.width = '90%'
         pl.style.display = 'flex';
-        
+        mp.style.display = 'flex'
     }
 }
 
@@ -250,39 +270,126 @@ function showY(){
 }
 
 function showZ(){
-    z.style.height= '212px'        
-    z.style.width = '76%'
-    z.style.opacity = '1'
-    zl.style.height = '212px'
-    zl.style.width = '1231px'
-    
+    console.log(draggableZ)
+    console.log(clickZ)
+    clickZ++
+    if(clickZ == 3){
+        z.style.height= '212px'         
+        z.style.width = '76%'
+        z.style.opacity = '1'
+        zl.style.height = '212px'
+        zl.style.width = '1231px'
+    }
+    if(clickZ == 1){
+        file3.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
+        file3.style.background =  'rgba( 255, 255, 255, 0.25)'
+        file3.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
+        file3.style.backdropFilter = 'blur( 12px )'
+        file3.style.WebkitBackdropFilter = 'blur(12px)'
+        dragElement(file3)
+        /*while(clickY = 1){
+            
+        }*/
+    }else{
+        file3.style.border = 'none'
+        file3.style.background =  'none'
+        file3.style.boxShadow = 'none'
+        file3.style.backdropFilter = 'none'
+        file3.style.WebkitBackdropFilter = 'none'
+    }
+    if (clickZ  > 2){
+        clickZ= 0
+    }
+
 }
 
 function showP(){
-    p.style.height= '70%'        
-    p.style.width = '90%'
-    p.style.opacity = '1'
-    pl.style.height= '899px'        
-    pl.style.width = '1759px'
-    pl.style.opacity = '1'
+    console.log(draggableZ)
+    console.log(clickZ)
+    clickP++
+    if(clickP == 3){
+        p.style.height= '70%'        
+        p.style.width = '90%'
+        p.style.opacity = '1'
+        pl.style.height= '899px'        
+        pl.style.width = '1759px'
+        pl.style.opacity = '1'
 
-    let allChildren = pl.children
+        let allChildren = pl.children
     for(let i=0; i < allChildren.length; i++) {
         allChildren[i].style.height = '300px'
         allChildren[i].style.width = '400px'
         allChildren[i].style.opacity = '1'
     }
+
+    }
+    if(clickP == 1){
+        file4.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
+        file4.style.background =  'rgba( 255, 255, 255, 0.25)'
+        file4.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
+        file4.style.backdropFilter = 'blur( 12px )'
+        file4.style.WebkitBackdropFilter = 'blur(12px)'
+        dragElement(file4)
+        /*while(clickY = 1){
+            
+        }*/
+    }else{
+        file4.style.border = 'none'
+        file4.style.background =  'none'
+        file4.style.boxShadow = 'none'
+        file4.style.backdropFilter = 'none'
+        file4.style.WebkitBackdropFilter = 'none'
+    }
+    if (clickP  > 2){
+        clickP= 0
+    }
+
 }
 
 function openProject(obj, abc){
+    console.log(clic)
     var project = obj
-    clic++
+    if(project != p4){
+        clic++
+    }
     if (clic == 1){
     project.style.height = '90%'
     project.style.width = '90%'
+    } if (project.style.height != '300px'){
+     if (project == p1){
+        lp1.style.display = 'none'
+        p1c.style.display = 'flex'
+        p1.style.hover = 'none'
+        
+    } if(project == p2) {
+        lp2.style.display = 'none'
+        p2c.style.display = 'flex'
+        p2.style.hover = 'none'
+        tp2.style.display = 'none'
+    } if(project == p3) {
+        lp3.style.display = 'none'
+        p3c.style.display = 'flex'
+        p3.style.hover = 'none'
+        tp3.style.display = 'none'
+    }
     } if (clic == 2) {
         project.style.height = '300px'
         project.style.width = '400px'
+        if (project.style.height != '90%'){
+            if (project == p1){
+                lp1.style.display = 'flex'
+                p1c.style.display = 'none'
+            }if(project == p2) {
+                lp2.style.display = 'flex'
+                p2c.style.display = 'none'
+                tp2.style.display = 'flex'
+            }
+            if(project == p3) {
+                lp3.style.display = 'flex'
+                p3c.style.display = 'none'
+                tp3.style.display = 'flex'
+            }
+        }
     }
     if(clic >2){
         clic = 0
