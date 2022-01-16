@@ -210,17 +210,19 @@ body{
             left: 0;
             right: 0;
             top: 15%;
+
+            >img{
+                height: 80%;
+                width: 100%;
+                display: flex;
+            }
             >.buttons{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
                 margin-top: 20px;
-                >img{
-                    height: 40%;
-                    width: 50%;
-                    display: flex;
-                }
+                
 
             
 
@@ -306,6 +308,7 @@ body{
         bottom: 100px;
         left: 51px;
         display: flex;
+
 
         >.skillList{
             height: 0px;
