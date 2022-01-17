@@ -275,10 +275,11 @@ function showZ(){
     clickZ++
     if(clickZ == 3){
         z.style.height= '212px'         
-        z.style.width = '76%'
+        z.style.width = '78%'
         z.style.opacity = '1'
         zl.style.height = '212px'
-        zl.style.width = '1231px'
+        zl.style.width = '100%'
+        zl.style.display = 'flex'
     }
     if(clickZ == 1){
         file3.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
@@ -314,6 +315,7 @@ function showP(){
         pl.style.height= '899px'        
         pl.style.width = '1759px'
         pl.style.opacity = '1'
+        pl.style.display = 'flex'
 
         let allChildren = pl.children
     for(let i=0; i < allChildren.length; i++) {

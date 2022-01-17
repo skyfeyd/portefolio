@@ -311,21 +311,24 @@ body{
 
 
         >.skillList{
-            height: 0px;
-            width: 0px;
             transition: 0.1s ease;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: start;
             margin-left: 5%;
+            overflow-y: scroll;
+            scrollbar-width: none;
+
             >.HTMLCSS{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 border-right: 5px solid black;
-                padding-right: 2%;
+                padding: 2%;
+                padding-top: 0%;
+                padding-bottom: 0%;
                 >img{
                     margin: 5px;
                 }
@@ -343,14 +346,14 @@ body{
                 }
             }
             >.JS{
-                
-                margin-left: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 border-right: 5px solid black;
-                padding-right: 2%;
+                padding: 2%;
+                padding-top: 0%;
+                padding-bottom: 0%;
                 >h2{
                     font-family: poppins;
                     font-weight: bolder;
@@ -365,16 +368,19 @@ body{
                 >img{
                     margin: 5px;
                 }
+
             }
 
             >.PHP{
-                margin-left: 50px;
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 border-right: 5px solid black;
-                padding-right: 2%;
+                padding: 2%;
+                padding-top: 0%;
+                padding-bottom: 0%;
                 >h2{
                     font-family: poppins;
                     font-weight: bolder;
@@ -392,13 +398,14 @@ body{
             }
 
             >.PYTHON{
-                margin-left: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 border-right: 5px solid black;
-                padding-right: 2%;
+                padding: 2%;
+                padding-top: 0%;
+                padding-bottom: 0%;
                 >h2{
                     font-family: poppins;
                     font-weight: bolder;
@@ -416,12 +423,13 @@ body{
             }
 
             >.UNITY{
-                margin-left: 70px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-
+                padding: 2%;
+                padding-top: 0%;
+                padding-bottom: 0%;
                 >h2{
                     font-family: poppins;
                     font-weight: bolder;

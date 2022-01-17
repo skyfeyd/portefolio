@@ -29,6 +29,7 @@
   cursor: auto;
 }
 .img .r, .pres .r, .skills .r, .project .r {
+  position: relative;
   height: 30px;
   width: 30px;
   background-color: #FD5656;
@@ -356,14 +357,14 @@ body > .skills {
   display: flex;
 }
 body > .skills > .skillList {
-  height: 0px;
-  width: 0px;
   transition: 0.1s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin-left: 5%;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 body > .skills > .skillList > .HTMLCSS {
   display: flex;
@@ -371,7 +372,9 @@ body > .skills > .skillList > .HTMLCSS {
   align-items: center;
   flex-direction: column;
   border-right: 5px solid black;
-  padding-right: 2%;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 body > .skills > .skillList > .HTMLCSS > img {
   margin: 5px;
@@ -388,13 +391,14 @@ body > .skills > .skillList > .HTMLCSS > .title > h2 {
   margin-right: 15px;
 }
 body > .skills > .skillList > .JS {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-right: 5px solid black;
-  padding-right: 2%;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 body > .skills > .skillList > .JS > h2 {
   font-family: poppins;
@@ -409,13 +413,14 @@ body > .skills > .skillList > .JS > img {
   margin: 5px;
 }
 body > .skills > .skillList > .PHP {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-right: 5px solid black;
-  padding-right: 2%;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 body > .skills > .skillList > .PHP > h2 {
   font-family: poppins;
@@ -430,13 +435,14 @@ body > .skills > .skillList > .PHP > img {
   margin: 5px;
 }
 body > .skills > .skillList > .PYTHON {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-right: 5px solid black;
-  padding-right: 2%;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 body > .skills > .skillList > .PYTHON > h2 {
   font-family: poppins;
@@ -451,11 +457,13 @@ body > .skills > .skillList > .PYTHON > img {
   margin: 5px;
 }
 body > .skills > .skillList > .UNITY {
-  margin-left: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 body > .skills > .skillList > .UNITY > h2 {
   font-family: poppins;
