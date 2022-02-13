@@ -1,11 +1,14 @@
 var x = document.querySelector('.img');
 var xc = document.querySelector('.content')
+var xb = document.querySelector('.imgButton')
 
 var y = document.querySelector('.pres');
 var yc = document.querySelector('.Ycontent')
+var yb = document.querySelector('.presButton')
 
 var z = document.querySelector('.skills')
 var zl = document.querySelector('.skillList')
+var yl = document.querySelector('.skillButton')
 
 var p = document.querySelector('.project');
 var pl = document.querySelector('.projectList');
@@ -47,6 +50,12 @@ var file3 = document.querySelector('.file3')
 var file4 = document.querySelector('.file4')
 
 var clic = 0
+
+//responsive design
+var w1 = window.matchMedia("(max-width: 600px)")
+
+
+
  
 
 close1();
@@ -71,8 +80,6 @@ function createHex() {
   
 function generate() {
 
-
-
 var gradient = "linear-gradient(" + deg + "deg, " + "#" + createHex() + ", " + "#" + createHex() +")";
 
 document.getElementById('bg').style.background = gradient;
@@ -94,6 +101,8 @@ function close1(){
         x.style.width = "0px"
         x.style.opacity = "0";
         xc.style.display = 'none';
+        xb.style.display = 'none';
+        
  
     }
 
@@ -107,12 +116,15 @@ function close2(){
     y.style.height = "0px";
     y.style.width = "0px"
     y.style.opacity = "0";
+    yc.style.display = "none"
+    yb.style.display = "none"
 }
 
 function close3(){
     z.style.height = "0px";
     z.style.width = "0px"
     z.style.opacity = "0";
+    zb.style.opacity = "0";
 }
 
 function close4(){
@@ -162,8 +174,9 @@ function bigger1(){
         x.style.height = "40%"
         x.style.width = "20%"
         xc.style.display = 'flex'
-        
-        
+    }
+    if(w1.matches) {
+        x.style.width = "90%"
     }
 }
 
@@ -174,6 +187,11 @@ function bigger2(){
         y.style.width = '40%'
         yc.style.display = 'flex'
     }
+    if (w1.matches){
+        y.style.width = '100%'
+        y.style.height = '65%'
+    }
+
 }
 
 
@@ -202,10 +220,19 @@ function showX(){
     clickX += 1
     clickY = 0
     if (clickX == 3){
-    x.style.height = "40%"
-    x.style.width = "20%"
-    x.style.opacity = "1"
-    xc.style.display = "flex"
+        if(w1.matches) {
+            x.style.width = "90%"
+            x.style.height = "40%"
+            x.style.opacity = '1'
+            xc.style.display = "flex"
+            xb.style.display = "flex"
+        }else{
+            x.style.height = "40%"
+            x.style.width = "20%"
+            x.style.opacity = "1"
+            xc.style.display = "flex"
+            xb.style.display = "flex"
+        }
     }
     if (clickX == 1) {
         draggableX = true
@@ -241,9 +268,19 @@ function showY(){
     console.log(clickY)
     clickY++
     if(clickY == 3){
-        y.style.height= '44%'        
-        y.style.width = '40%'
-        y.style.opacity = '1'
+        if(w1.matches) {
+            y.style.width = '100%'
+            y.style.height = '65%'
+            y.style.opacity = '1'
+            yc.style.display = 'flex'
+            yb.style.display = 'flex'
+        }else{
+            y.style.height= '44%'        
+            y.style.width = '40%'
+            y.style.opacity = '1'
+            yc.style.display = 'flex'
+            yb.style.display = 'flex'
+        }
     }
     if(clickY == 1){
         file2.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
@@ -265,22 +302,31 @@ function showY(){
     if (clickY  > 2){
         clickY = 0
     }
-    
-    
+
 }
 
 function showZ(){
     console.log(draggableZ)
     console.log(clickZ)
     clickZ++
-    if(clickZ == 3){
-        z.style.height= '212px'         
-        z.style.width = '78%'
-        z.style.opacity = '1'
-        zl.style.height = '212px'
-        zl.style.width = '100%'
-        zl.style.display = 'flex'
-    }
+        if (clickZ == 3){
+            if(w1.matches) {
+                z.style.width = "90%"
+                z.style.height = "40%"
+                z.style.opacity = '1'
+                zc.style.display = "flex"
+                zb.style.display = "flex"
+            }else{
+                z.style.height= '212px'         
+                z.style.width = '72%'
+                z.style.opacity = '1'
+                zl.style.height = '212px'
+                zl.style.width = '90%'
+                zl.style.flexWrap = "wrap"
+            }
+        }
+        
+    
     if(clickZ == 1){
         file3.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
         file3.style.background =  'rgba( 255, 255, 255, 0.25)'

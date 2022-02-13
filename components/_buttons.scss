@@ -14,6 +14,7 @@
     border: 1px solid #FFFFFF;
     border-style: none;
     opacity: 1;
+    transition: 0.6s ease-in-out;
 
     >h2{
         font-family: poppins;
@@ -31,7 +32,14 @@
     cursor: auto
     ;
 
-    
+    >.buttons{
+        width: 120px;
+        height: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+    }
+
     .r{
         position: relative;
         height: 30px;
@@ -82,3 +90,21 @@
 
 }
 
+@media only screen and (max-width : 600px) {
+    .ChangeWallpaper{
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        top: 93.5% ;
+        
+        left: 0;
+        right: 0;
+    }
+
+    
+
+    
+
+    
+
+}
