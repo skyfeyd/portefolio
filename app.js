@@ -69,7 +69,7 @@ close4()
 
 
 file.forEach(file => {
-    addEventListener('dblclick', event => {
+    addEventListener('click', event => {
         console.log(event.target.className)
         if (event.target.className === 'file1')
         {
@@ -143,8 +143,8 @@ file.forEach(file => {
                 }
 
             }else{
-                skills.style.height= '30%'        
-                skills.style.width = '85%'
+                skills.style.height= '22%'        
+                skills.style.width = '70%'
                 skills.style.opacity = '1'
                 //skills.style.transform = "translateY(300px)";
                 //yc.style.display = 'flex'
