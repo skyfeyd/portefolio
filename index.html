@@ -18,35 +18,37 @@
         <h2 class="PO">Portefolio</h2>
     </nav>
     <div class="files">
-        <div class="file1">
-            <img  onclick="showX()" src="./img/Composant 1 – 7.png" alt="">
+        <div class="file file1">
+            <img class="file1" src="./img/Composant 1 – 7.png" alt="">
             <h2>Me.</h2>
         </div>
-        <div class="file2">
-            <img  onclick="showY()" src="./img/Composant 1 – 7.png" alt="">
+        <div class="file file2">
+            <img class="file2" src="./img/Composant 1 – 7.png" alt="">
             <h2>Presentation.</h2>
             
         </div>
-        <div class="file3">
-            <img  onclick="showZ()" src="./img/Composant 1 – 7.png" alt="">
+        <div class="file file3">
+            <img class="file3" src="./img/Composant 1 – 7.png" alt="">
             <h2>Skills.</h2>
         </div>
-        <div class="file4">
-            <img  onclick="showP()" src="./img/Composant 1 – 7.png" alt="">
+        <div class="file file4">
+            <img class="file4" src="./img/Composant 1 – 7.png" alt="">
             <h2>Project</h2>
         </div>
     </div>
     <div class="img">
-    <div class="buttons imgButton">
-        <button class="r" onclick="close1()"></button>
-        <button class="o" onclick="minimise1()"></button>
-        <button class="g" onclick="bigger1()"></button>
-    </div>
-        <h2>Me.</h2>
+        <div class="head">
+            <div class="buttons f1">
+                <span class="close f1"></span>
+                <span class="minimise f1"></span>
+                <span class="bigger f1"></span>
+            </div>
+            <h2>Me.</h2>
+        </div>
         <div class="content">
             <img src="img/IMG_0118.png" alt="">
             <div class="buttons">
-                <a class="CV" href="download/CV Raphaël Castelnau.png" download><h4>CV</h4><img src="img/file-download-solid.png" alt="" ></a>
+                <a class="CV" href="download/CV Raphaël Castelnau light.pdf" download><h4>CV</h4><img src="img/file-download-solid.png" alt="" ></a>
                 <div class="logos">
                     <a href="https://github.com/skyfeyd" target="_blank"><img src="img/Composant 17 - 1.svg" alt=""></a>
                     <a href="https://www.linkedin.com/in/rapha%C3%ABl-castelnau-539437207/" target="_blank"><img src="img/iconmonstr-linkedin-3.svg" alt=""></a>
@@ -55,12 +57,15 @@
         </div>
     </div>
     <div class="pres">
-        <div class="buttons presButton">
-            <button class="r" onclick="close2()"></button>
-            <button class="o" onclick="minimise2()"></button>
-            <button class="g" onclick="bigger2()"></button>
+        <div class="head">
+            <div class="buttons f2">
+                <span class="close f2"></span>
+                <span class="minimise f2"></span>
+                <span class="bigger f2"></span>
+            </div>
+            <h2>Presentation.</h2>
         </div>
-        <h2>Presentation.</h2>
+        
         <div class="Ycontent">
             <p>
                 Hello! I am Raphaël Castelau, I'm a nineteen years old student in web development
@@ -72,12 +77,15 @@
         </div>
     </div>
     <div class="skills">
-        <div class="buttons skillsButton">
-            <button class="r" onclick="close3()"></button>
-            <button class="o" onclick="minimise3()"></button>
-            <button class="g" onclick="bigger3()"></button>
+        <div class="head">
+            <div class="buttons f3">
+                <span class="close f3"></span>
+                <span class="minimise f3"></span>
+                <span class="bigger f3"></span>
+            </div>
+            <h2>Skills.</h2>
         </div>
-        <h2>Skills.</h2>
+        
         <div class="skillList">
             <div class="HTMLCSS">
                 <div class="title">
@@ -85,7 +93,7 @@
                     <h2>CSS</h2>
                 </div>
                 <img src="img/HTML-CSS.png" alt="">
-                <img src="img/Rectangle 13.png" alt="">
+                <span class="bar"></span>
             </div>
             <div class="JS">
                 <h2>JS</h2>
@@ -95,33 +103,40 @@
             <div class="PHP">
                 <h2>PHP</h2>
                 <img class="phpL" src="img/php-brands.svg" alt="">
-                <img src="img/Composant 13 – 1.png" alt="">
+                <span class="bar"></span>
             </div>
             <div class="PYTHON">
                 <h2>PYTHON</h2>
                 <img class="pythonL" src="img/python-brands.svg" alt="">
-                <img src="img/Composant 12 – 1.png" alt="">
+                <span class="bar"></span>
             </div>
             <div class="UNITY">
                 <h2>UNITY</h2>
                 <img class="unityL" src="img/unity-brands.svg" alt="">
-                <img src="img/Composant 12 – 1.png" alt="">
+                <span class="bar"></span>
+            </div>
+            <div class="SYMFONY">
+                <h2>SYMFONY</h2>
+                <img class="unityL" src="img/symfony-brands.svg" alt="">
+                <span class="bar"></span>
             </div>
         </div>
     </div>
-    <div class="project">
-        <div class="buttons projectButton">
-            <button class="r" onclick="close4()"></button>
-            <button class="o" onclick="minimise4()"></button>
-            <button class="g" onclick="bigger4()"></button>
+    <div class="projects">
+        <div class="head">
+            <div class="buttons f4">
+                <span class="close f4"></span>
+                <span class="minimise f4"></span>
+                <span class="bigger f4"></span>
+            </div>
+            <h2>Projects.</h2>
         </div>
-        <h2>Projects.</h2>
         <div class="projectList">
-            <div class="project1" onclick="openProject(this,'one')">
+            <div class="project PEPIF">
                 <div class="MainLogo1">
                     <img class="logoP1" src="img/p1/rtgergterger-removebg-preview_1.png" alt="">
                 </div>
-                <div class="p1Content">
+                <div class="p1Content responsiveProject ">
                     <h4>Project BAP PEPIF</h4>
                     <span><img src="img/p1/django-logo-positive.svg" alt=""></span>
                     <p>Pepif is a non profit association Who, thanks to horse patrols, warns of the risk of fires in a southern region of the France (Provence-Alpes-Côte d'Azur).
@@ -137,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project2" onclick="openProject(this,'one')">
+            <div class="project POKAPI">
                 <div class="MainLogo2">
                     <img class="logoP2" src="img/p2/Composant 14 – 1.png" alt="">
                     <h5 class="titleP2">The poke project</h4>
@@ -153,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project3" onclick="openProject(this,'one')">
+            <div class="project MOCKUPS">
                 <div class="MainLogo3">
                     <img class="logoP3" src="img/p3/Component 1.png" alt="">
                     <h5 class="titleP3">Mockup</h4>
@@ -170,6 +185,61 @@
                     </div>
                 </div>
             </div>
+            <div class="project POO">
+                <div class="MainLogo4">
+                    <img class="logoP4" src="img/p4/logo.png" alt="">
+                    <h5 class="titleP4">SPA website</h4>
+                </div>
+                <div class="p4Content">
+                    <h4>Spa Website</h4>
+                    <span><img src="img/php-brands.svg" alt=""></span>
+                    <p>In the context of a PHP nativ course we had to do a fake SPA (Animal protection Society in France) website. The website have a user management systeme with login and sign in pages, there is also an admin page that allow to the admin to delete user. Since is the SPA website user can add the animals they own in the database and see a list of those animals. </p>
+                    <a class="link" href="https://spapoo.000webhostapp.com/index.php">Check it out !</a>
+                    <div class="galerie4    ">
+                      <div><img src="img/p3/Desktop - 1.svg" alt=""></div>
+                      <div><img src="img/p3/Desktop - 3.png" alt=""></div>
+                      <div><img class="stretch" src="img/p3/Desktop - 7.png" alt=""></div>
+                      <div><img src="img/p3/Desktop - 5.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="project sf1">
+                <div class="MainLogo5">
+                    <img class="logoP5" src="img/p5/Untitled-1-copy.png" alt="">
+                    <h5 class="titleP4">website</h4>
+                </div>
+                <div class="p5Content">
+                    <h4>Spa Website</h4>
+                    <span><img src="img/symfony-brands.svg" alt=""></span>
+                    <p>In the context of a PHP nativ course we had to do a fake SPA (Animal protection Society in France) website. The website have a user management systeme with login and sign in pages, there is also an admin page that allow to the admin to delete user. Since is the SPA website user can add the animals they own in the database and see a list of those animals. </p>
+                    <a class="link" href="https://spapoo.000webhostapp.com/index.php">Check it out !</a>
+                    <div class="galerie5    ">
+                      <div><img src="img/p3/Desktop - 1.svg" alt=""></div>
+                      <div><img src="img/p3/Desktop - 3.png" alt=""></div>
+                      <div><img class="stretch" src="img/p3/Desktop - 7.png" alt=""></div>
+                      <div><img src="img/p3/Desktop - 5.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="project sf2">
+                <div class="MainLogo6">
+                    <img class="logoP6" src="img/p6/Adidas-Shoes-PNG-Transparent 1 - Copy.png" alt="">
+                    <h5 class="titleP4">Shoes website</h4>
+                </div>
+                <div class="p6Content">
+                    <h4>Spa Website</h4>
+                    <span><img src="img/symfony-brands.svg" alt=""></span>
+                    <p>In the context of a PHP nativ course we had to do a fake SPA (Animal protection Society in France) website. The website have a user management systeme with login and sign in pages, there is also an admin page that allow to the admin to delete user. Since is the SPA website user can add the animals they own in the database and see a list of those animals. </p>
+                    <a class="link" href="https://spapoo.000webhostapp.com/index.php">Check it out !</a>
+                    <div class="galerie6    ">
+                      <div><img src="img/p3/Desktop - 1.svg" alt=""></div>
+                      <div><img src="img/p3/Desktop - 3.png" alt=""></div>
+                      <div><img class="stretch" src="img/p3/Desktop - 7.png" alt=""></div>
+                      <div><img src="img/p3/Desktop - 5.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
             
         </div>
         <h3 class="mp"></h3>

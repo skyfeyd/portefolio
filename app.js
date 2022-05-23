@@ -1,38 +1,22 @@
-var x = document.querySelector('.img');
-var xc = document.querySelector('.content')
-var xb = document.querySelector('.imgButton')
+const img = document.querySelector('.img')
+const pres = document.querySelector('.pres')
+const skills = document.querySelector('.skills')
+const project = document.querySelector('.projects')
 
-var y = document.querySelector('.pres');
-var yc = document.querySelector('.Ycontent')
-var yb = document.querySelector('.presButton')
+const PEPIF = document.querySelector('.PEPIF')
+const POKAPI = document.querySelector('.POKAPI')
+const MOCKUPS = document.querySelector('.MOCKUPS')
+const POO = document.querySelector('.POO')
+const sf1 = document.querySelector('.sf1')
+const sf2 = document.querySelector('.sf2')
 
-var z = document.querySelector('.skills')
-var zl = document.querySelector('.skillList')
-var yl = document.querySelector('.skillButton')
 
-var p = document.querySelector('.project');
-var pl = document.querySelector('.projectList');
-var mp = document.querySelector('.mp')
+const file = document.querySelectorAll('.file')
+const buttons = document.querySelectorAll('.buttons')
+const projectsPage = document.querySelectorAll('.project')
 
-var p1 = document.querySelector('.project1')
-var p1c = document.querySelector('.p1Content')
-var lp1 = document.querySelector('.logoP1')
+const circle = document.querySelector('.circle')
 
-var p2 = document.querySelector('.project2')
-var p2c = document.querySelector('.p2Content')
-var lp2 = document.querySelector('.logoP2')
-var tp2 = document.querySelector('.titleP2')
-
-var p3 = document.querySelector('.project3')
-var p3c = document.querySelector('.p3Content')
-var lp3 = document.querySelector('.logoP3')
-var tp3 = document.querySelector('.titleP3')
-
-var p4 = document.querySelector('.project4')
-
-var r = document.querySelector('.r');
-var o = document.querySelector('.o');
-var g = document.querySelector('.g');
 var moving = false
 var deg = '90';
 var clickX = 0;
@@ -44,27 +28,16 @@ var draggableY = false
 var draggableZ = false
 var draggableP = false
 
-var file1 = document.querySelector('.file1')
-var file2 = document.querySelector('.file2')
-var file3 = document.querySelector('.file3')
-var file4 = document.querySelector('.file4')
 
 var clic = 0
 
 //responsive design
-var w1 = window.matchMedia("(max-width: 600px)")
+var w1 = window.matchMedia("(max-width: 850px)")
 
-
-
- 
-
-close1();
-close2();
-close3();
-close4();
 
 
 console.log(clickX)
+
 
 
 
@@ -88,359 +61,357 @@ document.getElementById('bg').style.backgroundSize = "400% 400%";
 }
 
 
+close1()
+close2()
+close3()
+close4()
+
+
+
+file.forEach(file => {
+    addEventListener('dblclick', event => {
+        console.log(event.target.className)
+        if (event.target.className === 'file1')
+        {
+            if(w1.matches) {
+                img.style.width = "90%"
+                img.style.height = "40%"
+                img.style.opacity = '1'
+
+                let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+
+            }else{
+                img.style.height = "40%"
+                img.style.width = "20%"
+                img.style.opacity = "1"
+                //xc.style.display = "flex"
+                //xb.style.display = "flex"
+
+                let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+            }
+        }
+        else if (event.target.className === 'file2')
+        {
+            if(w1.matches) {
+                pres.style.width = '100%'
+                pres.style.height = '40%'
+                pres.style.opacity = '1'
+                //yc.style.display = 'flex'
+                //yb.style.display = 'flex'
+
+                let allChildren = pres.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+            }else{
+                pres.style.height= '34%'        
+                pres.style.width = '40%'
+                pres.style.opacity = '1'
+                //pres.style.transform = "translateX(800px)";
+                //yc.style.display = 'flex'
+                //yb.style.display = 'flex'
+
+                let allChildren = pres.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+            }
+        } else if (event.target.className === 'file3') {
+            if(w1.matches) {
+                skills.style.width = '99%'
+                skills.style.height = '30%'
+                skills.style.opacity = '1'
+                skills.children[0].style.marginLeft = "0px" 
+                
+                //yc.style.display = 'flex'
+                //yb.style.display = 'flex'
+
+                let allChildren = skills.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+
+            }else{
+                skills.style.height= '30%'        
+                skills.style.width = '85%'
+                skills.style.opacity = '1'
+                //skills.style.transform = "translateY(300px)";
+                //yc.style.display = 'flex'
+                //yb.style.display = 'flex'
+
+                let allChildren = skills.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+            }
+        }
+        else if (event.target.className === 'file4')
+        {   
+            if(w1.matches) {
+                project.style.height= '60%'        
+                project.style.width = '90%'
+                project.style.opacity = '1'
+                //pl.style.height= '899px'        
+                //pl.style.width = '1759px'
+                //pl.style.opacity = '1'
+                //pl.style.display = 'flex'
+                
+                let allChildren = project.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    //allChildren[i].style.width = '0px'
+                }
+            }else{
+                project.style.height= '800px'        
+                project.style.width = '90%'
+                project.style.opacity = '1'
+                //pl.style.height= '899px'        
+                //pl.style.width = '1759px'
+                //pl.style.opacity = '1'
+                //pl.style.display = 'flex'
+                
+                let allChildren = project.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'flex'
+                    
+                    //allChildren[i].style.width = '0px'
+                }
+                    
+            }
+        }
+    })
+})
+
+
+
+buttons.forEach(buttons => {
+    addEventListener('click', event => {
+        if (event.target.className === "close f1"){
+            console.log(img.children)
+            img.style.width = "0px" 
+            img.style.height = "0px"
+            img.style.opacity = "0"
+
+            let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }
+        }
+        if (event.target.className === "minimise f1"){
+            console.log(img.children)
+            img.style.height = '50px'
+            img.style.width = '200px' 
+            img.style.padding = '0px'
+            img.children[1].style.display = 'none'
+            /*
+            let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }*/
+        }
+        if (event.target.className === "bigger f1"){
+                img.style.height = "40%"
+                img.style.width = "20%"
+                img.style.opacity = "1"
+                img.children[1].style.display = "flex"
+        }
+        if (event.target.className === "close f2"){
+            pres.style.width = "0px"
+            pres.style.height = "0px"
+            pres.style.opacity = "0"
+
+            let allChildren = pres.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }
+        }
+        if (event.target.className === "minimise f2"){
+            console.log(pres.children)
+            pres.style.height = '50px'
+            pres.style.width = '270px' 
+            pres.style.padding = '0px'
+            pres.children[1].style.display = 'none'
+            /*
+            let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }*/
+        }
+        if (event.target.className === "bigger f2"){
+            pres.style.height= '34%'        
+            pres.style.width = '40%'
+            pres.style.opacity = '1'
+            pres.children[1].style.display = "flex"
+        }
+        if (event.target.className === "close f3"){
+            skills.style.width = "0px"
+            skills.style.height = "0px"
+            skills.style.opacity = "0"
+            skills.style.transform = "translateY(-5px)";
+
+            let allChildren = skills.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }
+        }
+        if (event.target.className === "minimise f3"){
+            console.log(skills.children)
+            skills.style.height = '50px'
+            skills.style.width = '200px'
+            skills.style.padding = '0px'
+            skills.children[2].style.display = 'none'
+            /*
+            let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }*/
+        }
+        if (event.target.className === "bigger f3"){
+            skills.style.height= '30%'        
+            skills.style.width = '85%'
+            skills.style.opacity = '1'
+            skills.children[2].style.display = "flex"
+        }
+        if (event.target.className === "close f4"){
+            project.style.width = "0px"
+            project.style.height = "0px"
+            project.style.opacity = "0"
+
+            let allChildren =  project.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }
+        }
+        if (event.target.className === "minimise f4"){
+            console.log(skills.children)
+            project.style.height = '50px'
+            project.style.width = '220px'
+            project.style.padding = '0px'
+            project.children[2].style.display = 'none'
+            /*
+            let allChildren = img.children
+                for(let i=0; i < allChildren.length; i++) {
+                    allChildren[i].style.display = 'none'
+                    //allChildren[i].style.width = '0px'
+            }*/
+        }
+        if (event.target.className === "bigger f4"){
+            project.style.height= '800px'        
+            project.style.width = '90%'
+            project.style.opacity = '1'
+            project.children[2].style.display = "flex"
+        }
+
+    
+        
+    })
+})
+
+
+projectsPage.forEach(projectsPage => {
+    addEventListener('click', event => {
+        console.log(event.target.className)
+        if (event.target.className === 'project PEPIF' || event.target.className === 'logoP1'){
+            PEPIF.style.width = "100%"
+            PEPIF.style.height = "90%"
+            PEPIF.children[0].style.display = "none"
+            PEPIF.children[1].style.display = "flex"
+        } else if (event.target.className === 'project POKAPI' || event.target.className === 'logoP2'){
+            POKAPI.style.width = "100%"
+            POKAPI.style.height = "90%"
+            POKAPI.children[0].style.display = "none"
+            POKAPI.children[1].style.display = "flex"
+        } else if (event.target.className === 'project MOCKUPS' || event.target.className === 'logoP3'){
+            MOCKUPS.style.width = "100%"
+            MOCKUPS.style.height = "90%"
+            MOCKUPS.children[0].style.display = "none"
+            MOCKUPS.children[1].style.display = "flex"
+        } else if (event.target.className === 'project POO' || event.target.className === 'logoP4'){
+            POO.style.width = "100%"
+            POO.style.height = "90%"
+            POO.children[0].style.display = "none"
+            POO.children[1].style.display = "flex"
+        } else if (event.target.className === 'project sf1' || event.target.className === 'logoP5'){
+            sf1.style.width = "100%"
+            sf1.style.height = "90%"
+            sf1.children[0].style.display = "none"
+            sf1.children[1].style.display = "flex"
+        }  else if (event.target.className === 'project sf2' || event.target.className === 'logoP6'){
+            sf2.style.width = "100%"
+            sf2.style.height = "90%"
+            sf2.children[0].style.display = "none"
+            sf2.children[1].style.display = "flex"
+        } 
+    })
+})
 
 
 
 
 function close1(){
-    if(clickX > 0){
-        clickX--
-    }
-    if (r.closest = x){
-        x.style.height = "0px";
-        x.style.width = "0px"
-        x.style.opacity = "0";
-        xc.style.display = 'none';
-        xb.style.display = 'none';
-        
- 
-    }
+    img.style.width = "0%"
+    img.style.height = "0%"
+    img.style.opacity = '0'
 
+    let allChildren = img.children
+    for(let i=0; i < allChildren.length; i++) {
+        allChildren[i].style.display = 'none'
+        //allChildren[i].style.width = '0px'
+    }
 }
 
-
 function close2(){
-    if(clickY > 0){
-        clickY--
+    pres.style.width = "0%"
+    pres.style.height = "0%"
+    pres.style.opacity = '0'
+
+    let allChildren = pres.children
+    for(let i=0; i < allChildren.length; i++) {
+        allChildren[i].style.display = 'none'
+        //allChildren[i].style.width = '0px'
     }
-    y.style.height = "0px";
-    y.style.width = "0px"
-    y.style.opacity = "0";
-    yc.style.display = "none"
-    yb.style.display = "none"
 }
 
 function close3(){
-    z.style.height = "0px";
-    z.style.width = "0px"
-    z.style.opacity = "0";
-    zb.style.opacity = "0";
+    skills.style.width = "0%"
+    skills.style.height = "0%"
+    skills.style.opacity = '0'
+
+    let allChildren = skills.children
+    for(let i=0; i < allChildren.length; i++) {
+        allChildren[i].style.display = 'none'
+        //allChildren[i].style.width = '0px'
+    }
 }
 
 function close4(){
-    p.style.height= '0'        
-    p.style.width = '0'
-    p.style.opacity = '0'
-    pl.style.height= '0'        
-    pl.style.width = '0'
-    pl.style.opacity = '0'
-}
+    project.style.width = "0%"
+    project.style.height = "0%"
+    project.style.opacity = '0'
 
-function minimise1(){
-    if (o.closest = x){
-        x.style.height = '50px'
-        x.style.width = '200px'    
-        xc.style.display = 'none'
-    }
-}
-
-function minimise2(){
-    if (o.closest = y){
-        y.style.height = '50px'
-        y.style.width = '270px'
-        yc.style.display = 'none'
-    }
-}
-
-function minimise3(){
-    if (z.closest = x){
-        z.style.height = '50px'
-        z.style.width = '200px'
-        zl.style.display = 'none'
-    }
-}
-
-function minimise4(){
-    if (p.closest = x){
-        p.style.height = '50px'
-        p.style.width = '250px'
-        pl.style.display = 'none';
-        mp.style.display = 'none';
-    }
-}
-
-function bigger1(){
-    if (x.style.height = '50px'){
-        x.style.height = "40%"
-        x.style.width = "20%"
-        xc.style.display = 'flex'
-    }
-    if(w1.matches) {
-        x.style.width = "90%"
-    }
-}
-
-
-function bigger2(){
-    if (y.style.height = '50px'){
-        y.style.height= '44%'        
-        y.style.width = '40%'
-        yc.style.display = 'flex'
-    }
-    if (w1.matches){
-        y.style.width = '100%'
-        y.style.height = '65%'
-    }
-
-}
-
-
-
-function bigger3(){
-    if (z.style.height = '50px'){
-        z.style.height = '212px'
-        z.style.width = '76%'
-        zl.style.display = 'flex'
-        
-    }
-}
-
-function bigger4(){
-    if (p.style.height = '50px'){
-        p.style.height= '70%'        
-        p.style.width = '90%'
-        pl.style.display = 'flex';
-        mp.style.display = 'flex'
-    }
-}
-
-function showX(){
-    console.log(draggableX)
-    console.log(clickX)
-    clickX += 1
-    clickY = 0
-    if (clickX == 3){
-        if(w1.matches) {
-            x.style.width = "90%"
-            x.style.height = "40%"
-            x.style.opacity = '1'
-            xc.style.display = "flex"
-            xb.style.display = "flex"
-        }else{
-            x.style.height = "40%"
-            x.style.width = "20%"
-            x.style.opacity = "1"
-            xc.style.display = "flex"
-            xb.style.display = "flex"
-        }
-    }
-    if (clickX == 1) {
-        draggableX = true
-        file1.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
-        file1.style.background =  'rgba( 255, 255, 255, 0.25)'
-        file1.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
-        file1.style.backdropFilter = 'blur( 12px )'
-        file1.style.WebkitBackdropFilter = 'blur(12px)'
-    }
-
-    if (clickX  > 2){
-        clickX = 0
-    }
-
-    if (clickX == 0){
-        draggableX = false
-        file1.style.border = 'none'
-        file1.style.background =  'none'
-        file1.style.boxShadow = 'none'
-        file1.style.backdropFilter = 'none'
-        file1.style.WebkitBackdropFilter = 'none'
-    }
-    
-    if (clickX == 1){
-        dragElement(file1)
-    }
-
-    
-}
-
-function showY(){
-    console.log(draggableY)
-    console.log(clickY)
-    clickY++
-    if(clickY == 3){
-        if(w1.matches) {
-            y.style.width = '100%'
-            y.style.height = '65%'
-            y.style.opacity = '1'
-            yc.style.display = 'flex'
-            yb.style.display = 'flex'
-        }else{
-            y.style.height= '44%'        
-            y.style.width = '40%'
-            y.style.opacity = '1'
-            yc.style.display = 'flex'
-            yb.style.display = 'flex'
-        }
-    }
-    if(clickY == 1){
-        file2.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
-        file2.style.background =  'rgba( 255, 255, 255, 0.25)'
-        file2.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
-        file2.style.backdropFilter = 'blur( 12px )'
-        file2.style.WebkitBackdropFilter = 'blur(12px)'
-        dragElement(file2)
-        /*while(clickY = 1){
-            
-        }*/
-    }else{
-        file2.style.border = 'none'
-        file2.style.background =  'none'
-        file2.style.boxShadow = 'none'
-        file2.style.backdropFilter = 'none'
-        file2.style.WebkitBackdropFilter = 'none'
-    }
-    if (clickY  > 2){
-        clickY = 0
-    }
-
-}
-
-function showZ(){
-    console.log(draggableZ)
-    console.log(clickZ)
-    clickZ++
-        if (clickZ == 3){
-            if(w1.matches) {
-                z.style.width = "90%"
-                z.style.height = "40%"
-                z.style.opacity = '1'
-                zc.style.display = "flex"
-                zb.style.display = "flex"
-            }else{
-                z.style.height= '212px'         
-                z.style.width = '72%'
-                z.style.opacity = '1'
-                zl.style.height = '212px'
-                zl.style.width = '90%'
-                zl.style.flexWrap = "wrap"
-            }
-        }
-        
-    
-    if(clickZ == 1){
-        file3.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
-        file3.style.background =  'rgba( 255, 255, 255, 0.25)'
-        file3.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
-        file3.style.backdropFilter = 'blur( 12px )'
-        file3.style.WebkitBackdropFilter = 'blur(12px)'
-        dragElement(file3)
-        /*while(clickY = 1){
-            
-        }*/
-    }else{
-        file3.style.border = 'none'
-        file3.style.background =  'none'
-        file3.style.boxShadow = 'none'
-        file3.style.backdropFilter = 'none'
-        file3.style.WebkitBackdropFilter = 'none'
-    }
-    if (clickZ  > 2){
-        clickZ= 0
-    }
-
-}
-
-function showP(){
-    console.log(draggableZ)
-    console.log(clickZ)
-    clickP++
-    if(clickP == 3){
-        p.style.height= '70%'        
-        p.style.width = '90%'
-        p.style.opacity = '1'
-        pl.style.height= '899px'        
-        pl.style.width = '1759px'
-        pl.style.opacity = '1'
-        pl.style.display = 'flex'
-
-        let allChildren = pl.children
+    let allChildren = project.children
     for(let i=0; i < allChildren.length; i++) {
-        allChildren[i].style.height = '300px'
-        allChildren[i].style.width = '400px'
-        allChildren[i].style.opacity = '1'
-    }
-
-    }
-    if(clickP == 1){
-        file4.style.border = '1px solid rgba( 255, 255, 255, 0.18 )'
-        file4.style.background =  'rgba( 255, 255, 255, 0.25)'
-        file4.style.boxShadow = '(0 8px 32px 0 rgba( 31, 38, 135, 0.37)'
-        file4.style.backdropFilter = 'blur( 12px )'
-        file4.style.WebkitBackdropFilter = 'blur(12px)'
-        dragElement(file4)
-        /*while(clickY = 1){
-            
-        }*/
-    }else{
-        file4.style.border = 'none'
-        file4.style.background =  'none'
-        file4.style.boxShadow = 'none'
-        file4.style.backdropFilter = 'none'
-        file4.style.WebkitBackdropFilter = 'none'
-    }
-    if (clickP  > 2){
-        clickP= 0
-    }
-
-}
-
-function openProject(obj, abc){
-    console.log(clic)
-    var project = obj
-    if(project != p4){
-        clic++
-    }
-    if (clic == 1){
-    project.style.height = '90%'
-    project.style.width = '90%'
-    } if (project.style.height != '300px'){
-     if (project == p1){
-        lp1.style.display = 'none'
-        p1c.style.display = 'flex'
-        p1.style.hover = 'none'
-        
-    } if(project == p2) {
-        lp2.style.display = 'none'
-        p2c.style.display = 'flex'
-        p2.style.hover = 'none'
-        tp2.style.display = 'none'
-    } if(project == p3) {
-        lp3.style.display = 'none'
-        p3c.style.display = 'flex'
-        p3.style.hover = 'none'
-        tp3.style.display = 'none'
-    }
-    } if (clic == 2) {
-        project.style.height = '300px'
-        project.style.width = '400px'
-        if (project.style.height != '90%'){
-            if (project == p1){
-                lp1.style.display = 'flex'
-                p1c.style.display = 'none'
-            }if(project == p2) {
-                lp2.style.display = 'flex'
-                p2c.style.display = 'none'
-                tp2.style.display = 'flex'
-            }
-            if(project == p3) {
-                lp3.style.display = 'flex'
-                p3c.style.display = 'none'
-                tp3.style.display = 'flex'
-            }
-        }
-    }
-    if(clic >2){
-        clic = 0
+        allChildren[i].style.display = 'none'
+        //allChildren[i].style.width = '0px'
     }
 }
 
@@ -492,3 +463,6 @@ document.onselectstart = function()
 {
     window.getSelection().removeAllRanges();
 };
+
+
+

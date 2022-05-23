@@ -23,20 +23,20 @@
   font-weight: bold;
 }
 
-.img, .pres, .skills, .project {
+.img, .pres, .skills, .projects {
   display: flex;
   justify-self: start;
   align-self: flex-start;
   cursor: auto;
 }
-.img > .buttons, .pres > .buttons, .skills > .buttons, .project > .buttons {
+.img > .head > .buttons, .pres > .head > .buttons, .skills > .head > .buttons, .projects > .head > .buttons {
   width: 120px;
   height: 50px;
   display: flex;
   justify-content: start;
   align-items: flex-start;
 }
-.img .r, .pres .r, .skills .r, .project .r {
+.img .close, .pres .close, .skills .close, .projects .close {
   position: relative;
   height: 30px;
   width: 30px;
@@ -49,11 +49,11 @@
   transition: 2ms ease-in-out;
   cursor: pointer;
 }
-.img .r:hover, .pres .r:hover, .skills .r:hover, .project .r:hover {
+.img .close:hover, .pres .close:hover, .skills .close:hover, .projects .close:hover {
   box-shadow: none;
   margin-top: 12px;
 }
-.img .o, .pres .o, .skills .o, .project .o {
+.img .minimise, .pres .minimise, .skills .minimise, .projects .minimise {
   height: 30px;
   width: 30px;
   background-color: #FDB156;
@@ -64,11 +64,11 @@
   margin-left: 7px;
   cursor: pointer;
 }
-.img .o:hover, .pres .o:hover, .skills .o:hover, .project .o:hover {
+.img .minimise:hover, .pres .minimise:hover, .skills .minimise:hover, .projects .minimise:hover {
   box-shadow: none;
   margin-top: 12px;
 }
-.img .g, .pres .g, .skills .g, .project .g {
+.img .bigger, .pres .bigger, .skills .bigger, .projects .bigger {
   height: 30px;
   width: 30px;
   background-color: #8DFD56;
@@ -79,7 +79,7 @@
   margin-left: 7px;
   cursor: pointer;
 }
-.img .g:hover, .pres .g:hover, .skills .g:hover, .project .g:hover {
+.img .bigger:hover, .pres .bigger:hover, .skills .bigger:hover, .projects .bigger:hover {
   box-shadow: none;
   margin-top: 12px;
 }
@@ -176,7 +176,7 @@ body > .files > .file2 {
   text-align: center;
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 11%;
   border: none;
   border-radius: 10px;
   padding-left: 10px;
@@ -203,7 +203,7 @@ body > .files > .file3 {
   align-items: center;
   text-align: center;
   position: absolute;
-  top: 25%;
+  top: 26%;
   left: 2%;
   border: none;
   border-radius: 10px;
@@ -231,8 +231,8 @@ body > .files > .file4 {
   align-items: center;
   text-align: center;
   position: absolute;
-  top: 25%;
-  left: 10%;
+  top: 26%;
+  left: 11%;
   border: none;
   border-radius: 10px;
   padding-left: 10px;
@@ -250,7 +250,7 @@ body > .files > .file4 > img {
   width: 70%;
   height: 80%;
 }
-body > .img, body .pres, body .skills, body .project {
+body > .img, body .pres, body .skills, body .projects {
   height: 0;
   width: 0;
   opacity: 0;
@@ -262,7 +262,15 @@ body > .img, body .pres, body .skills, body .project {
   border-radius: 38px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .img > h2, body .pres > h2, body .skills > h2, body .project > h2 {
+body > .img > .head, body .pres > .head, body .skills > .head, body .projects > .head {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 38px 38px 0px 0px;
+}
+body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, body .projects > .head > h2 {
   font-family: poppins;
   display: flex;
   align-self: flex-start;
@@ -273,7 +281,7 @@ body > .img > h2, body .pres > h2, body .skills > h2, body .project > h2 {
   position: absolute;
   right: 10px;
 }
-body > .img > h3, body .pres > h3, body .skills > h3, body .project > h3 {
+body > .img > h3, body .pres > h3, body .skills > h3, body .projects > h3 {
   font-family: poppins;
   color: black;
   font-size: 25px;
@@ -289,6 +297,7 @@ body > .img {
   z-index: 90;
   top: 6%;
   left: 1%;
+  padding: 0.2%;
 }
 body > .img > .content {
   height: 80%;
@@ -359,10 +368,12 @@ body > .pres {
   z-index: 90;
   top: 9%;
   left: 50%;
+  padding: 0.2%;
+  padding-top: 0%;
 }
 body > .pres > .Ycontent {
-  height: 60%;
-  width: 80%;
+  height: 80%;
+  width: 98%;
   position: absolute;
   left: 0;
   right: 0;
@@ -370,6 +381,8 @@ body > .pres > .Ycontent {
   justify-content: start;
   align-items: flex-start;
   margin: 0 auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 body > .pres > .Ycontent > p {
   font-family: poppins;
@@ -384,16 +397,20 @@ body > .skills {
   bottom: 100px;
   left: 51px;
   display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2%;
 }
 body > .skills > .skillList {
+  width: 98%;
   transition: 0.1s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  margin-left: 0%;
-  overflow-y: scroll;
-  scrollbar-width: none;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 body > .skills > .skillList > .HTMLCSS {
   display: flex;
@@ -419,6 +436,23 @@ body > .skills > .skillList > .HTMLCSS > .title > h2 {
   margin-left: 15px;
   margin-right: 15px;
 }
+body > .skills > .skillList > .HTMLCSS > .bar {
+  width: 100%;
+  height: 25px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body > .skills > .skillList > .HTMLCSS > .bar:before {
+  content: "";
+  width: 90%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
 body > .skills > .skillList > .JS {
   display: flex;
   flex-direction: column;
@@ -438,8 +472,22 @@ body > .skills > .skillList > .JS > .jsL {
   width: 112.28px;
   height: 108px;
 }
-body > .skills > .skillList > .JS > img {
+body > .skills > .skillList > .JS > .bar {
+  width: 100%;
+  height: 25px;
   margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body > .skills > .skillList > .JS > .bar:before {
+  content: "";
+  width: 65%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
 }
 body > .skills > .skillList > .PHP {
   display: flex;
@@ -460,8 +508,22 @@ body > .skills > .skillList > .PHP > .phpL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .PHP > img {
+body > .skills > .skillList > .PHP > .bar {
+  width: 100%;
+  height: 25px;
   margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body > .skills > .skillList > .PHP > .bar:before {
+  content: "";
+  width: 75%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
 }
 body > .skills > .skillList > .PYTHON {
   display: flex;
@@ -482,14 +544,29 @@ body > .skills > .skillList > .PYTHON > .pythonL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .PYTHON > img {
+body > .skills > .skillList > .PYTHON > .bar {
+  width: 100%;
+  height: 25px;
   margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body > .skills > .skillList > .PYTHON > .bar:before {
+  content: "";
+  width: 67%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
 }
 body > .skills > .skillList > .UNITY {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 5px solid black;
   padding: 2%;
   padding-top: 0%;
   padding-bottom: 0%;
@@ -503,10 +580,59 @@ body > .skills > .skillList > .UNITY > .unityL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .UNITY > img {
+body > .skills > .skillList > .UNITY > .bar {
+  width: 100%;
+  height: 25px;
   margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-body > .project {
+body > .skills > .skillList > .UNITY > .bar:before {
+  content: "";
+  width: 55%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
+body > .skills > .skillList > .SYMFONY {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+body > .skills > .skillList > .SYMFONY > h2 {
+  font-family: poppins;
+  font-weight: bolder;
+  font-size: 25px;
+}
+body > .skills > .skillList > .SYMFONY > .unityL {
+  width: 190px;
+  height: 99.93px;
+}
+body > .skills > .skillList > .SYMFONY > .bar {
+  width: 100%;
+  height: 25px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+body > .skills > .skillList > .SYMFONY > .bar:before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
+body > .projects {
   transition: 0.6s ease;
   margin: 0 auto;
   margin-top: 1%;
@@ -519,20 +645,27 @@ body > .project {
   -webkit-backdrop-filter: blur(20px);
   border-radius: 38px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .project > .projectList {
+  padding: 0.2%;
   display: flex;
-  justify-self: center;
-  align-self: center;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-left: 25px;
-  overflow-y: scroll;
+  align-items: start;
+  flex-direction: column;
+}
+body > .projects > .projectList {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  overflow-y: auto;
   scrollbar-width: none;
   cursor: auto;
 }
-body > .project > .projectList > div {
+body > .projects > .projectList > div {
+  height: 300px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -547,23 +680,23 @@ body > .project > .projectList > div {
   transition: 3ms ease-in-out;
   position: relative;
 }
-body > .project > .projectList > div:hover {
+body > .projects > .projectList > div:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: none;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .project > .projectList > div > .MainLogo1 {
+body > .projects > .projectList > div > .MainLogo1 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body > .project > .projectList > div > .MainLogo1 > .logoP1 {
+body > .projects > .projectList > div > .MainLogo1 > .logoP1 {
   width: 90%;
   height: 40%;
 }
-body > .project > .projectList > div > .p1Content {
+body > .projects > .projectList > div > .p1Content {
   width: 100%;
   height: 100%;
   border-radius: 38px;
@@ -573,7 +706,7 @@ body > .project > .projectList > div > .p1Content {
   flex-direction: column;
   position: relative;
 }
-body > .project > .projectList > div > .p1Content > span {
+body > .projects > .projectList > div > .p1Content > span {
   position: absolute;
   top: 2%;
   right: -5%;
@@ -581,34 +714,35 @@ body > .project > .projectList > div > .p1Content > span {
   justify-content: center;
   align-items: center;
 }
-body > .project > .projectList > div > .p1Content > span > img {
+body > .projects > .projectList > div > .p1Content > span > img {
   height: 50%;
-  width: 50%;
+  width: 10%;
+  object-fit: cover;
 }
-body > .project > .projectList > div > .p1Content > h4 {
+body > .projects > .projectList > div > .p1Content > h4 {
   font-family: poppins;
   font-size: 65px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
-body > .project > .projectList > div > .p1Content > p {
-  width: 50%;
+body > .projects > .projectList > div > .p1Content > p {
+  width: 80%;
   margin: 20px;
   font-family: poppins;
   font-size: 25px;
   line-height: 40px;
 }
-body > .project > .projectList > div > .p1Content > .git {
-  height: 58px;
-  width: 58px;
+body > .projects > .projectList > div > .p1Content > .git {
+  height: 0px;
+  width: 0px;
   border-radius: 50%;
   margin: 20px;
 }
-body > .project > .projectList > div > .p1Content > .git:hover {
+body > .projects > .projectList > div > .p1Content > .git:hover {
   background-color: white;
 }
-body > .project > .projectList > div > .p1Content > .galerie {
+body > .projects > .projectList > div > .p1Content > .galerie {
   width: 90%;
   height: 35%;
   display: flex;
@@ -621,7 +755,7 @@ body > .project > .projectList > div > .p1Content > .galerie {
   left: 0;
   right: 0;
 }
-body > .project > .projectList > div > .p1Content > .galerie > div {
+body > .projects > .projectList > div > .p1Content > .galerie > div {
   width: 20%;
   height: 90%;
   display: flex;
@@ -634,27 +768,28 @@ body > .project > .projectList > div > .p1Content > .galerie > div {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .project > .projectList > div > .p1Content > .galerie > div > img {
+body > .projects > .projectList > div > .p1Content > .galerie > div > img {
   width: 40%;
   height: 90%;
+  object-fit: cover;
 }
-body > .project > .projectList > div > .MainLogo2 {
+body > .projects > .projectList > div > .MainLogo2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body > .project > .projectList > div > .MainLogo2 > .logoP2 {
+body > .projects > .projectList > div > .MainLogo2 > .logoP2 {
   width: 90%;
   height: 40%;
 }
-body > .project > .projectList > div > .MainLogo2 > h5 {
+body > .projects > .projectList > div > .MainLogo2 > h5 {
   margin: 0 auto;
   font-family: poppins;
   font-weight: bold;
   font-size: 25px;
 }
-body > .project > .projectList > div > .p2Content {
+body > .projects > .projectList > div > .p2Content {
   width: 100%;
   height: 100%;
   border-radius: 38px;
@@ -664,7 +799,7 @@ body > .project > .projectList > div > .p2Content {
   flex-direction: column;
   position: relative;
 }
-body > .project > .projectList > div > .p2Content > span {
+body > .projects > .projectList > div > .p2Content > span {
   position: absolute;
   top: 4%;
   right: 2%;
@@ -672,34 +807,34 @@ body > .project > .projectList > div > .p2Content > span {
   justify-content: center;
   align-items: center;
 }
-body > .project > .projectList > div > .p2Content > span > img {
+body > .projects > .projectList > div > .p2Content > span > img {
   height: 100%;
   width: 100%;
 }
-body > .project > .projectList > div > .p2Content > h4 {
+body > .projects > .projectList > div > .p2Content > h4 {
   font-family: poppins;
   font-size: 65px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
-body > .project > .projectList > div > .p2Content > p {
+body > .projects > .projectList > div > .p2Content > p {
   width: 50%;
   margin: 20px;
   font-family: poppins;
   font-size: 25px;
   line-height: 40px;
 }
-body > .project > .projectList > div > .p2Content > .git {
-  height: 58px;
-  width: 58px;
+body > .projects > .projectList > div > .p2Content > .git {
+  height: 0px;
+  width: 0px;
   border-radius: 50%;
   margin: 20px;
 }
-body > .project > .projectList > div > .p2Content > .git:hover {
+body > .projects > .projectList > div > .p2Content > .git:hover {
   background-color: white;
 }
-body > .project > .projectList > div > .p2Content > .galerie2 {
+body > .projects > .projectList > div > .p2Content > .galerie2 {
   width: 90%;
   height: 35%;
   display: flex;
@@ -712,7 +847,7 @@ body > .project > .projectList > div > .p2Content > .galerie2 {
   left: 0;
   right: 0;
 }
-body > .project > .projectList > div > .p2Content > .galerie2 > div {
+body > .projects > .projectList > div > .p2Content > .galerie2 > div {
   width: 20%;
   height: 90%;
   display: flex;
@@ -727,31 +862,31 @@ body > .project > .projectList > div > .p2Content > .galerie2 > div {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .project > .projectList > div > .p2Content > .galerie2 > div > img {
+body > .projects > .projectList > div > .p2Content > .galerie2 > div > img {
   width: 100%;
   height: 60%;
 }
-body > .project > .projectList > div > .p2Content > .galerie2 > div .draco {
+body > .projects > .projectList > div > .p2Content > .galerie2 > div .draco {
   width: 70%;
   height: 100%;
 }
-body > .project > .projectList > div > .MainLogo3 {
+body > .projects > .projectList > div > .MainLogo3 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body > .project > .projectList > div > .MainLogo3 > .logoP3 {
+body > .projects > .projectList > div > .MainLogo3 > .logoP3 {
   width: 90%;
   height: 40%;
 }
-body > .project > .projectList > div > .MainLogo3 > h5 {
+body > .projects > .projectList > div > .MainLogo3 > h5 {
   margin: 0 auto;
   font-family: poppins;
   font-weight: bold;
   font-size: 25px;
 }
-body > .project > .projectList > div > .p3Content {
+body > .projects > .projectList > div > .p3Content {
   width: 100%;
   height: 100%;
   border-radius: 38px;
@@ -761,7 +896,7 @@ body > .project > .projectList > div > .p3Content {
   flex-direction: column;
   position: relative;
 }
-body > .project > .projectList > div > .p3Content > span {
+body > .projects > .projectList > div > .p3Content > span {
   height: 50px;
   width: 68px;
   position: absolute;
@@ -771,25 +906,25 @@ body > .project > .projectList > div > .p3Content > span {
   justify-content: center;
   align-items: center;
 }
-body > .project > .projectList > div > .p3Content > span > img {
+body > .projects > .projectList > div > .p3Content > span > img {
   height: 100%;
   width: 100%;
 }
-body > .project > .projectList > div > .p3Content > h4 {
+body > .projects > .projectList > div > .p3Content > h4 {
   font-family: poppins;
   font-size: 65px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
-body > .project > .projectList > div > .p3Content > p {
+body > .projects > .projectList > div > .p3Content > p {
   width: 50%;
   margin: 20px;
   font-family: poppins;
   font-size: 25px;
   line-height: 40px;
 }
-body > .project > .projectList > div > .p3Content > .galerie3 {
+body > .projects > .projectList > div > .p3Content > .galerie3 {
   width: 90%;
   height: 35%;
   display: flex;
@@ -802,7 +937,7 @@ body > .project > .projectList > div > .p3Content > .galerie3 {
   left: 0;
   right: 0;
 }
-body > .project > .projectList > div > .p3Content > .galerie3 > div {
+body > .projects > .projectList > div > .p3Content > .galerie3 > div {
   width: 20%;
   height: 90%;
   display: flex;
@@ -817,13 +952,324 @@ body > .project > .projectList > div > .p3Content > .galerie3 > div {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .project > .projectList > div > .p3Content > .galerie3 > div > img {
+body > .projects > .projectList > div > .p3Content > .galerie3 > div > img {
   width: 100%;
   height: 80%;
 }
-body > .project > .projectList > div > .p3Content > .galerie3 > div > .stretch {
+body > .projects > .projectList > div > .p3Content > .galerie3 > div > .stretch {
   width: 90%;
   height: 100%;
+}
+body > .projects > .projectList > div > .MainLogo4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > .projects > .projectList > div > .MainLogo4 > .logoP4 {
+  width: 50%;
+  height: 40%;
+}
+body > .projects > .projectList > div > .MainLogo4 > h5 {
+  margin: 0 auto;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 25px;
+}
+body > .projects > .projectList > div > .p4Content {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  display: none;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+body > .projects > .projectList > div > .p4Content > span {
+  height: 50px;
+  width: 68px;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .projects > .projectList > div > .p4Content > span > img {
+  height: 100%;
+  width: 100%;
+}
+body > .projects > .projectList > div > .p4Content > h4 {
+  font-family: poppins;
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+body > .projects > .projectList > div > .p4Content > p {
+  width: 50%;
+  margin: 20px;
+  font-family: poppins;
+  font-size: 25px;
+  line-height: 40px;
+}
+body > .projects > .projectList > div > .p4Content > .link {
+  width: 50%;
+  margin: 20px;
+  margin-top: 0px;
+  font-family: poppins;
+  font-size: 20px;
+}
+body > .projects > .projectList > div > .p4Content > .galerie4 {
+  width: 90%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+body > .projects > .projectList > div > .p4Content > .galerie4 > div {
+  width: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 38px;
+  margin: 50px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body > .projects > .projectList > div > .p4Content > .galerie4 > div > img {
+  width: 100%;
+  height: 80%;
+}
+body > .projects > .projectList > div > .p4Content > .galerie4 > div > .stretch {
+  width: 90%;
+  height: 100%;
+}
+body > .projects > .projectList > div > .MainLogo5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > .projects > .projectList > div > .MainLogo5 > .logoP5 {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+body > .projects > .projectList > div > .MainLogo5 > h5 {
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 25px;
+}
+body > .projects > .projectList > div > .p5Content {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  display: none;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+body > .projects > .projectList > div > .p5Content > span {
+  height: 50px;
+  width: 68px;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .projects > .projectList > div > .p5Content > span > img {
+  height: 100%;
+  width: 100%;
+}
+body > .projects > .projectList > div > .p5Content > h4 {
+  font-family: poppins;
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+body > .projects > .projectList > div > .p5Content > p {
+  width: 50%;
+  margin: 20px;
+  font-family: poppins;
+  font-size: 25px;
+  line-height: 40px;
+}
+body > .projects > .projectList > div > .p5Content > .link {
+  width: 50%;
+  margin: 20px;
+  margin-top: 0px;
+  font-family: poppins;
+  font-size: 20px;
+}
+body > .projects > .projectList > div > .p5Content > .galerie5 {
+  width: 90%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+body > .projects > .projectList > div > .p5Content > .galerie5 > div {
+  width: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 38px;
+  margin: 50px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body > .projects > .projectList > div > .p5Content > .galerie5 > div > img {
+  width: 100%;
+  height: 80%;
+}
+body > .projects > .projectList > div > .p5Content > .galerie5 > div > .stretch {
+  width: 90%;
+  height: 100%;
+}
+body > .projects > .projectList > div > .MainLogo6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > .projects > .projectList > div > .MainLogo6 > .logoP6 {
+  width: 50%;
+  height: 40%;
+}
+body > .projects > .projectList > div > .MainLogo6 > h5 {
+  margin: 0 auto;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 25px;
+}
+body > .projects > .projectList > div > .p6Content {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  display: none;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+body > .projects > .projectList > div > .p6Content > span {
+  height: 50px;
+  width: 68px;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .projects > .projectList > div > .p6Content > span > img {
+  height: 100%;
+  width: 100%;
+}
+body > .projects > .projectList > div > .p6Content > h4 {
+  font-family: poppins;
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+body > .projects > .projectList > div > .p6Content > p {
+  width: 50%;
+  margin: 20px;
+  font-family: poppins;
+  font-size: 25px;
+  line-height: 40px;
+}
+body > .projects > .projectList > div > .p6Content > .link {
+  width: 50%;
+  margin: 20px;
+  margin-top: 0px;
+  font-family: poppins;
+  font-size: 20px;
+}
+body > .projects > .projectList > div > .p6Content > .galerie6 {
+  width: 90%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+body > .projects > .projectList > div > .p6Content > .galerie6 > div {
+  width: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 38px;
+  margin: 50px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body > .projects > .projectList > div > .p6Content > .galerie6 > div > img {
+  width: 100%;
+  height: 80%;
+}
+body > .projects > .projectList > div > .p6Content > .galerie6 > div > .stretch {
+  width: 90%;
+  height: 100%;
+}
+body > .projects > .projectList .responsiveProject {
+  flex-direction: column;
+  overflow-y: scroll;
+}
+body > .projects > .projectList .responsiveProject > span {
+  width: 0;
+  height: 0;
+}
+body > .projects > .projectList .responsiveProject > p {
+  font-size: 10px;
+}
+body > .projects > .projectList .responsiveProject > .galerie {
+  flex-direction: column;
+}
+body > .projects > .projectList .responsiveProject > .galerie > div {
+  width: 200px;
+  height: 200px;
 }
 
 @keyframes gradient {
@@ -846,7 +1292,35 @@ body > .project > .projectList > div > .p3Content > .galerie3 > div > .stretch {
     margin: 1%;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
+  body {
+    /*
+    .projects{
+        >.projectList{
+            >.project{
+                overflow: scroll;
+                flex-direction: column;
+                >.p{
+                    padding: 2%;
+                    >span{
+                        display: none;
+                    }
+                    >div{
+                        justify-content:center;
+                        align-items:center;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        >div{
+                            width: 200px;
+                            height: 200px;
+                            margin: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }*/
+  }
   body > nav > h2 {
     font-size: 18px;
   }
@@ -867,17 +1341,20 @@ body > .project > .projectList > div > .p3Content > .galerie3 > div > .stretch {
     top: 50%;
     left: 54%;
   }
-  body .img {
-    left: 0%;
-    right: 0%;
-  }
   body .pres {
-    left: 0%;
-    right: 0%;
+    left: 0;
+  }
+  body .pres > .Ycontent {
+    height: 80%;
+    margin-top: -20px;
   }
   body .skills {
+    margin: 0;
     right: 0%;
     left: 0%;
+  }
+  body .skills > .skillList {
+    scrollbar-width: none;
   }
 }
 html, body, div, span, applet, object, iframe,
