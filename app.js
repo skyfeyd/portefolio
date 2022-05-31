@@ -1,15 +1,7 @@
 const img = document.querySelector('.img')
 const pres = document.querySelector('.pres')
 const skills = document.querySelector('.skills')
-const project = document.querySelector('.projects')
-
-const PEPIF = document.querySelector('.PEPIF')
-const POKAPI = document.querySelector('.POKAPI')
-const MOCKUPS = document.querySelector('.MOCKUPS')
-const POO = document.querySelector('.POO')
-const sf1 = document.querySelector('.sf1')
-const sf2 = document.querySelector('.sf2')
-
+const projects = document.querySelector('.projects')
 
 const file = document.querySelectorAll('.file')
 const buttons = document.querySelectorAll('.buttons')
@@ -162,9 +154,9 @@ file.forEach(file => {
         else if (event.target.className === 'file4')
         {   
             if(w1.matches) {
-                project.style.height= '90vh'        
-                project.style.width = '90%'
-                project.style.opacity = '1'/*
+                projects.style.height= '90vh'        
+                projects.style.width = '90%'
+                projects.style.opacity = '1'/*
                 galerie.style.flexDirection = "column"
                 galerie.style.position = "relative"
                 let allChildrenGal = galerie.children
@@ -173,15 +165,15 @@ file.forEach(file => {
                     allChildrenGal[i].style.margin = '5%'
                 }*/
                 
-                let allChildren = project.children
+                let allChildren = projects.children
                 for(let i=0; i < allChildren.length; i++) {
                     allChildren[i].style.display = 'flex'
                     //allChildren[i].style.width = '0px'
                 }
             }else{
-                project.style.height= '800px'        
-                project.style.width = '90%'
-                project.style.opacity = '1'/*
+                projects.style.height= '800px'        
+                projects.style.width = '90%'
+                projects.style.opacity = '1'/*
                 galerie.style.flexDirection = "row"
                 galerie.style.position = "absolute"
                 let allChildrenGal = galerie.children
@@ -190,7 +182,7 @@ file.forEach(file => {
                     allChildrenGal[i].style.margin = '5%'
                 }*/
                 
-                let allChildren = project.children
+                let allChildren = projects.children
                 for(let i=0; i < allChildren.length; i++) {
                     allChildren[i].style.display = 'flex'
                     
@@ -299,11 +291,11 @@ buttons.forEach(buttons => {
             skills.children[2].style.display = "flex"
         }
         if (event.target.className === "close f4"){
-            project.style.width = "0px"
-            project.style.height = "0px"
-            project.style.opacity = "0"
+            projects.style.width = "0px"
+            projects.style.height = "0px"
+            projects.style.opacity = "0"
 
-            let allChildren =  project.children
+            let allChildren =  projects.children
                 for(let i=0; i < allChildren.length; i++) {
                     allChildren[i].style.display = 'none'
                     //allChildren[i].style.width = '0px'
@@ -311,10 +303,10 @@ buttons.forEach(buttons => {
         }
         if (event.target.className === "minimise f4"){
             console.log(skills.children)
-            project.style.height = '50px'
-            project.style.width = '220px'
-            project.style.padding = '0px'
-            project.children[2].style.display = 'none'
+            projects.style.height = '50px'
+            projects.style.width = '220px'
+            projects.style.padding = '0px'
+            projects.children[2].style.display = 'none'
             /*
             let allChildren = img.children
                 for(let i=0; i < allChildren.length; i++) {
@@ -323,10 +315,10 @@ buttons.forEach(buttons => {
             }*/
         }
         if (event.target.className === "bigger f4"){
-            project.style.height= '800px'        
-            project.style.width = '90%'
-            project.style.opacity = '1'
-            project.children[2].style.display = "flex"
+            projects.style.height= '800px'        
+            projects.style.width = '90%'
+            projects.style.opacity = '1'
+            projects.children[2].style.display = "flex"
         }
 
     
@@ -338,11 +330,21 @@ buttons.forEach(buttons => {
 projectsPage.forEach(projectsPage => {
     addEventListener('click', event => {
         console.log(event.target.className)
-        if (event.target.className === 'project PEPIF' || event.target.className === 'logoP1'){
-            PEPIF.style.width = "100%"
-            PEPIF.style.height = "auto"
-            PEPIF.children[0].style.display = "none"
-            PEPIF.children[1].style.display = "flex"
+        if (event.target.className === 'project' || event.target.className === 'logo'){
+            if (w1.matches){
+                projectsPage.style.width = "100%"
+                projectsPage.style.height = "auto"
+                projectsPage.children[0].style.display = "none"
+                projectsPage.children[1].style.display = "flex"
+            } else {
+                console.log(projectsPage.children[1])
+                projectsPage.style.width = "100%"
+                projectsPage.style.height = "90%"
+                projectsPage.children[0].style.display = "none"
+                projectsPage.children[1].style.display = "flex"
+                //projectsPage.children[1].classList.remove("responsiveProject")
+            }
+            
         }
     })
 })
@@ -386,11 +388,11 @@ function close3(){
 }
 
 function close4(){
-    project.style.width = "0%"
-    project.style.height = "0%"
-    project.style.opacity = '0'
+    projects.style.width = "0%"
+    projects.style.height = "0%"
+    projects.style.opacity = '0'
 
-    let allChildren = project.children
+    let allChildren = projects.children
     for(let i=0; i < allChildren.length; i++) {
         allChildren[i].style.display = 'none'
         //allChildren[i].style.width = '0px'

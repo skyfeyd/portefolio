@@ -315,7 +315,8 @@ body > .img > .content {
 body > .img > .content > img {
   height: 70%;
   width: 100%;
-  display: flex;
+  object-fit: cover;
+  border-radius: 20px;
 }
 body > .img > .content > .buttons {
   display: flex;
@@ -694,16 +695,16 @@ body > .projects > .projectList > div:hover {
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .projects > .projectList > div > .MainLogo1 {
+body > .projects > .projectList > div > .MainLogo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body > .projects > .projectList > div > .MainLogo1 > .logoP1 {
+body > .projects > .projectList > div > .MainLogo > .logo {
   width: 90%;
   height: 40%;
 }
-body > .projects > .projectList > div > .p1Content {
+body > .projects > .projectList > div > .Content {
   width: 100%;
   height: 100%;
   border-radius: 38px;
@@ -713,7 +714,7 @@ body > .projects > .projectList > div > .p1Content {
   flex-direction: column;
   position: relative;
 }
-body > .projects > .projectList > div > .p1Content > span {
+body > .projects > .projectList > div > .Content > span {
   position: absolute;
   top: 2%;
   right: -5%;
@@ -721,35 +722,35 @@ body > .projects > .projectList > div > .p1Content > span {
   justify-content: center;
   align-items: center;
 }
-body > .projects > .projectList > div > .p1Content > span > img {
+body > .projects > .projectList > div > .Content > span > img {
   height: 50%;
   width: 10%;
   object-fit: cover;
 }
-body > .projects > .projectList > div > .p1Content > h4 {
+body > .projects > .projectList > div > .Content > h4 {
   font-family: poppins;
   font-size: 65px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
-body > .projects > .projectList > div > .p1Content > p {
+body > .projects > .projectList > div > .Content > p {
   width: 80%;
   margin: 20px;
   font-family: poppins;
   font-size: 25px;
   line-height: 40px;
 }
-body > .projects > .projectList > div > .p1Content > .git {
+body > .projects > .projectList > div > .Content > .git {
   height: 0px;
   width: 0px;
   border-radius: 50%;
   margin: 20px;
 }
-body > .projects > .projectList > div > .p1Content > .git:hover {
+body > .projects > .projectList > div > .Content > .git:hover {
   background-color: white;
 }
-body > .projects > .projectList > div > .p1Content > .galerie1 {
+body > .projects > .projectList > div > .Content > .galerie {
   width: 90%;
   height: 35%;
   display: flex;
@@ -757,12 +758,10 @@ body > .projects > .projectList > div > .p1Content > .galerie1 {
   align-items: center;
   flex-direction: row;
   margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  margin-bottom: 5%;
 }
-body > .projects > .projectList > div > .p1Content > .galerie1 > div {
+body > .projects > .projectList > div > .Content > .galerie > div {
+  width: 20%;
   height: 90%;
   display: flex;
   justify-content: center;
@@ -774,490 +773,10 @@ body > .projects > .projectList > div > .p1Content > .galerie1 > div {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .projects > .projectList > div > .p1Content > .galerie1 > div > img {
+body > .projects > .projectList > div > .Content > .galerie > div > img {
   width: 40%;
   height: 90%;
   object-fit: cover;
-}
-body > .projects > .projectList > div > .MainLogo2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > .projects > .projectList > div > .MainLogo2 > .logoP2 {
-  width: 90%;
-  height: 40%;
-}
-body > .projects > .projectList > div > .MainLogo2 > h5 {
-  margin: 0 auto;
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 25px;
-}
-body > .projects > .projectList > div > .p2Content {
-  width: 100%;
-  height: 100%;
-  border-radius: 38px;
-  display: none;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-}
-body > .projects > .projectList > div > .p2Content > span {
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body > .projects > .projectList > div > .p2Content > span > img {
-  height: 100%;
-  width: 100%;
-}
-body > .projects > .projectList > div > .p2Content > h4 {
-  font-family: poppins;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p2Content > p {
-  width: 50%;
-  margin: 20px;
-  font-family: poppins;
-  font-size: 25px;
-  line-height: 40px;
-}
-body > .projects > .projectList > div > .p2Content > .git {
-  height: 0px;
-  width: 0px;
-  border-radius: 50%;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p2Content > .git:hover {
-  background-color: white;
-}
-body > .projects > .projectList > div > .p2Content > .galerie2 {
-  width: 90%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-body > .projects > .projectList > div > .p2Content > .galerie2 > div {
-  width: 20%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 38px;
-  margin: 50px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .projects > .projectList > div > .p2Content > .galerie2 > div > img {
-  width: 100%;
-  height: 60%;
-}
-body > .projects > .projectList > div > .p2Content > .galerie2 > div .draco {
-  width: 70%;
-  height: 100%;
-}
-body > .projects > .projectList > div > .MainLogo3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > .projects > .projectList > div > .MainLogo3 > .logoP3 {
-  width: 90%;
-  height: 40%;
-}
-body > .projects > .projectList > div > .MainLogo3 > h5 {
-  margin: 0 auto;
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 25px;
-}
-body > .projects > .projectList > div > .p3Content {
-  width: 100%;
-  height: 100%;
-  border-radius: 38px;
-  display: none;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-}
-body > .projects > .projectList > div > .p3Content > span {
-  height: 50px;
-  width: 68px;
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body > .projects > .projectList > div > .p3Content > span > img {
-  height: 100%;
-  width: 100%;
-}
-body > .projects > .projectList > div > .p3Content > h4 {
-  font-family: poppins;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p3Content > p {
-  width: 50%;
-  margin: 20px;
-  font-family: poppins;
-  font-size: 25px;
-  line-height: 40px;
-}
-body > .projects > .projectList > div > .p3Content > .galerie3 {
-  width: 90%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-body > .projects > .projectList > div > .p3Content > .galerie3 > div {
-  width: 20%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 38px;
-  margin: 50px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .projects > .projectList > div > .p3Content > .galerie3 > div > img {
-  width: 100%;
-  height: 80%;
-}
-body > .projects > .projectList > div > .p3Content > .galerie3 > div > .stretch {
-  width: 90%;
-  height: 100%;
-}
-body > .projects > .projectList > div > .MainLogo4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > .projects > .projectList > div > .MainLogo4 > .logoP4 {
-  width: 50%;
-  height: 40%;
-}
-body > .projects > .projectList > div > .MainLogo4 > h5 {
-  margin: 0 auto;
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 25px;
-}
-body > .projects > .projectList > div > .p4Content {
-  width: 100%;
-  height: 100%;
-  border-radius: 38px;
-  display: none;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-}
-body > .projects > .projectList > div > .p4Content > span {
-  height: 50px;
-  width: 68px;
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body > .projects > .projectList > div > .p4Content > span > img {
-  height: 100%;
-  width: 100%;
-}
-body > .projects > .projectList > div > .p4Content > h4 {
-  font-family: poppins;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p4Content > p {
-  width: 50%;
-  margin: 20px;
-  font-family: poppins;
-  font-size: 25px;
-  line-height: 40px;
-}
-body > .projects > .projectList > div > .p4Content > .link {
-  width: 50%;
-  margin: 20px;
-  margin-top: 0px;
-  font-family: poppins;
-  font-size: 20px;
-}
-body > .projects > .projectList > div > .p4Content > .galerie4 {
-  width: 90%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-body > .projects > .projectList > div > .p4Content > .galerie4 > div {
-  width: 20%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 38px;
-  margin: 50px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .projects > .projectList > div > .p4Content > .galerie4 > div > img {
-  width: 100%;
-  height: 80%;
-}
-body > .projects > .projectList > div > .p4Content > .galerie4 > div > .stretch {
-  width: 90%;
-  height: 100%;
-}
-body > .projects > .projectList > div > .MainLogo5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > .projects > .projectList > div > .MainLogo5 > .logoP5 {
-  width: 100%;
-  height: 100%;
-  margin-top: 40px;
-}
-body > .projects > .projectList > div > .MainLogo5 > h5 {
-  margin: 0 auto;
-  margin-top: 40px;
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 25px;
-}
-body > .projects > .projectList > div > .p5Content {
-  width: 100%;
-  height: 100%;
-  border-radius: 38px;
-  display: none;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-}
-body > .projects > .projectList > div > .p5Content > span {
-  height: 50px;
-  width: 68px;
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body > .projects > .projectList > div > .p5Content > span > img {
-  height: 100%;
-  width: 100%;
-}
-body > .projects > .projectList > div > .p5Content > h4 {
-  font-family: poppins;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p5Content > p {
-  width: 50%;
-  margin: 20px;
-  font-family: poppins;
-  font-size: 25px;
-  line-height: 40px;
-}
-body > .projects > .projectList > div > .p5Content > .link {
-  width: 50%;
-  margin: 20px;
-  margin-top: 0px;
-  font-family: poppins;
-  font-size: 20px;
-}
-body > .projects > .projectList > div > .p5Content > .galerie5 {
-  width: 90%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-body > .projects > .projectList > div > .p5Content > .galerie5 > div {
-  width: 20%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 38px;
-  margin: 50px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .projects > .projectList > div > .p5Content > .galerie5 > div > img {
-  width: 100%;
-  height: 80%;
-}
-body > .projects > .projectList > div > .p5Content > .galerie5 > div > .stretch {
-  width: 90%;
-  height: 100%;
-}
-body > .projects > .projectList > div > .MainLogo6 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > .projects > .projectList > div > .MainLogo6 > .logoP6 {
-  width: 50%;
-  height: 40%;
-}
-body > .projects > .projectList > div > .MainLogo6 > h5 {
-  margin: 0 auto;
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 25px;
-}
-body > .projects > .projectList > div > .p6Content {
-  width: 100%;
-  height: 100%;
-  border-radius: 38px;
-  display: none;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-}
-body > .projects > .projectList > div > .p6Content > span {
-  height: 50px;
-  width: 68px;
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body > .projects > .projectList > div > .p6Content > span > img {
-  height: 100%;
-  width: 100%;
-}
-body > .projects > .projectList > div > .p6Content > h4 {
-  font-family: poppins;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px;
-}
-body > .projects > .projectList > div > .p6Content > p {
-  width: 50%;
-  margin: 20px;
-  font-family: poppins;
-  font-size: 25px;
-  line-height: 40px;
-}
-body > .projects > .projectList > div > .p6Content > .link {
-  width: 50%;
-  margin: 20px;
-  margin-top: 0px;
-  font-family: poppins;
-  font-size: 20px;
-}
-body > .projects > .projectList > div > .p6Content > .galerie6 {
-  width: 90%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
-body > .projects > .projectList > div > .p6Content > .galerie6 > div {
-  width: 20%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 38px;
-  margin: 50px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-body > .projects > .projectList > div > .p6Content > .galerie6 > div > img {
-  width: 100%;
-  height: 80%;
-}
-body > .projects > .projectList > div > .p6Content > .galerie6 > div > .stretch {
-  width: 90%;
-  height: 100%;
 }
 body > .projects > .projectList .responsiveProject > span {
   width: 0;
