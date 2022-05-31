@@ -1,0 +1,25 @@
+{
+  "name": "skyfeyd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:skyfeyd/Starter-Package.git"
+  },
+  "keywords": [
+    "skyfeyd"
+  ],
+  "author": "skyfeyd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyfeyd/package.json/issues"
+  },
+  "homepage": "https://github.com/skyfeyd/Starter-Package#readme",
+  "publishConfig": {
+    "@skyfeyd:registry": "https://npm.pkg.github.com"
+  }
+}

@@ -17,6 +17,8 @@ const projectsPage = document.querySelectorAll('.project')
 
 const circle = document.querySelector('.circle')
 
+const galerie = document.querySelector('.galerie')
+
 var moving = false
 var deg = '90';
 var clickX = 0;
@@ -143,7 +145,7 @@ file.forEach(file => {
                 }
 
             }else{
-                skills.style.height= '22%'        
+                skills.style.height= '26%'        
                 skills.style.width = '70%'
                 skills.style.opacity = '1'
                 //skills.style.transform = "translateY(300px)";
@@ -285,8 +287,8 @@ buttons.forEach(buttons => {
             }*/
         }
         if (event.target.className === "bigger f3"){
-            skills.style.height= '30%'        
-            skills.style.width = '85%'
+            skills.style.height= '26%'        
+            skills.style.width = '70%'
             skills.style.opacity = '1'
             skills.children[2].style.display = "flex"
         }
@@ -363,6 +365,27 @@ projectsPage.forEach(projectsPage => {
         } 
     })
 })
+
+if(w1.matches){
+    galerie.style.flexDirection = "column"
+    galerie.style.position = "relative"
+    let allChildren = galerie.children
+    for(let i=0; i < allChildren.length; i++) {  
+        allChildren[i].style.width = '90%'
+        allChildren[i].style.margin = '5%'
+    }
+} else {
+    galerie.style.flexDirection = "row"
+    galerie.style.position = "absolute"
+    let allChildren = galerie.children
+    for(let i=0; i < allChildren.length; i++) {  
+        allChildren[i].style.width = '20%'
+        allChildren[i].style.margin = '5%'
+    }
+}
+
+
+
 
 
 
