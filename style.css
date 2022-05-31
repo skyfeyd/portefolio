@@ -666,7 +666,7 @@ body > .projects > .projectList {
   flex-direction: row;
   justify-content: center;
   align-items: start;
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-width: none;
   cursor: auto;
 }
@@ -1259,23 +1259,12 @@ body > .projects > .projectList > div > .p6Content > .galerie6 > div > .stretch 
   width: 90%;
   height: 100%;
 }
-body > .projects > .projectList .responsiveProject {
-  flex-direction: column;
-  overflow-y: scroll;
-}
 body > .projects > .projectList .responsiveProject > span {
   width: 0;
   height: 0;
 }
 body > .projects > .projectList .responsiveProject > p {
   font-size: 10px;
-}
-body > .projects > .projectList .responsiveProject > .galerie {
-  flex-direction: column;
-}
-body > .projects > .projectList .responsiveProject > .galerie > div {
-  width: 200px;
-  height: 200px;
 }
 
 @keyframes gradient {
@@ -1299,34 +1288,6 @@ body > .projects > .projectList .responsiveProject > .galerie > div {
   }
 }
 @media only screen and (max-width: 850px) {
-  body {
-    /*
-    .projects{
-        >.projectList{
-            >.project{
-                overflow: scroll;
-                flex-direction: column;
-                >.p{
-                    padding: 2%;
-                    >span{
-                        display: none;
-                    }
-                    >div{
-                        justify-content:center;
-                        align-items:center;
-                        flex-wrap: wrap;
-                        flex-direction: row;
-                        >div{
-                            width: 200px;
-                            height: 200px;
-                            margin: 25px;
-                        }
-                    }
-                }
-            }
-        }
-    }*/
-  }
   body > nav > h2 {
     font-size: 18px;
   }
@@ -1371,6 +1332,18 @@ body > .projects > .projectList .responsiveProject > .galerie > div {
   }
   body .skills > .skillList > div > span {
     display: none !important;
+  }
+  body .projectList {
+    overflow-y: scroll !important;
+  }
+  body .galerie {
+    flex-direction: column !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  body .galerie > div {
+    width: 90% !important;
+    margin: 5% !important;
   }
 }
 html, body, div, span, applet, object, iframe,

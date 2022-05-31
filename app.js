@@ -162,13 +162,16 @@ file.forEach(file => {
         else if (event.target.className === 'file4')
         {   
             if(w1.matches) {
-                project.style.height= '60%'        
+                project.style.height= '90vh'        
                 project.style.width = '90%'
-                project.style.opacity = '1'
-                //pl.style.height= '899px'        
-                //pl.style.width = '1759px'
-                //pl.style.opacity = '1'
-                //pl.style.display = 'flex'
+                project.style.opacity = '1'/*
+                galerie.style.flexDirection = "column"
+                galerie.style.position = "relative"
+                let allChildrenGal = galerie.children
+                for(let i=0; i < allChildrenGal.length; i++) {  
+                    allChildrenGal[i].style.width = '90%'
+                    allChildrenGal[i].style.margin = '5%'
+                }*/
                 
                 let allChildren = project.children
                 for(let i=0; i < allChildren.length; i++) {
@@ -178,11 +181,14 @@ file.forEach(file => {
             }else{
                 project.style.height= '800px'        
                 project.style.width = '90%'
-                project.style.opacity = '1'
-                //pl.style.height= '899px'        
-                //pl.style.width = '1759px'
-                //pl.style.opacity = '1'
-                //pl.style.display = 'flex'
+                project.style.opacity = '1'/*
+                galerie.style.flexDirection = "row"
+                galerie.style.position = "absolute"
+                let allChildrenGal = galerie.children
+                for(let i=0; i < allChildrenGal.length; i++) {  
+                    allChildrenGal[i].style.width = '20%'
+                    allChildrenGal[i].style.margin = '5%'
+                }*/
                 
                 let allChildren = project.children
                 for(let i=0; i < allChildren.length; i++) {
@@ -334,59 +340,12 @@ projectsPage.forEach(projectsPage => {
         console.log(event.target.className)
         if (event.target.className === 'project PEPIF' || event.target.className === 'logoP1'){
             PEPIF.style.width = "100%"
-            PEPIF.style.height = "90%"
+            PEPIF.style.height = "auto"
             PEPIF.children[0].style.display = "none"
             PEPIF.children[1].style.display = "flex"
-        } else if (event.target.className === 'project POKAPI' || event.target.className === 'logoP2'){
-            POKAPI.style.width = "100%"
-            POKAPI.style.height = "90%"
-            POKAPI.children[0].style.display = "none"
-            POKAPI.children[1].style.display = "flex"
-        } else if (event.target.className === 'project MOCKUPS' || event.target.className === 'logoP3'){
-            MOCKUPS.style.width = "100%"
-            MOCKUPS.style.height = "90%"
-            MOCKUPS.children[0].style.display = "none"
-            MOCKUPS.children[1].style.display = "flex"
-        } else if (event.target.className === 'project POO' || event.target.className === 'logoP4'){
-            POO.style.width = "100%"
-            POO.style.height = "90%"
-            POO.children[0].style.display = "none"
-            POO.children[1].style.display = "flex"
-        } else if (event.target.className === 'project sf1' || event.target.className === 'logoP5'){
-            sf1.style.width = "100%"
-            sf1.style.height = "90%"
-            sf1.children[0].style.display = "none"
-            sf1.children[1].style.display = "flex"
-        }  else if (event.target.className === 'project sf2' || event.target.className === 'logoP6'){
-            sf2.style.width = "100%"
-            sf2.style.height = "90%"
-            sf2.children[0].style.display = "none"
-            sf2.children[1].style.display = "flex"
-        } 
+        }
     })
 })
-
-if(w1.matches){
-    galerie.style.flexDirection = "column"
-    galerie.style.position = "relative"
-    let allChildren = galerie.children
-    for(let i=0; i < allChildren.length; i++) {  
-        allChildren[i].style.width = '90%'
-        allChildren[i].style.margin = '5%'
-    }
-} else {
-    galerie.style.flexDirection = "row"
-    galerie.style.position = "absolute"
-    let allChildren = galerie.children
-    for(let i=0; i < allChildren.length; i++) {  
-        allChildren[i].style.width = '20%'
-        allChildren[i].style.margin = '5%'
-    }
-}
-
-
-
-
 
 
 

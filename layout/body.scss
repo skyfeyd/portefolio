@@ -625,6 +625,7 @@ body{
         align-items: start;
         flex-direction: column;
         
+        
         >h2{
             font-family: poppins;
             color: white;
@@ -643,7 +644,7 @@ body{
             flex-direction: row;
             justify-content: center;
             align-items: start;
-            overflow-y: auto;
+            overflow-y: scroll;
             scrollbar-width: none; 
             cursor: auto;
 
@@ -1283,21 +1284,12 @@ body{
                 }
             }
             .responsiveProject{
-                flex-direction: column;
-                overflow-y: scroll;
                 >span{
                     width: 0;
                     height: 0;
                 }
                 >p{
                     font-size: 10px;
-                }
-                >.galerie{
-                    flex-direction: column;
-                    >div{
-                        width: 200px;
-                        height: 200px;
-                    }
                 }
             }
             
@@ -1400,32 +1392,20 @@ body{
                     }
                 }
                 
-            }/*
-            .projects{
-                >.projectList{
-                    >.project{
-                        overflow: scroll;
-                        flex-direction: column;
-                        >.p{
-                            padding: 2%;
-                            >span{
-                                display: none;
-                            }
-                            >div{
-                                justify-content:center;
-                                align-items:center;
-                                flex-wrap: wrap;
-                                flex-direction: row;
-                                >div{
-                                    width: 200px;
-                                    height: 200px;
-                                    margin: 25px;
-                                }
-                            }
-                        }
-                    }
+            }
+
+            .projectList{
+                overflow-y: scroll !important;  
+            }
+            .galerie{
+                flex-direction: column !important;
+                height: auto !important;
+                position: relative !important;
+                >div{
+                    width: 90% !important;
+                    margin: 5% !important;
                 }
-            }*/
+            }
             
     }
 
