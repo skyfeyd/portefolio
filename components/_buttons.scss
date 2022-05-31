@@ -93,6 +93,30 @@
 
 }
 
+
+.CV{
+    height: 45px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    >h4{
+        font-family: poppins;
+        font-weight: bolder;
+        font-size: 25px;
+        color: black;
+        margin-right: 5px;
+    }
+    >img{
+        margin-left: 5px;
+    }
+}
+
+
+
 @media only screen and (max-width : 600px) {
     .ChangeWallpaper{
         width: 100%;
@@ -111,3 +135,28 @@
     
 
 }
+
+@media only screen and (max-width : 1144px) {
+    .CV{
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+
+        >h4{
+            margin-right: 0;
+        }
+        >i{
+            display: none;
+        }
+    }
+
+    .logos{
+        >a{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+
+

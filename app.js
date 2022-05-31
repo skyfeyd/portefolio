@@ -26,11 +26,8 @@ var draggableP = false
 var clic = 0
 
 //responsive design
-var w1 = window.matchMedia("(max-width: 850px)")
-
-
-
-console.log(clickX)
+var w1 = window.matchMedia("(max-width: 550px)")
+var w2 = window.matchMedia("(min-width: 551px) and (max-width: 850px)")
 
 
 
@@ -55,18 +52,17 @@ document.getElementById('bg').style.backgroundSize = "400% 400%";
 }
 
 
-close1()
-close2()
-close3()
-close4()
-
-
 
 file.forEach(file => {
     addEventListener('click', event => {
         console.log(event.target.className)
         if (event.target.className === 'file1')
         {
+            console.log(img.classList)
+            img.classList.remove('imgc')
+            img.classList.remove('imgm')
+            img.classList.add('imgo')
+            /*
             if(w1.matches) {
                 img.style.width = "90%"
                 img.style.height = "40%"
@@ -78,22 +74,42 @@ file.forEach(file => {
                     //allChildren[i].style.width = '0px'
                 }
 
-            }else{
+            }else if(w2.matches){
+                console.log('w2')
                 img.style.height = "40%"
-                img.style.width = "20%"
+                img.style.width = "40%"
                 img.style.opacity = "1"
-                //xc.style.display = "flex"
-                //xb.style.display = "flex"
 
                 let allChildren = img.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'flex'
-                    //allChildren[i].style.width = '0px'
+                    for(let i=0; i < allChildren.length; i++) {
+                        allChildren[i].style.display = 'flex'
+                        //allChildren[i].style.width = '0px'
+                    }
+                
+
+                } else {
+                    img.classList.add('imgo')
+                    img.classList.remove('imgc')/*
+                    img.style.height = "40%"
+                    img.style.width = "20%"
+                    img.style.opacity = "1"
+                    //xc.style.display = "flex"
+                    //xb.style.display = "flex"
+
+                    let allChildren = img.children
+                    for(let i=0; i < allChildren.length; i++) {
+                        allChildren[i].style.display = 'flex'
+                        //allChildren[i].style.width = '0px'
+                    }
                 }
-            }
-        }
-        else if (event.target.className === 'file2')
+            */
+        }  
+        if (event.target.className === 'file2') 
         {
+            pres.classList.remove('presc')
+            pres.classList.add('preso')
+
+            /*
             if(w1.matches) {
                 pres.style.width = '100%'
                 pres.style.height = '40%'
@@ -119,8 +135,10 @@ file.forEach(file => {
                     allChildren[i].style.display = 'flex'
                     //allChildren[i].style.width = '0px'
                 }
-            }
+            }*/
         } else if (event.target.className === 'file3') {
+            skills.classList.remove('skillc')
+            skills.classList.add('skillo')/*
             if(w1.matches) {
                 skills.style.width = '99%'
                 skills.style.height = '30%'
@@ -149,12 +167,14 @@ file.forEach(file => {
                     allChildren[i].style.display = 'flex'
                     //allChildren[i].style.width = '0px'
                 }
-            }
+            }*/
         }
         else if (event.target.className === 'file4')
         {   
+            projects.classList.remove('projectsc')
+            projects.classList.add('projectso')/*
             if(w1.matches) {
-                projects.style.height= '90vh'        
+                projects.style.height= 'auto'        
                 projects.style.width = '90%'
                 projects.style.opacity = '1'/*
                 galerie.style.flexDirection = "column"
@@ -163,7 +183,7 @@ file.forEach(file => {
                 for(let i=0; i < allChildrenGal.length; i++) {  
                     allChildrenGal[i].style.width = '90%'
                     allChildrenGal[i].style.margin = '5%'
-                }*/
+                }
                 
                 let allChildren = projects.children
                 for(let i=0; i < allChildren.length; i++) {
@@ -180,7 +200,7 @@ file.forEach(file => {
                 for(let i=0; i < allChildrenGal.length; i++) {  
                     allChildrenGal[i].style.width = '20%'
                     allChildrenGal[i].style.margin = '5%'
-                }*/
+                }
                 
                 let allChildren = projects.children
                 for(let i=0; i < allChildren.length; i++) {
@@ -189,7 +209,7 @@ file.forEach(file => {
                     //allChildren[i].style.width = '0px'
                 }
                     
-            }
+            }*/
         }
     })
 })
@@ -199,107 +219,43 @@ file.forEach(file => {
 buttons.forEach(buttons => {
     addEventListener('click', event => {
         if (event.target.className === "close f1"){
-            console.log(img.children)
-            img.style.width = "0px" 
-            img.style.height = "0px"
-            img.style.opacity = "0"
-
-            let allChildren = img.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }
+            img.classList.remove('imgo')
+            img.classList.add('imgc')
         }
         if (event.target.className === "minimise f1"){
-            console.log(img.children)
-            img.style.height = '50px'
-            img.style.width = '200px' 
-            img.style.padding = '0px'
-            img.children[1].style.display = 'none'
-            /*
-            let allChildren = img.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }*/
+            img.classList.add('imgm')
         }
         if (event.target.className === "bigger f1"){
-                img.style.height = "40%"
-                img.style.width = "20%"
-                img.style.opacity = "1"
-                img.children[1].style.display = "flex"
+            img.classList.remove('imgm')
+            img.classList.add('imgo')
         }
         if (event.target.className === "close f2"){
-            pres.style.width = "0px"
-            pres.style.height = "0px"
-            pres.style.opacity = "0"
-
-            let allChildren = pres.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }
+            pres.classList.remove('preso')
+            pres.classList.add('presc')
         }
         if (event.target.className === "minimise f2"){
-            console.log(pres.children)
-            pres.style.height = '50px'
-            pres.style.width = '270px' 
-            pres.style.padding = '0px'
-            pres.children[1].style.display = 'none'
-            /*
-            let allChildren = img.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }*/
+            pres.classList.add('presm')
         }
         if (event.target.className === "bigger f2"){
-            pres.style.height= '34%'        
-            pres.style.width = '40%'
-            pres.style.opacity = '1'
-            pres.children[1].style.display = "flex"
+            pres.classList.remove('presm')
+            pres.classList.add('preso')
         }
         if (event.target.className === "close f3"){
-            skills.style.width = "0px"
-            skills.style.height = "0px"
-            skills.style.opacity = "0"
-            skills.style.transform = "translateY(-5px)";
-
-            let allChildren = skills.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }
+            skills.classList.remove('skillo')
+            skills.classList.add('skillc')
         }
         if (event.target.className === "minimise f3"){
-            console.log(skills.children)
-            skills.style.height = '50px'
-            skills.style.width = '200px'
-            skills.style.padding = '0px'
-            skills.children[2].style.display = 'none'
-            /*
-            let allChildren = img.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }*/
+            skills.classList.add('skillm')
         }
         if (event.target.className === "bigger f3"){
-            skills.style.height= '26%'        
-            skills.style.width = '70%'
-            skills.style.opacity = '1'
-            skills.children[2].style.display = "flex"
+            skills.classList.remove('skillm')
+            skills.classList.add('skillo')
         }
         if (event.target.className === "close f4"){
-            projects.style.width = "0px"
-            projects.style.height = "0px"
-            projects.style.opacity = "0"
-
-            let allChildren =  projects.children
-                for(let i=0; i < allChildren.length; i++) {
-                    allChildren[i].style.display = 'none'
-                    //allChildren[i].style.width = '0px'
-            }
+            projects.classList.remove('projectso')
+            projects.classList.add('projectsc')/*
+            projectsPage.classList.remove("open")
+            projectsPage.classList.add("close")*/
         }
         if (event.target.className === "minimise f4"){
             console.log(skills.children)
@@ -331,73 +287,14 @@ projectsPage.forEach(projectsPage => {
     addEventListener('click', event => {
         console.log(event.target.className)
         if (event.target.className === 'project' || event.target.className === 'logo'){
-            if (w1.matches){
-                projectsPage.style.width = "100%"
-                projectsPage.style.height = "auto"
-                projectsPage.children[0].style.display = "none"
-                projectsPage.children[1].style.display = "flex"
-            } else {
-                console.log(projectsPage.children[1])
-                projectsPage.style.width = "100%"
-                projectsPage.style.height = "90%"
-                projectsPage.children[0].style.display = "none"
-                projectsPage.children[1].style.display = "flex"
-                //projectsPage.children[1].classList.remove("responsiveProject")
-            }
+            projectsPage.classList.remove("close")
+            projectsPage.classList.add("open")
             
-        }
-    })
-})
-
-
-
-function close1(){
-    img.style.width = "0%"
-    img.style.height = "0%"
-    img.style.opacity = '0'
-
-    let allChildren = img.children
-    for(let i=0; i < allChildren.length; i++) {
-        allChildren[i].style.display = 'none'
-        //allChildren[i].style.width = '0px'
-    }
-}
-
-function close2(){
-    pres.style.width = "0%"
-    pres.style.height = "0%"
-    pres.style.opacity = '0'
-
-    let allChildren = pres.children
-    for(let i=0; i < allChildren.length; i++) {
-        allChildren[i].style.display = 'none'
-        //allChildren[i].style.width = '0px'
-    }
-}
-
-function close3(){
-    skills.style.width = "0%"
-    skills.style.height = "0%"
-    skills.style.opacity = '0'
-
-    let allChildren = skills.children
-    for(let i=0; i < allChildren.length; i++) {
-        allChildren[i].style.display = 'none'
-        //allChildren[i].style.width = '0px'
-    }
-}
-
-function close4(){
-    projects.style.width = "0%"
-    projects.style.height = "0%"
-    projects.style.opacity = '0'
-
-    let allChildren = projects.children
-    for(let i=0; i < allChildren.length; i++) {
-        allChildren[i].style.display = 'none'
-        //allChildren[i].style.width = '0px'
-    }
-}
+            
+        }   
+    })} 
+)
+    
 
 
 

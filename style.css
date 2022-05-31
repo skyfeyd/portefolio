@@ -84,6 +84,27 @@
   margin-top: 12px;
 }
 
+.CV {
+  height: 45px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.CV > h4 {
+  font-family: poppins;
+  font-weight: bolder;
+  font-size: 25px;
+  color: black;
+  margin-right: 5px;
+}
+.CV > img {
+  margin-left: 5px;
+}
+
 @media only screen and (max-width: 600px) {
   .ChangeWallpaper {
     width: 100%;
@@ -92,6 +113,24 @@
     top: 93.5%;
     left: 0;
     right: 0;
+  }
+}
+@media only screen and (max-width: 1144px) {
+  .CV {
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+  }
+  .CV > h4 {
+    margin-right: 0;
+  }
+  .CV > i {
+    display: none;
+  }
+
+  .logos > a {
+    width: 50px;
+    height: 50px;
   }
 }
 body {
@@ -316,7 +355,7 @@ body > .img > .content > img {
   height: 70%;
   width: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10%;
 }
 body > .img > .content > .buttons {
   display: flex;
@@ -324,26 +363,6 @@ body > .img > .content > .buttons {
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
-}
-body > .img > .content > .buttons > .CV {
-  height: 58px;
-  width: 122px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 30px;
-  text-decoration: none;
-}
-body > .img > .content > .buttons > .CV > h4 {
-  font-family: poppins;
-  font-weight: bolder;
-  font-size: 25px;
-  color: black;
-  margin-right: 5px;
-}
-body > .img > .content > .buttons > .CV > img {
-  margin-left: 5px;
 }
 body > .img > .content > .buttons > .logos {
   display: flex;
@@ -362,6 +381,45 @@ body > .img > .content > .buttons > .logos > a > img {
 }
 body > .img > .content > .buttons > .logos > a:hover {
   background-color: white;
+}
+body > .img.imgo {
+  width: 20%;
+  height: 40%;
+  opacity: 1;
+}
+body > .img.imgo > div {
+  display: flex;
+}
+@media only screen and (max-width: 550px) {
+  body > .img.imgo {
+    width: 90%;
+    height: 40%;
+    opacity: 1;
+    top: 10%;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+  body > .img.imgo {
+    width: 40%;
+    height: 40%;
+    opacity: 1;
+    top: 10%;
+  }
+}
+body > .img.imgc {
+  width: 0;
+  height: 0;
+}
+body > .img.imgc > div {
+  display: none;
+}
+body > .img.imgm {
+  height: 50px;
+  width: 200px;
+  padding: 0px;
+}
+body > .img.imgm > .content {
+  display: none;
 }
 body > .pres {
   transition: 0.6s ease;
@@ -390,6 +448,43 @@ body > .pres > .Ycontent > p {
   font-size: 25px;
   line-height: 40px;
   height: 100%;
+}
+body > .pres.preso {
+  width: 40%;
+  height: 34%;
+  opacity: 1;
+}
+@media only screen and (max-width: 550px) {
+  body > .pres.preso {
+    width: 90%;
+    height: 40%;
+    opacity: 1;
+    margin: 0 auto;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+  body > .pres.preso {
+    width: 70%;
+    height: 40%;
+    opacity: 1;
+    left: 28%;
+  }
+}
+body > .pres.presc {
+  width: 0;
+  height: 0;
+}
+body > .pres.presc > div {
+  display: none;
+}
+body > .pres.presm {
+  width: 270px;
+  height: 50px;
+  padding: 0px;
+}
+body > .pres.presm > .Ycontent {
+  display: none;
 }
 body > .skills {
   transition: 0.6s ease;
@@ -632,6 +727,44 @@ body > .skills > .skillList > .SYMFONY > .bar:before {
   background-color: black;
   border-radius: 20px;
 }
+body > .skills.skillo {
+  width: 70%;
+  height: 26%;
+  opacity: 1;
+}
+body > .skills.skillo > div {
+  display: flex;
+}
+@media only screen and (max-width: 550px) {
+  body > .skills.skillo {
+    width: 99%;
+    height: 30%;
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+  body > .skills.skillo {
+    width: 80%;
+    height: 20%;
+    opacity: 1;
+    right: 28%;
+  }
+}
+body > .skills.skillc {
+  height: 0;
+  width: 0;
+}
+body > .skills.skillc div {
+  display: none;
+}
+body > .skills.skillm {
+  height: 50px;
+  width: 200px;
+  padding: 0px;
+}
+body > .skills.skillm > .skillList {
+  display: none;
+}
 body > .projects {
   transition: 0.6s ease;
   margin: 0 auto;
@@ -672,8 +805,6 @@ body > .projects > .projectList {
   cursor: auto;
 }
 body > .projects > .projectList > div {
-  height: 300px;
-  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -785,6 +916,62 @@ body > .projects > .projectList .responsiveProject > span {
 body > .projects > .projectList .responsiveProject > p {
   font-size: 10px;
 }
+body > .projects > .projectList .open {
+  width: 100%;
+  height: 90%;
+}
+body > .projects > .projectList .open > .MainLogo {
+  display: none;
+}
+body > .projects > .projectList .open > .Content {
+  display: flex;
+}
+body > .projects > .projectList .close {
+  height: 300px;
+  width: 400px;
+}
+body > .projects > .projectList .close > .MainLogo {
+  display: flex;
+}
+body > .projects > .projectList .close > .Content {
+  display: none;
+}
+body > .projects.projectso {
+  height: 800px;
+  width: 90%;
+  opacity: 1;
+  /*
+  @media only screen and (min-width: 551px) and (max-width: 850px){
+      width: 70%;
+      height: 40%;
+      opacity: 1;
+      left: 28%;
+  }*/
+}
+body > .projects.projectso > div {
+  display: flex;
+}
+@media only screen and (max-width: 550px) {
+  body > .projects.projectso {
+    width: 90%;
+    height: auto;
+    opacity: 1;
+  }
+}
+body > .projects.projectsc {
+  height: 0;
+  width: 0;
+}
+body > .projects.projectsc > div {
+  display: none;
+}
+body > .projects.projectsm {
+  height: 50px;
+  width: 220px;
+}
+body > .projects.projectsm > .content {
+  display: none;
+}
 
 @keyframes gradient {
   0% {
@@ -805,11 +992,6 @@ body > .projects > .projectList .responsiveProject > p {
     font-size: 20px;
     margin: 1%;
   }
-}
-@media only screen and (max-width: 850px) {
-  body > nav > h2 {
-    font-size: 18px;
-  }
   body .files > .file1 {
     left: 2%;
     margin-top: 10%;
@@ -827,8 +1009,26 @@ body > .projects > .projectList .responsiveProject > p {
     top: 50%;
     left: 54%;
   }
+}
+@media only screen and (max-width: 850px) {
+  body > nav > h2 {
+    font-size: 18px;
+  }
+  body .img > .Content > .buttons {
+    width: 100%;
+  }
+  body .img > .Content > .buttons > .CV {
+    width: 50px;
+    height: 50px;
+  }
+  body .img > .Content > .buttons > .CV > h4 {
+    margin-right: 0;
+  }
+  body .img > .Content > .buttons > .CV > i {
+    display: none;
+  }
   body .pres {
-    left: 0;
+    right: 0;
   }
   body .pres > .Ycontent {
     height: 80%;
@@ -853,16 +1053,25 @@ body > .projects > .projectList .responsiveProject > p {
     display: none !important;
   }
   body .projectList {
-    overflow-y: scroll !important;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
-  body .galerie {
-    flex-direction: column !important;
-    height: auto !important;
-    position: relative !important;
+  body .projectList.galerie {
+    flex-direction: column;
+    height: auto;
+    position: relative;
   }
-  body .galerie > div {
-    width: 90% !important;
-    margin: 5% !important;
+  body .projectList.galerie > div {
+    width: 90%;
+    margin: 5%;
+  }
+  body .projectList.open {
+    width: 100%;
+    height: auto;
+  }
+  body .projectList.close {
+    height: 300px;
+    width: 400px;
   }
 }
 html, body, div, span, applet, object, iframe,

@@ -60,6 +60,7 @@ body{
             border-radius: 10px;
             padding-left: 10px;
             padding-right: 10px;
+
             
             >h2{
                 margin-top: -10px;
@@ -75,6 +76,8 @@ body{
                 height: 80%;
             }
         }
+
+        
 
         >.file2{
             height: 120px;
@@ -245,7 +248,7 @@ body{
                 height: 70%;
                 width: 100%;
                 object-fit: cover;
-                border-radius: 20px;
+                border-radius: 10%;
             }
             >.buttons{
                 display: flex;
@@ -257,26 +260,7 @@ body{
 
             
 
-                >.CV{
-                    height: 58px;
-                    width: 122px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: white;
-                    border-radius: 30px;
-                    text-decoration: none;
-                    >h4{
-                        font-family: poppins;
-                        font-weight: bolder;
-                        font-size: 25px;
-                        color: black;
-                        margin-right: 5px;
-                    }
-                    >img{
-                        margin-left: 5px;
-                    }
-                }
+                
 
                 >.logos{
                     display: flex;
@@ -303,7 +287,55 @@ body{
                     }
                 }    }   
         }
+
+        &.imgo{
+            width: 20% ;
+            height: 40% ;
+            opacity: 1;
+    
+            >div{
+                display: flex;
+            }
+    
+            @media only screen and (max-width: 550px){
+                width: 90%;
+                height: 40%;
+                opacity: 1;
+                top: 10%;
+            }
+    
+            @media only screen and (min-width: 551px) and (max-width: 850px){
+                width: 40%;
+                height: 40%;
+                opacity: 1;
+                top: 10%;
+            }
+                
+        }
+            
+    
+        &.imgc{
+            width: 0;
+            height: 0;
+            >div{
+                display: none;
+            }
+        }
+
+
+        &.imgm{
+            height: 50px;
+            width: 200px;
+            padding: 0px;
+
+            >.content{
+                display: none;
+            }
+        }
+
     }
+
+
 
     >.pres{
         transition: 0.6s ease;
@@ -335,7 +367,49 @@ body{
             }
         }
 
+        &.preso{
+            width: 40%;
+            height: 34%;
+            opacity: 1;
+            
+
+            @media only screen and (max-width: 550px){
+                width: 90%;
+                height: 40%;
+                opacity: 1;
+                margin: 0 auto;
+                left: 0;
+            }
+    
+            @media only screen and (min-width: 551px) and (max-width: 850px){
+                width: 70%;
+                height: 40%;
+                opacity: 1;
+                left: 28%;
+            }
+        }
+
+        &.presc{
+            width: 0;
+            height: 0;
+            >div{
+                display: none;
+            }
+        }
+
+        &.presm{
+            width: 270px;
+            height: 50px;
+            padding: 0px;
+
+            >.Ycontent{
+                display: none;
+            }
+        }
+
     }
+
+    
 
     >.skills{
         transition: 0.6s ease;
@@ -606,6 +680,47 @@ body{
                 }
             }
         }
+
+        &.skillo{
+            width: 70%;
+            height: 26%;
+            opacity: 1;
+
+            >div{
+                display: flex;
+            }
+
+            @media only screen and (max-width: 550px){
+                width: 99%;
+                height: 30%;
+                opacity: 1;
+            }
+    
+            @media only screen and (min-width: 551px) and (max-width: 850px){
+                width: 80%;
+                height: 20%;
+                opacity: 1;
+                right: 28%;
+            }
+        }
+
+        &.skillc{
+            height: 0;
+            width: 0;
+            div{
+                display: none;
+            }
+        }
+
+        &.skillm{
+            height: 50px;
+            width: 200px;
+            padding: 0px;
+            >.skillList{
+                display: none;
+            }
+        }
+        
     }
     >.projects{
         transition: 0.6s ease;
@@ -650,8 +765,6 @@ body{
             cursor: auto;
 
             >div{
-                height: 300px;
-                width: 400px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -774,9 +887,77 @@ body{
                     font-size: 10px;
                 }
             }
+
+            .open{
+                width: 100%;
+                height: 90%;
+
+                >.MainLogo{
+                    display: none;
+                }
+
+                >.Content{
+                    display: flex;
+                }
+            }
+
+            .close{
+                height: 300px;
+                width: 400px;
+
+                >.MainLogo{
+                    display: flex;
+                }
+
+                >.Content{
+                    display: none;
+                }
+            }
             
         }
+
+        &.projectso{
+            height: 800px;
+            width: 90%;
+            opacity: 1;
+
+            >div{
+                display : flex;
+            }
+
+            @media only screen and (max-width: 550px){
+                width: 90%;
+                height: auto;
+                opacity: 1;
+            }
+            /*
+            @media only screen and (min-width: 551px) and (max-width: 850px){
+                width: 70%;
+                height: 40%;
+                opacity: 1;
+                left: 28%;
+            }*/
+        }
+
+        &.projectsc{
+            height: 0;
+            width: 0;
+
+            >div{
+                display: none;
+            }
+        }
+
+        &.projectsm{
+            height: 50px;
+            width: 220px;
+
+            >.content{
+                display: none;
+            }
+        }
     }
+
 }
 
 @keyframes gradient {
@@ -805,20 +986,6 @@ body{
                 margin: 1%;
             }
         }
-    }
-
-
-
-}
-
-
-@media only screen and (max-width : 850px) {
-    body{
-        >nav{
-            >h2{
-                font-size: 18px;   
-            }
-        }
 
         .files{
             
@@ -844,11 +1011,47 @@ body{
             
 
         }
+    }
+
+
+
+}
+
+
+@media only screen and (max-width : 850px) {
+    body{
+        >nav{
+            >h2{
+                font-size: 18px;   
+            }
+        }
+
+        
 
             .img{
+
+                >.Content{
+                    >.buttons{
+                        width: 100%;
+                        
+                        >.CV{
+                            width: 50px;
+                            height: 50px;
+                            
+                            >h4{
+                                margin-right: 0;
+                            }
+                            >i{
+                                display: none;
+                            }
+    
+                        }
+                    }
+                }
+                
             }
             .pres{
-                left: 0;
+                right: 0;
                 >.Ycontent{
                     height: 80%;
                     margin-top: -20px;
@@ -877,17 +1080,32 @@ body{
             }
 
             .projectList{
-                overflow-y: scroll !important;  
-            }
-            .galerie{
-                flex-direction: column !important;
-                height: auto !important;
-                position: relative !important;
-                >div{
-                    width: 90% !important;
-                    margin: 5% !important;
+                overflow-y: auto;  
+                overflow-x: hidden;
+
+                &.galerie{
+                    flex-direction: column;
+                    height: auto;
+                    position: relative;
+                    >div{
+                        width: 90%;
+                        margin: 5%;
+                    }
+                }
+
+                &.open{
+                    width: 100%;
+                    height: auto;
+                }
+    
+                &.close{
+                    height: 300px;
+                    width: 400px;
                 }
             }
+            
+
+            
             
     }
 
