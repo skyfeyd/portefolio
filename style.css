@@ -978,6 +978,7 @@ body > .contact {
   left: 40%;
   right: 0%;
   z-index: 95;
+  transition: 300ms ease-in-out;
 }
 body > .contact > .contactContent {
   height: 80%;
@@ -1045,6 +1046,9 @@ body > .contact > .contactContent > form > a {
   font-family: poppins;
   color: white;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body > .contacto {
   width: 20%;
