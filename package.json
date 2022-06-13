@@ -21,5 +21,8 @@
   "homepage": "https://github.com/skyfeyd/Starter-Package#readme",
   "publishConfig": {
     "@skyfeyd:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }

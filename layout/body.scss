@@ -2,7 +2,7 @@ body{
     background: transparent linear-gradient(90deg, #19009B 0%, #00FFFF 100%) 0% 0% padding-box;
     animation: gradient 15s ease infinite;
     background-size: 200% 200%;
-    font-family: poppins;
+    font-family: poppins !important;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -172,7 +172,7 @@ body{
             }
         }
     }
-    >.img, .pres, .skills, .projects{
+    >.img, .pres, .skills, .projects, .contact{
        height: 0;
        width: 0;
        opacity: 0;
@@ -698,7 +698,7 @@ body{
     
             @media only screen and (min-width: 551px) and (max-width: 850px){
                 width: 80%;
-                height: 20%;
+                height: 25%;
                 opacity: 1;
                 right: 28%;
             }
@@ -927,7 +927,7 @@ body{
 
             @media only screen and (max-width: 550px){
                 width: 90%;
-                height: auto;
+                height: 50vh;
                 opacity: 1;
             }
             /*
@@ -953,6 +953,135 @@ body{
             width: 220px;
 
             >.content{
+                display: none;
+            }
+        }
+    }
+    >.contact{
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        right: 0%;
+        z-index: 95;
+        >.contactContent{
+            height: 80%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 15%;
+            //background-color: green;
+
+            >form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;  
+                //background-color: red;
+
+                >input{
+                    width: 100%;
+                    height: 61px;
+                    background: none;
+                    border: 2px solid white;
+                    color: white;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-left: 10px;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-family: poppins;
+
+                    
+                }
+                >input::placeholder{
+                    color: white;
+                    opacity: 1;
+                }
+
+
+                >textarea{
+                    width: 100%;
+                    height: 157px;
+                    background: none;
+                    border: 2px solid white;
+                    color: white;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-family: poppins;
+                    
+                }
+                >textarea::placeholder{
+                    color: white;
+                    opacity: 1;
+                }
+                >a{
+                    width: 50%;
+                    height: 57px;
+                    border: none;
+                    background-color: #0400ff;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-family: poppins;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    >.contacto{
+        width: 20% ;
+        height: 40% ;
+        opacity: 1;
+
+        @media only screen and (max-width: 550px){
+            width: 100%;
+            height: 40%;
+            opacity: 1;
+            left: 0;
+        }
+
+
+        @media only screen and (min-width: 551px) and (max-width: 850px){
+            width: 80%;
+            height: 40%;
+            opacity: 1;
+            left: 10%;
+        }
+
+
+        >div{
+            >form{
+                display: flex;
+            }   
+        }
+    }
+    >.contactc{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        >div{
+            display: none;
+        }
+    }
+    >.contactm{
+        height: 50px;
+        width: 220px;
+
+        >div{
+            >form{
                 display: none;
             }
         }
@@ -1064,15 +1193,15 @@ body{
                     scrollbar-width: none;
                     >div{
                         >img{
-                            width: 70% !important;
-                            height: 70% !important;
+                            width: 70%;
+                            height: 70%;
                         }
                         >.jsL{
-                            width: 90% !important;
-                            height: 90% !important;
+                            width: 90%;
+                            height: 90%;
                         }
                         >span{
-                            display: none !important;
+                            display: none;
                         }
                     }
                 }

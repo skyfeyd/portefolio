@@ -1,4 +1,4 @@
-.ChangeWallpaper {
+.contactButton {
   display: flex;
   cursor: pointer;
   position: absolute;
@@ -16,27 +16,27 @@
   opacity: 1;
   transition: 0.6s ease-in-out;
 }
-.ChangeWallpaper > h2 {
+.contactButton > h2 {
   font-family: poppins;
   color: white;
   font-size: 25px;
   font-weight: bold;
 }
 
-.img, .pres, .skills, .projects {
+.img, .pres, .skills, .projects, .contact {
   display: flex;
   justify-self: start;
-  align-self: flex-start;
+  align-self: start;
   cursor: auto;
 }
-.img > .head > .buttons, .pres > .head > .buttons, .skills > .head > .buttons, .projects > .head > .buttons {
+.img > .head > .buttons, .pres > .head > .buttons, .skills > .head > .buttons, .projects > .head > .buttons, .contact > .head > .buttons {
   width: 120px;
   height: 50px;
   display: flex;
   justify-content: start;
   align-items: flex-start;
 }
-.img .close, .pres .close, .skills .close, .projects .close {
+.img .close, .pres .close, .skills .close, .projects .close, .contact .close {
   position: relative;
   height: 30px;
   width: 30px;
@@ -49,11 +49,11 @@
   transition: 2ms ease-in-out;
   cursor: pointer;
 }
-.img .close:hover, .pres .close:hover, .skills .close:hover, .projects .close:hover {
+.img .close:hover, .pres .close:hover, .skills .close:hover, .projects .close:hover, .contact .close:hover {
   box-shadow: none;
   margin-top: 12px;
 }
-.img .minimise, .pres .minimise, .skills .minimise, .projects .minimise {
+.img .minimise, .pres .minimise, .skills .minimise, .projects .minimise, .contact .minimise {
   height: 30px;
   width: 30px;
   background-color: #FDB156;
@@ -64,11 +64,11 @@
   margin-left: 7px;
   cursor: pointer;
 }
-.img .minimise:hover, .pres .minimise:hover, .skills .minimise:hover, .projects .minimise:hover {
+.img .minimise:hover, .pres .minimise:hover, .skills .minimise:hover, .projects .minimise:hover, .contact .minimise:hover {
   box-shadow: none;
   margin-top: 12px;
 }
-.img .bigger, .pres .bigger, .skills .bigger, .projects .bigger {
+.img .bigger, .pres .bigger, .skills .bigger, .projects .bigger, .contact .bigger {
   height: 30px;
   width: 30px;
   background-color: #8DFD56;
@@ -79,7 +79,7 @@
   margin-left: 7px;
   cursor: pointer;
 }
-.img .bigger:hover, .pres .bigger:hover, .skills .bigger:hover, .projects .bigger:hover {
+.img .bigger:hover, .pres .bigger:hover, .skills .bigger:hover, .projects .bigger:hover, .contact .bigger:hover {
   box-shadow: none;
   margin-top: 12px;
 }
@@ -106,7 +106,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .ChangeWallpaper {
+  .contactButton {
     width: 100%;
     height: 50px;
     border-radius: 25px;
@@ -127,7 +127,6 @@
   .CV > i {
     display: none;
   }
-
   .logos > a {
     width: 50px;
     height: 50px;
@@ -137,7 +136,7 @@ body {
   background: transparent linear-gradient(90deg, #19009B 0%, #00FFFF 100%) 0% 0% padding-box;
   animation: gradient 15s ease infinite;
   background-size: 200% 200%;
-  font-family: poppins;
+  font-family: poppins !important;
   width: 100%;
   max-width: 100%;
   max-height: 100%;
@@ -289,7 +288,7 @@ body > .files > .file4 > img {
   width: 70%;
   height: 80%;
 }
-body > .img, body .pres, body .skills, body .projects {
+body > .img, body .pres, body .skills, body .projects, body .contact {
   height: 0;
   width: 0;
   opacity: 0;
@@ -301,7 +300,7 @@ body > .img, body .pres, body .skills, body .projects {
   border-radius: 38px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .img > .head, body .pres > .head, body .skills > .head, body .projects > .head {
+body > .img > .head, body .pres > .head, body .skills > .head, body .projects > .head, body .contact > .head {
   width: 100%;
   height: 50px;
   display: flex;
@@ -309,7 +308,7 @@ body > .img > .head, body .pres > .head, body .skills > .head, body .projects > 
   align-items: center;
   border-radius: 38px 38px 0px 0px;
 }
-body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, body .projects > .head > h2 {
+body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, body .projects > .head > h2, body .contact > .head > h2 {
   font-family: poppins;
   display: flex;
   align-self: flex-start;
@@ -320,7 +319,7 @@ body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, bo
   position: absolute;
   right: 10px;
 }
-body > .img > h3, body .pres > h3, body .skills > h3, body .projects > h3 {
+body > .img > h3, body .pres > h3, body .skills > h3, body .projects > h3, body .contact > h3 {
   font-family: poppins;
   color: black;
   font-size: 25px;
@@ -745,7 +744,7 @@ body > .skills.skillo > div {
 @media only screen and (min-width: 551px) and (max-width: 850px) {
   body > .skills.skillo {
     width: 80%;
-    height: 20%;
+    height: 25%;
     opacity: 1;
     right: 28%;
   }
@@ -954,7 +953,7 @@ body > .projects.projectso > div {
 @media only screen and (max-width: 550px) {
   body > .projects.projectso {
     width: 90%;
-    height: auto;
+    height: 50vh;
     opacity: 1;
   }
 }
@@ -970,6 +969,119 @@ body > .projects.projectsm {
   width: 220px;
 }
 body > .projects.projectsm > .content {
+  display: none;
+}
+body > .contact {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  right: 0%;
+  z-index: 95;
+}
+body > .contact > .contactContent {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+body > .contact > .contactContent > form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+body > .contact > .contactContent > form > input {
+  width: 100%;
+  height: 61px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: poppins;
+}
+body > .contact > .contactContent > form > input::placeholder {
+  color: white;
+  opacity: 1;
+}
+body > .contact > .contactContent > form > textarea {
+  width: 100%;
+  height: 157px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: poppins;
+}
+body > .contact > .contactContent > form > textarea::placeholder {
+  color: white;
+  opacity: 1;
+}
+body > .contact > .contactContent > form > a {
+  width: 50%;
+  height: 57px;
+  border: none;
+  background-color: #0400ff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: poppins;
+  color: white;
+  text-transform: uppercase;
+}
+body > .contacto {
+  width: 20%;
+  height: 40%;
+  opacity: 1;
+}
+@media only screen and (max-width: 550px) {
+  body > .contacto {
+    width: 100%;
+    height: 40%;
+    opacity: 1;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 850px) {
+  body > .contacto {
+    width: 80%;
+    height: 40%;
+    opacity: 1;
+    left: 10%;
+  }
+}
+body > .contacto > div > form {
+  display: flex;
+}
+body > .contactc {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+body > .contactc > div {
+  display: none;
+}
+body > .contactm {
+  height: 50px;
+  width: 220px;
+}
+body > .contactm > div > form {
   display: none;
 }
 
@@ -1042,15 +1154,15 @@ body > .projects.projectsm > .content {
     scrollbar-width: none;
   }
   body .skills > .skillList > div > img {
-    width: 70% !important;
-    height: 70% !important;
+    width: 70%;
+    height: 70%;
   }
   body .skills > .skillList > div > .jsL {
-    width: 90% !important;
-    height: 90% !important;
+    width: 90%;
+    height: 90%;
   }
   body .skills > .skillList > div > span {
-    display: none !important;
+    display: none;
   }
   body .projectList {
     overflow-y: auto;
