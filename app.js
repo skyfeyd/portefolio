@@ -92,6 +92,12 @@ file4.addEventListener('click', event => {
     projects.classList.add('projectso')
     fetchProjects()
 })
+
+contactButton.addEventListener('click', event => {
+    cliqued = 5
+    contact.classList.remove('contactc')
+    contact.classList.add('contacto')
+})
         
 
 
@@ -141,6 +147,16 @@ buttons.forEach(buttons => {
         }
         if (event.target.className === "bigger f4"){
             projects.classList.remove('projectsm')
+        }
+        if (event.target.className === "close f5") {
+            contact.classList.remove('contacto')
+            contact.classList.add('contactc')
+        }
+        if (event.target.className === "minimise f5") {
+            contact.classList.add('contactm')
+        }
+        if (event.target.className === "bigger f5") {
+            contact.classList.remove('contactm')
         }
     })
 })
@@ -302,35 +318,28 @@ submit.addEventListener('click', (event) => {
     const email = document.getElementById('email').value
     const message = document.getElementById('message').value
     
-    const requestOptions = {
-        method: 'POST',
-        Headers: {
-        'accept': 'application/ld+json',
-        'Content-Type': 'application/json',
-        },
-        redirect: 'follow',
-        body: JSON.stringify({
-            'name': name,
-            'email': email,
-            'message': message
-        })
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+    "name": name,
+    "email": email,
+    "message": message,
+    });
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
     };
+
     fetch("https://127.0.0.1:8000/api/contacts.json", requestOptions)
-    .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          console.log(json.message)
-        } else {
-          console.log(response);
-        console.log(json.message)
-          
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-    }
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
     
-    )
+})
     /*
     axios.post('https://127.0.0.1:8000/api/contacts', {
         name: name,
@@ -343,4 +352,3 @@ submit.addEventListener('click', (event) => {
       .catch(function (error) {
         console.log(error);
       });*/
-})

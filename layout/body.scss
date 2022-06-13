@@ -1078,9 +1078,10 @@ body{
     }
     >.contactm{
         height: 50px;
-        width: 220px;
+        width: 300px;
 
-        >div{
+        >.contactContent{
+            display: none;
             >form{
                 display: none;
             }

@@ -9,8 +9,8 @@
   height: 148px;
   width: 148px;
   border-radius: 50%;
-  background: transparent linear-gradient(132deg, rgba(255, 255, 255, 0.6392156863) 0%, rgba(255, 255, 255, 0.5490196078) 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.368627451);
+  background: transparent linear-gradient(132deg, #FFFFFFA3 0%, #FFFFFF8C 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 20px 70px #0000005E;
   border: 1px solid #FFFFFF;
   border-style: none;
   opacity: 1;
@@ -41,7 +41,7 @@
   height: 30px;
   width: 30px;
   background-color: #FD5656;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  box-shadow: 0px 3px 6px #00000029;
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -57,7 +57,7 @@
   height: 30px;
   width: 30px;
   background-color: #FDB156;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  box-shadow: 0px 3px 6px #00000029;
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -72,7 +72,7 @@
   height: 30px;
   width: 30px;
   background-color: #8DFD56;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  box-shadow: 0px 3px 6px #00000029;
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -127,6 +127,7 @@
   .CV > i {
     display: none;
   }
+
   .logos > a {
     width: 50px;
     height: 50px;
@@ -1079,9 +1080,12 @@ body > .contactc > div {
 }
 body > .contactm {
   height: 50px;
-  width: 220px;
+  width: 300px;
 }
-body > .contactm > div > form {
+body > .contactm > .contactContent {
+  display: none;
+}
+body > .contactm > .contactContent > form {
   display: none;
 }
 
