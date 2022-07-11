@@ -253,7 +253,7 @@ function fetchProjects(){
       
       if(cliqued === 4){
         console.log(cliqued)
-        fetch("https://127.0.0.1:8000/api/projects", requestOptions)
+        fetch("http://raphapi.herokuapp.com/api/projects", requestOptions)
         .then(response => response.json())
         .then(data => {
             console.log(data)
@@ -272,7 +272,7 @@ function fetchProjects(){
                 MainLogoDiv.classList.add('MainLogo')
                 const logo = document.createElement('img')
                 logo.classList.add('logo')
-                logo.src = `https://127.0.0.1:8000/uploads/images/${data['hydra:member'][n]['Presentation_images']}`
+                logo.src = `http://raphapi.herokuapp.com/uploads/images/${data['hydra:member'][n]['Presentation_images']}`
                 MainLogoDiv.append(logo)
                 const contentDiv = document.createElement('div')
                 projectDiv.append(contentDiv)
@@ -282,7 +282,7 @@ function fetchProjects(){
                 title.innerHTML = data['hydra:member'][n]['Title']
                 const span = document.createElement('span')
                 const frameworkIMG = document.createElement('img')
-                frameworkIMG.src = `https://127.0.0.1:8000/uploads/images/${data['hydra:member'][n]['frameworkImages']}`
+                frameworkIMG.src = `http://raphapi.herokuapp.com/uploads/images/${data['hydra:member'][n]['frameworkImages']}`
                 contentDiv.append(title)
                 contentDiv.append(span)
                 span.append(frameworkIMG)
@@ -300,7 +300,7 @@ function fetchProjects(){
                 contentDiv.append(galerie)
                 const imagesout = document.createElement('div')
                 const imagesin = document.createElement('img')  
-                imagesin.src = `https://127.0.0.1:8000/uploads/images/${data['hydra:member'][n]['Images']}`
+                imagesin.src = `http://raphapi.herokuapp.com/uploads/images/${data['hydra:member'][n]['Images']}`
                 imagesout.append(imagesin)
                 galerie.append(imagesout)
             })
@@ -334,7 +334,7 @@ submit.addEventListener('click', (event) => {
     redirect: 'follow'
     };
 
-    fetch("https://127.0.0.1:8000/api/contacts.json", requestOptions)
+    fetch("https://raphapi.herokuapp.com/api/contacts.json", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
