@@ -9,8 +9,8 @@
   height: 148px;
   width: 148px;
   border-radius: 50%;
-  background: transparent linear-gradient(132deg, #FFFFFFA3 0%, #FFFFFF8C 100%) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 20px 70px #0000005E;
+  background: transparent linear-gradient(132deg, rgba(255, 255, 255, 0.6392156863) 0%, rgba(255, 255, 255, 0.5490196078) 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.368627451);
   border: 1px solid #FFFFFF;
   border-style: none;
   opacity: 1;
@@ -41,7 +41,7 @@
   height: 30px;
   width: 30px;
   background-color: #FD5656;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -57,7 +57,7 @@
   height: 30px;
   width: 30px;
   background-color: #FDB156;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -72,7 +72,7 @@
   height: 30px;
   width: 30px;
   background-color: #8DFD56;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
@@ -105,6 +105,23 @@
   margin-left: 5px;
 }
 
+.Wallpaper {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: transparent linear-gradient(132deg, rgba(255, 255, 255, 0.6392156863) 0%, rgba(255, 255, 255, 0.5490196078) 100%) 0% 0% no-repeat padding-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Wallpaper > img {
+  width: 90%;
+  height: 90%;
+  fill: white;
+}
+
 @media only screen and (max-width: 600px) {
   .contactButton {
     width: 100%;
@@ -127,7 +144,6 @@
   .CV > i {
     display: none;
   }
-
   .logos > a {
     width: 50px;
     height: 50px;
@@ -174,8 +190,14 @@ body > .files div {
   position: absolute;
 }
 body > .files div > img {
-  width: 70%;
+  width: 80%;
   height: 80%;
+}
+body > .files div > .show {
+  display: flex;
+}
+body > .files div > .hide {
+  display: none;
 }
 body > .files > .file1 {
   height: 120px;
@@ -200,11 +222,6 @@ body > .files > .file1 > h2 {
   font-weight: bold;
   color: white;
 }
-body > .files > .file1 > img {
-  display: flex;
-  width: 70%;
-  height: 80%;
-}
 body > .files > .file2 {
   height: 120px;
   width: 150px;
@@ -227,11 +244,6 @@ body > .files > .file2 > h2 {
   font-size: 20px;
   font-weight: bold;
   color: white;
-}
-body > .files > .file2 > img {
-  display: flex;
-  width: 70%;
-  height: 80%;
 }
 body > .files > .file3 {
   height: 120px;
@@ -256,11 +268,6 @@ body > .files > .file3 > h2 {
   font-weight: bold;
   color: white;
 }
-body > .files > .file3 > img {
-  display: flex;
-  width: 70%;
-  height: 80%;
-}
 body > .files > .file4 {
   height: 120px;
   width: 150px;
@@ -283,11 +290,6 @@ body > .files > .file4 > h2 {
   font-size: 20px;
   font-weight: bold;
   color: white;
-}
-body > .files > .file4 > img {
-  display: flex;
-  width: 70%;
-  height: 80%;
 }
 body > .img, body .pres, body .skills, body .projects, body .contact {
   height: 0;
@@ -532,22 +534,6 @@ body > .skills > .skillList > .HTMLCSS > .title > h2 {
   margin-left: 15px;
   margin-right: 15px;
 }
-body > .skills > .skillList > .HTMLCSS > .bar {
-  width: 100%;
-  height: 25px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-body > .skills > .skillList > .HTMLCSS > .bar:before {
-  content: "";
-  width: 90%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
-}
 body > .skills > .skillList > .JS {
   display: flex;
   flex-direction: column;
@@ -566,23 +552,6 @@ body > .skills > .skillList > .JS > h2 {
 body > .skills > .skillList > .JS > .jsL {
   width: 112.28px;
   height: 108px;
-}
-body > .skills > .skillList > .JS > .bar {
-  width: 100%;
-  height: 25px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-body > .skills > .skillList > .JS > .bar:before {
-  content: "";
-  width: 65%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
 }
 body > .skills > .skillList > .PHP {
   display: flex;
@@ -603,23 +572,6 @@ body > .skills > .skillList > .PHP > .phpL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .PHP > .bar {
-  width: 100%;
-  height: 25px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-body > .skills > .skillList > .PHP > .bar:before {
-  content: "";
-  width: 75%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
-}
 body > .skills > .skillList > .PYTHON {
   display: flex;
   flex-direction: column;
@@ -638,23 +590,6 @@ body > .skills > .skillList > .PYTHON > h2 {
 body > .skills > .skillList > .PYTHON > .pythonL {
   width: 190px;
   height: 99.93px;
-}
-body > .skills > .skillList > .PYTHON > .bar {
-  width: 100%;
-  height: 25px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-body > .skills > .skillList > .PYTHON > .bar:before {
-  content: "";
-  width: 67%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
 }
 body > .skills > .skillList > .UNITY {
   display: flex;
@@ -675,28 +610,12 @@ body > .skills > .skillList > .UNITY > .unityL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .UNITY > .bar {
-  width: 100%;
-  height: 25px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-body > .skills > .skillList > .UNITY > .bar:before {
-  content: "";
-  width: 55%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
-}
 body > .skills > .skillList > .SYMFONY {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 5px solid black;
   padding: 2%;
   padding-top: 0%;
   padding-bottom: 0%;
@@ -710,22 +629,23 @@ body > .skills > .skillList > .SYMFONY > .unityL {
   width: 190px;
   height: 99.93px;
 }
-body > .skills > .skillList > .SYMFONY > .bar {
-  width: 100%;
-  height: 25px;
-  margin: 5px;
-  background-color: white;
-  border-radius: 20px;
+body > .skills > .skillList > .VUE {
   display: flex;
-  justify-content: start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 2%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
-body > .skills > .skillList > .SYMFONY > .bar:before {
-  content: "";
-  width: 80%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
+body > .skills > .skillList > .VUE > h2 {
+  font-family: poppins;
+  font-weight: bolder;
+  font-size: 25px;
+}
+body > .skills > .skillList > .VUE > .unityL {
+  width: 190px;
+  height: 99.93px;
 }
 body > .skills.skillo {
   width: 70%;
@@ -809,7 +729,8 @@ body > .projects > .projectList > div {
   justify-content: center;
   align-items: center;
   border-radius: 38px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.65);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(6.5px);
@@ -892,8 +813,8 @@ body > .projects > .projectList > div > .Content > .galerie {
   margin-bottom: 5%;
 }
 body > .projects > .projectList > div > .Content > .galerie > div {
-  width: 20%;
-  height: 90%;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -905,9 +826,9 @@ body > .projects > .projectList > div > .Content > .galerie > div {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 body > .projects > .projectList > div > .Content > .galerie > div > img {
-  width: 40%;
-  height: 90%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 body > .projects > .projectList .responsiveProject > span {
   width: 0;
@@ -917,7 +838,7 @@ body > .projects > .projectList .responsiveProject > p {
   font-size: 10px;
 }
 body > .projects > .projectList .open {
-  width: 100%;
+  width: 90%;
   height: 90%;
 }
 body > .projects > .projectList .open > .MainLogo {
