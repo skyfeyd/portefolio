@@ -881,6 +881,7 @@ body > .projects.projectso {
   height: 800px;
   width: 90%;
   opacity: 1;
+  pointer-events: all;
   /*
   @media only screen and (min-width: 551px) and (max-width: 850px){
       width: 70%;
@@ -902,6 +903,7 @@ body > .projects.projectso > div {
 body > .projects.projectsc {
   height: 0;
   width: 0;
+  pointer-events: none;
 }
 body > .projects.projectsc > div {
   display: none;
