@@ -161,13 +161,17 @@
     height: 50px;
   }
 }
+* {
+  font-family: Poppins !important;
+}
+
 body {
   background: transparent linear-gradient(90deg, #19009B 0%, #00FFFF 100%) 0% 0% padding-box;
   animation: gradient 15s ease infinite;
   transition: all 300ms ease-in-out;
   background-size: 200% 200%;
-  font-family: poppins !important;
   width: 100%;
+  font-family: poppins;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -186,13 +190,15 @@ body > nav {
   align-self: top;
   align-items: center;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 body > nav > h2 {
   color: white;
   margin: 0.5%;
+  font-family: Transducer !important;
+  font-weight: bolder;
+  font-style: italic;
 }
 body > .files {
   cursor: pointer;
@@ -237,7 +243,6 @@ body > .files > .file1 {
 }
 body > .files > .file1 > h2 {
   margin-top: -10px;
-  font-family: poppins;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -260,7 +265,6 @@ body > .files > .file2 {
 }
 body > .files > .file2 > h2 {
   margin-top: -10px;
-  font-family: poppins;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -283,7 +287,6 @@ body > .files > .file3 {
 }
 body > .files > .file3 > h2 {
   margin-top: -10px;
-  font-family: poppins;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -306,7 +309,6 @@ body > .files > .file4 {
 }
 body > .files > .file4 > h2 {
   margin-top: -10px;
-  font-family: poppins;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -332,7 +334,6 @@ body > .img > .head, body .pres > .head, body .skills > .head, body .projects > 
   border-radius: 38px 38px 0px 0px;
 }
 body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, body .projects > .head > h2, body .contact > .head > h2 {
-  font-family: poppins;
   display: flex;
   align-self: flex-start;
   justify-self: end;
@@ -343,7 +344,6 @@ body > .img > .head > h2, body .pres > .head > h2, body .skills > .head > h2, bo
   right: 10px;
 }
 body > .img > h3, body .pres > h3, body .skills > h3, body .projects > h3, body .contact > h3 {
-  font-family: poppins;
   color: black;
   font-size: 25px;
   font-weight: bold;
@@ -466,7 +466,6 @@ body > .pres > .Ycontent {
   scrollbar-width: none;
 }
 body > .pres > .Ycontent > p {
-  font-family: poppins;
   font-size: 25px;
   line-height: 40px;
   height: 100%;
@@ -548,7 +547,6 @@ body > .skills > .skillList > .HTMLCSS > .title {
   flex-direction: row;
 }
 body > .skills > .skillList > .HTMLCSS > .title > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
   margin-left: 15px;
@@ -565,7 +563,6 @@ body > .skills > .skillList > .JS {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .JS > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -584,7 +581,6 @@ body > .skills > .skillList > .PHP {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .PHP > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -603,7 +599,6 @@ body > .skills > .skillList > .PYTHON {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .PYTHON > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -622,7 +617,6 @@ body > .skills > .skillList > .UNITY {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .UNITY > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -641,7 +635,6 @@ body > .skills > .skillList > .SYMFONY {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .SYMFONY > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -659,7 +652,6 @@ body > .skills > .skillList > .VUE {
   padding-bottom: 0%;
 }
 body > .skills > .skillList > .VUE > h2 {
-  font-family: poppins;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -725,7 +717,6 @@ body > .projects {
   flex-direction: column;
 }
 body > .projects > h2 {
-  font-family: poppins;
   color: white;
   font-size: 20px;
   margin-top: 100px;
@@ -800,7 +791,6 @@ body > .projects > .projectList > div > .Content > span > img {
   object-fit: cover;
 }
 body > .projects > .projectList > div > .Content > h4 {
-  font-family: poppins;
   font-size: 65px;
   font-weight: bold;
   text-align: center;
@@ -809,7 +799,6 @@ body > .projects > .projectList > div > .Content > h4 {
 body > .projects > .projectList > div > .Content > p {
   width: 80%;
   margin: 20px;
-  font-family: poppins;
   font-size: 25px;
   line-height: 40px;
 }
@@ -953,7 +942,6 @@ body > .contact > .contactContent > form > input {
   padding-left: 10px;
   border-radius: 20px;
   font-weight: bold;
-  font-family: poppins;
 }
 body > .contact > .contactContent > form > input::placeholder {
   color: white;
@@ -971,7 +959,6 @@ body > .contact > .contactContent > form > textarea {
   padding-top: 10px;
   border-radius: 20px;
   font-weight: bold;
-  font-family: poppins;
 }
 body > .contact > .contactContent > form > textarea::placeholder {
   color: white;
@@ -984,7 +971,6 @@ body > .contact > .contactContent > form > a {
   background-color: #0400ff;
   border-radius: 20px;
   font-weight: bold;
-  font-family: poppins;
   color: white;
   text-transform: uppercase;
   display: flex;
