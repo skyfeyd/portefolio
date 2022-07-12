@@ -44,58 +44,61 @@
   height: 30px;
   width: 30px;
   background-color: #FD5656;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 10px;
-  transition: 2ms ease-in-out;
+  transition: 15ms ease-in-out;
   cursor: pointer;
 }
 .img .close:hover, .pres .close:hover, .skills .close:hover, .projects .close:hover, .contact .close:hover {
   box-shadow: none;
   margin-top: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 .img .minimise, .pres .minimise, .skills .minimise, .projects .minimise, .contact .minimise {
   height: 30px;
   width: 30px;
   background-color: #FDB156;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 7px;
+  transition: 15ms ease-in-out;
   cursor: pointer;
 }
 .img .minimise:hover, .pres .minimise:hover, .skills .minimise:hover, .projects .minimise:hover, .contact .minimise:hover {
   box-shadow: none;
   margin-top: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 .img .bigger, .pres .bigger, .skills .bigger, .projects .bigger, .contact .bigger {
   height: 30px;
   width: 30px;
   background-color: #8DFD56;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-style: none;
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 7px;
+  transition: 15ms ease-in-out;
   cursor: pointer;
 }
 .img .bigger:hover, .pres .bigger:hover, .skills .bigger:hover, .projects .bigger:hover, .contact .bigger:hover {
   box-shadow: none;
   margin-top: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 
 .CV {
   height: 45px;
-  width: 90px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: white;
   border-radius: 30px;
   text-decoration: none;
+  position: relative;
 }
 .CV > h4 {
   font-family: poppins;
@@ -103,45 +106,60 @@
   font-size: 25px;
   color: black;
   margin-right: 5px;
+  position: relative;
+  z-index: 35;
+  margin: 0 auto;
+  transition: 300ms ease-in-out;
 }
 .CV > img {
   margin-left: 5px;
 }
+.CV::before {
+  content: "";
+  width: 10%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  border-radius: 30px;
+  z-index: 30;
+  transition: 300ms ease-in-out;
+  opacity: 0;
+}
+.CV:hover > h4 {
+  color: white;
+}
+.CV:hover::before {
+  width: 100%;
+  opacity: 1;
+}
 
 .Wallpaper {
-  width: 90px;
-  height: 85px;
-  border-radius: 10px;
+  width: 58px;
+  height: 58px;
   border: none;
-  background: transparent linear-gradient(132deg, rgba(255, 255, 255, 0.6392156863) 0%, rgba(255, 255, 255, 0.5490196078) 100%) 0% 0% no-repeat padding-box;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   transition: all 300ms ease-in-out;
   top: 70%;
   left: 15%;
-  border: none;
+  background: none;
 }
 .Wallpaper > img {
   width: 70%;
   height: 70%;
-  fill: white;
-}
-.Wallpaper:hover {
-  box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.368627451);
-  border: 1px solid white;
 }
 
 @media only screen and (max-width: 600px) {
   .contactButton {
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    top: 93.5%;
-    left: 0;
-    right: 0;
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    margin-top: 100px;
+  }
+  .contactButton > h2 {
+    font-size: 17px;
   }
 }
 @media only screen and (max-width: 1144px) {
@@ -1036,6 +1054,60 @@ body > .contactm > .contactContent > form {
 ::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
+}
+
+.toolbar {
+  width: 450px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2%;
+  left: 0%;
+  right: 0;
+}
+.toolbar > .apps {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  z-index: 30;
+}
+.toolbar > .apps > a, .toolbar > .apps button {
+  height: 68px;
+  width: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar > .apps > a > img, .toolbar > .apps button > img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  transition: 300ms ease-in-out;
+}
+.toolbar > .apps > a > img:hover, .toolbar > .apps button > img:hover {
+  margin-bottom: 40px;
+}
+.toolbar > .bar {
+  width: 100%;
+  height: 20px;
+  background: transparent linear-gradient(132deg, rgba(255, 255, 255, 0.6392156863) 0%, rgba(255, 255, 255, 0.5490196078) 100%) 0% 0% no-repeat padding-box;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 550px) {
+  .toolbar {
+    width: 90%;
+  }
 }
 
 /* Handle on hover */
