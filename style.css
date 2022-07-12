@@ -1022,6 +1022,23 @@ body > .contactm > .contactContent > form {
   display: none;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
