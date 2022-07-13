@@ -1047,22 +1047,27 @@ body{
         position: absolute;
         z-index: 30;
 
-        >a, button{
+        >a{
             height: 68px;
             width: 68px;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 300ms ease-in-out;
+            
+            
 
             >img{
                 width: 70%;
                 height: 70%;
                 object-fit: cover;
-                transition: 300ms ease-in-out;
+                
 
-                &:hover{
-                    margin-bottom: 40px;
-                }
+                
+            }
+
+            &:hover{
+                padding-bottom: 40px;
             }
 
             
