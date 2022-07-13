@@ -1079,21 +1079,21 @@ body > .contactm > .contactContent > form {
   position: absolute;
   z-index: 30;
 }
-.toolbar > .apps > a, .toolbar > .apps button {
+.toolbar > .apps > a {
   height: 68px;
   width: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 300ms ease-in-out;
 }
-.toolbar > .apps > a > img, .toolbar > .apps button > img {
+.toolbar > .apps > a > img {
   width: 70%;
   height: 70%;
   object-fit: cover;
-  transition: 300ms ease-in-out;
 }
-.toolbar > .apps > a > img:hover, .toolbar > .apps button > img:hover {
-  margin-bottom: 40px;
+.toolbar > .apps > a:hover {
+  padding-bottom: 40px;
 }
 .toolbar > .bar {
   width: 100%;
