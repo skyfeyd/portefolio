@@ -355,7 +355,7 @@ body{
         padding-top: 0%;
      
         >.Ycontent{
-            height: 80%;
+            height: calc(80%-20px);
             width: 98%;
             position: absolute;
             left: 0;
@@ -364,6 +364,8 @@ body{
             justify-content: start;
             align-items: flex-start;
             margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
             overflow-y: scroll;
             scrollbar-width: none;
             
