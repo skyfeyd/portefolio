@@ -9,6 +9,8 @@ const file2 = document.querySelector('.file2')
 const file3 = document.querySelector('.file3')
 const file4 = document.querySelector('.file4')
 const buttons = document.querySelectorAll('.buttons')
+let projectListDiv = document.querySelectorAll('.projectList > div')
+console.log (projectListDiv)
 const projectsPage = document.querySelectorAll('.project')
 
 const circle = document.querySelector('.circle')
@@ -20,6 +22,8 @@ const galerie = document.querySelector('.galerie')
 const open = document.querySelectorAll('.open')
 
 const form = document.getElementById('form')
+
+const loader = document.querySelector('.loader')
 
 var moving = false
 var deg = '90';
@@ -164,10 +168,11 @@ buttons.forEach(buttons => {
 
 projectsPage.forEach(projectsPage => {
     addEventListener('click', event => {
-        console.log(event.target.className)
+        //console.log(event.target.className)
         if (event.target.className === 'project' || event.target.className === 'logo'){
             projectsPage.classList.remove('close')
             projectsPage.classList.add('open')
+            
         }   
             }
         )
@@ -189,8 +194,23 @@ function openItems(domElementsArray) {
     })
 }
 
-    
+/*
+function load(){
+    console.log(projectListDiv.length + ' loading')
+    while (projectListDiv.length < 2){
+        loader.classList.add('show')
+        loader.classList.remove('hide')
+    }
 
+    if (projectListDiv > 1){
+        loader.style.width="100%"
+        setTimeout(function(){
+            loader.classList.remove('show')
+            loader.classList.add('hide')
+        }, 5000)
+    }
+}    
+*/
 
 /*
 dragElement(document.querySelector(".ChangeWallpaper"));

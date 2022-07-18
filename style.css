@@ -233,10 +233,10 @@ body > .files div > svg {
   margin-bottom: 20px;
 }
 body > .files div > .show {
-  display: flex;
+  opacity: 1;
 }
 body > .files div > .hide {
-  display: none;
+  opacity: 0;
 }
 body > .files div:hover > svg {
   stroke: white;
@@ -743,7 +743,28 @@ body > .projects > h2 {
   right: 10px;
   margin: 0 auto;
 }
-body > .projects > .projectList {
+body > .projects > .loader {
+  height: 10px;
+  width: 0%;
+  background-color: black;
+  box-shadow: none;
+  display: flex;
+  border-radius: 20px;
+  margin-left: 5%;
+  animation: loader 5sec ease-in infinite;
+}
+body > .projects > .loader:hover {
+  background: black;
+}
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+body > .projectList {
   height: 100%;
   width: 100%;
   display: flex;
@@ -755,7 +776,7 @@ body > .projects > .projectList {
   scrollbar-width: none;
   cursor: auto;
 }
-body > .projects > .projectList > div {
+body > .projectList > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -771,23 +792,23 @@ body > .projects > .projectList > div {
   transition: 3ms ease-in-out;
   position: relative;
 }
-body > .projects > .projectList > div:hover {
+body > .projectList > div:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: none;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .projects > .projectList > div > .MainLogo {
+body > .projectList > div > .MainLogo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body > .projects > .projectList > div > .MainLogo > .logo {
+body > .projectList > div > .MainLogo > .logo {
   width: 90%;
   height: 40%;
 }
-body > .projects > .projectList > div > .Content {
+body > .projectList > div > .Content {
   width: 100%;
   height: 100%;
   border-radius: 38px;
@@ -797,7 +818,7 @@ body > .projects > .projectList > div > .Content {
   flex-direction: column;
   position: relative;
 }
-body > .projects > .projectList > div > .Content > span {
+body > .projectList > div > .Content > span {
   position: absolute;
   top: 2%;
   right: -5%;
@@ -805,33 +826,33 @@ body > .projects > .projectList > div > .Content > span {
   justify-content: center;
   align-items: center;
 }
-body > .projects > .projectList > div > .Content > span > img {
+body > .projectList > div > .Content > span > img {
   height: 50%;
   width: 10%;
   object-fit: cover;
 }
-body > .projects > .projectList > div > .Content > h4 {
+body > .projectList > div > .Content > h4 {
   font-size: 65px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
-body > .projects > .projectList > div > .Content > p {
+body > .projectList > div > .Content > p {
   width: 80%;
   margin: 20px;
   font-size: 25px;
   line-height: 40px;
 }
-body > .projects > .projectList > div > .Content > .git {
+body > .projectList > div > .Content > .git {
   height: 0px;
   width: 0px;
   border-radius: 50%;
   margin: 20px;
 }
-body > .projects > .projectList > div > .Content > .git:hover {
+body > .projectList > div > .Content > .git:hover {
   background-color: white;
 }
-body > .projects > .projectList > div > .Content > .galerie {
+body > .projectList > div > .Content > .galerie {
   width: 90%;
   height: 35%;
   display: flex;
@@ -841,7 +862,7 @@ body > .projects > .projectList > div > .Content > .galerie {
   margin: 0 auto;
   margin-bottom: 5%;
 }
-body > .projects > .projectList > div > .Content > .galerie > div {
+body > .projectList > div > .Content > .galerie > div {
   width: 200px;
   height: 200px;
   display: flex;
@@ -854,39 +875,39 @@ body > .projects > .projectList > div > .Content > .galerie > div {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body > .projects > .projectList > div > .Content > .galerie > div > img {
+body > .projectList > div > .Content > .galerie > div > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-body > .projects > .projectList .responsiveProject > span {
+body > .projectList .responsiveProject > span {
   width: 0;
   height: 0;
 }
-body > .projects > .projectList .responsiveProject > p {
+body > .projectList .responsiveProject > p {
   font-size: 10px;
 }
-body > .projects > .projectList .open {
+body > .projectList .open {
   width: 90%;
   height: 90%;
 }
-body > .projects > .projectList .open > .MainLogo {
+body > .projectList .open > .MainLogo {
   display: none;
 }
-body > .projects > .projectList .open > .Content {
+body > .projectList .open > .Content {
   display: flex;
 }
-body > .projects > .projectList .close {
+body > .projectList .close {
   height: 300px;
   width: 400px;
 }
-body > .projects > .projectList .close > .MainLogo {
+body > .projectList .close > .MainLogo {
   display: flex;
 }
-body > .projects > .projectList .close > .Content {
+body > .projectList .close > .Content {
   display: none;
 }
-body > .projects.projectso {
+body.projectso {
   height: 800px;
   width: 90%;
   opacity: 1;
@@ -899,32 +920,33 @@ body > .projects.projectso {
       left: 28%;
   }*/
 }
-body > .projects.projectso > div {
+body.projectso > div {
   display: flex;
 }
 @media only screen and (max-width: 550px) {
-  body > .projects.projectso {
+  body.projectso {
     width: 90%;
     height: 50vh;
     opacity: 1;
   }
 }
-body > .projects.projectsc {
+body.projectsc {
   height: 0;
   width: 0;
   pointer-events: none;
 }
-body > .projects.projectsc > div {
+body.projectsc > div {
   display: none;
 }
-body > .projects.projectsm {
+body.projectsm {
   height: 50px;
   width: 220px;
 }
-body > .projects.projectsm > .content {
+body.projectsm > .content {
   display: none;
 }
-body > .contact {
+
+> .contact {
   position: absolute;
   top: 15%;
   left: 40%;
@@ -932,7 +954,7 @@ body > .contact {
   z-index: 95;
   transition: 300ms ease-in-out;
 }
-body > .contact > .contactContent {
+> .contact > .contactContent {
   height: 80%;
   width: 80%;
   display: flex;
@@ -945,7 +967,7 @@ body > .contact > .contactContent {
   right: 0;
   top: 15%;
 }
-body > .contact > .contactContent > form {
+> .contact > .contactContent > form {
   width: 100%;
   height: 100%;
   display: flex;
@@ -953,7 +975,7 @@ body > .contact > .contactContent > form {
   align-items: center;
   flex-direction: column;
 }
-body > .contact > .contactContent > form > input {
+> .contact > .contactContent > form > input {
   width: 100%;
   height: 61px;
   background: none;
@@ -965,11 +987,11 @@ body > .contact > .contactContent > form > input {
   border-radius: 20px;
   font-weight: bold;
 }
-body > .contact > .contactContent > form > input::placeholder {
+> .contact > .contactContent > form > input::placeholder {
   color: white;
   opacity: 1;
 }
-body > .contact > .contactContent > form > textarea {
+> .contact > .contactContent > form > textarea {
   width: 100%;
   height: 157px;
   background: none;
@@ -982,11 +1004,11 @@ body > .contact > .contactContent > form > textarea {
   border-radius: 20px;
   font-weight: bold;
 }
-body > .contact > .contactContent > form > textarea::placeholder {
+> .contact > .contactContent > form > textarea::placeholder {
   color: white;
   opacity: 1;
 }
-body > .contact > .contactContent > form > a {
+> .contact > .contactContent > form > a {
   width: 50%;
   height: 57px;
   border: none;
@@ -999,13 +1021,14 @@ body > .contact > .contactContent > form > a {
   justify-content: center;
   align-items: center;
 }
-body > .contacto {
+
+> .contacto {
   width: 20%;
   height: 40%;
   opacity: 1;
 }
 @media only screen and (max-width: 550px) {
-  body > .contacto {
+  > .contacto {
     width: 100%;
     height: 40%;
     opacity: 1;
@@ -1013,32 +1036,34 @@ body > .contacto {
   }
 }
 @media only screen and (min-width: 551px) and (max-width: 850px) {
-  body > .contacto {
+  > .contacto {
     width: 80%;
     height: 40%;
     opacity: 1;
     left: 10%;
   }
 }
-body > .contacto > div > form {
+> .contacto > div > form {
   display: flex;
 }
-body > .contactc {
+
+> .contactc {
   width: 0;
   height: 0;
   opacity: 0;
 }
-body > .contactc > div {
+> .contactc > div {
   display: none;
 }
-body > .contactm {
+
+> .contactm {
   height: 50px;
   width: 300px;
 }
-body > .contactm > .contactContent {
+> .contactm > .contactContent {
   display: none;
 }
-body > .contactm > .contactContent > form {
+> .contactm > .contactContent > form {
   display: none;
 }
 

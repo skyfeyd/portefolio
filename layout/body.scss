@@ -56,11 +56,11 @@ body{
             }
 
             >.show{
-                display: flex;
+                opacity: 1;
             }
 
             >.hide{
-                display: none;
+                opacity: 0;
             }
 
             &:hover{
@@ -667,6 +667,32 @@ body{
             margin: 0 auto;
         }
 
+        >.loader{
+            height: 10px;
+            width: 0%;
+            background-color: black;
+            box-shadow: none;
+            display: flex;
+            border-radius: 20px;
+            margin-left: 5%;
+            animation: loader 5sec ease-in infinite;
+            
+            &:hover{
+                background: black;
+            }
+
+            @keyframes loader{
+                0%{
+                    width: 0%;
+                }
+                100%{
+                    width: 40%;
+                }
+            }
+                
+            }
+        }
+
         >.projectList{
             height: 100%;
             width: 100%;
@@ -792,6 +818,9 @@ body{
                     
                 }
             }
+
+            
+
             .responsiveProject{
                 >span{
                     width: 0;
@@ -1005,7 +1034,6 @@ body{
         }
     }
 
-}
 
 ::-webkit-scrollbar {
     width: 5px;
