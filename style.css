@@ -737,9 +737,9 @@ body > .projects {
 body > .projects > h2 {
   color: white;
   font-size: 20px;
-  margin-top: 100px;
   right: 10px;
   margin: 0 auto;
+  margin-top: 25%;
 }
 body > .projects > .projectList {
   height: 100%;
@@ -889,6 +889,7 @@ body > .projects.projectso {
   width: 90%;
   opacity: 1;
   pointer-events: all;
+  justify-content: start;
   /*
   @media only screen and (min-width: 551px) and (max-width: 850px){
       width: 70%;
@@ -899,6 +900,9 @@ body > .projects.projectso {
 }
 body > .projects.projectso > div {
   display: none;
+}
+body > .projects.projectso > .head {
+  display: flex;
 }
 @media only screen and (max-width: 550px) {
   body > .projects.projectso {
